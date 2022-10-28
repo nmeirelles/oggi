@@ -1,3 +1,19 @@
 INDEX VERSION 1.3+C:\Users\nicko\OneDrive\Área de Trabalho\Clientes\Oggi\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1336024840.index
+3347305778.index
+3165493497.index
+3646839438.index
+587042648.index
+2942579111.index
+2468631782.index
+3736118922.index
+481068572.index
+4224016961.index
+2695094905.index
 3018528951.index
+2761126966.index
+4189545781.index
+1032698205.index
 2445062759.index
+770205146.index
+2456529834.index

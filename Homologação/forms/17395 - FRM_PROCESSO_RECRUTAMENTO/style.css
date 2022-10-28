@@ -1,0 +1,34 @@
+#divhead {
+	display: grid;
+  align-items: center;
+  justify-content: center;
+	height: 100px;
+	background-image: radial-gradient(circle, rgb(209, 127, 186), rgb(212, 75, 176), rgb(216, 46, 171), rgb(66, 8, 51));
+	border: solid 1px;
+	border-radius: 0px 20px 0px 20px;
+	margin-bottom: 40px;
+	color: white;
+	text-align: center;
+}
+
+.cpObriga{
+	border: 2px solid red !important; 
+}
+.lbobrigat{
+	color: red !important; 
+}
+.cp_obrigatorio{
+	color: red;
+}
+
+
+.text_decoration{
+	text-decoration: line-through;
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+}

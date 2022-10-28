@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_ZD0u0VNKEe2JdeHvELt8rg" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_ZD0u0lNKEe2JdeHvELt8rg" bindingContexts="_ZD0u1FNKEe2JdeHvELt8rg">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.totvs.tds.ecm.designer.bpmneditor&quot; name=&quot;recrutamento_selecao_pessoal_v3.process&quot; tooltip=&quot;Homologa&#xe7;&#xe3;o/workflow/diagrams/recrutamento_selecao_pessoal_v3.process&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Homologa&#xe7;&#xe3;o/workflow/diagrams/recrutamento_selecao_pessoal_v3.process&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.totvs.tds.ecm.designer.bpmneditor&quot; name=&quot;recrutamento_selecao_pessoal_v3.process&quot; tooltip=&quot;Produ&#xe7;&#xe3;o/workflow/diagrams/recrutamento_selecao_pessoal_v3.process&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Produ&#xe7;&#xe3;o/workflow/diagrams/recrutamento_selecao_pessoal_v3.process&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.wst.jsdt.ui.CompilationUnitEditor&quot; name=&quot;ds_horario_trabalho_protheus.js&quot; tooltip=&quot;Homologa&#xe7;&#xe3;o/datasets/Homologa&#xe7;&#xe3;o/ds_horario_trabalho_protheus.js&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Homologa&#xe7;&#xe3;o/datasets/Homologa&#xe7;&#xe3;o/ds_horario_trabalho_protheus.js&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.wst.jsdt.ui.CompilationUnitEditor&quot; name=&quot;displayFields.js&quot; tooltip=&quot;Homologa&#xe7;&#xe3;o/forms/14920 - Recrutamento e Sele&#xe7;&#xe3;o de Pessoal v3.0/events/displayFields.js&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Homologa&#xe7;&#xe3;o/forms/14920 - Recrutamento e Sele&#xe7;&#xe3;o de Pessoal v3.0/events/displayFields.js&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.wst.jsdt.ui.CompilationUnitEditor&quot; name=&quot;custom.js&quot; tooltip=&quot;Homologa&#xe7;&#xe3;o/forms/14920 - Recrutamento e Sele&#xe7;&#xe3;o de Pessoal v3.0/custom.js&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Homologa&#xe7;&#xe3;o/forms/14920 - Recrutamento e Sele&#xe7;&#xe3;o de Pessoal v3.0/custom.js&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;Recrutamento e Sele&#xe7;&#xe3;o de Pessoal v3.html&quot; tooltip=&quot;Homologa&#xe7;&#xe3;o/forms/14920 - Recrutamento e Sele&#xe7;&#xe3;o de Pessoal v3.0/Recrutamento e Sele&#xe7;&#xe3;o de Pessoal v3.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Homologa&#xe7;&#xe3;o/forms/14920 - Recrutamento e Sele&#xe7;&#xe3;o de Pessoal v3.0/Recrutamento e Sele&#xe7;&#xe3;o de Pessoal v3.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.totvs.tds.ecm.designer.bpmneditor&quot; name=&quot;ProcessoRecrutamento.process&quot; tooltip=&quot;Homologa&#xe7;&#xe3;o/workflow/diagrams/ProcessoRecrutamento.process&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Homologa&#xe7;&#xe3;o/workflow/diagrams/ProcessoRecrutamento.process&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.totvs.tds.ecm.designer.bpmneditor&quot; name=&quot;recrutamento_selecao_pessoal_v3.process&quot; tooltip=&quot;Homologa&#xe7;&#xe3;o/workflow/diagrams/recrutamento_selecao_pessoal_v3.process&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Homologa&#xe7;&#xe3;o/workflow/diagrams/recrutamento_selecao_pessoal_v3.process&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_ZD0u0lNKEe2JdeHvELt8rg" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_ZPDuclNKEe2JdeHvELt8rg" label="%trimmedwindow.label.eclipseSDK" x="2592" y="192" width="1024" height="768">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_ZD0u0lNKEe2JdeHvELt8rg" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_ZPDuclNKEe2JdeHvELt8rg" label="%trimmedwindow.label.eclipseSDK" x="0" y="0" width="1024" height="768">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
@@ -169,8 +169,8 @@
               </children>
             </children>
             <children xsi:type="basic:PartSashContainer" xmi:id="_apJG2VNKEe2JdeHvELt8rg" containerData="7400" selectedElement="_apJG2lNKEe2JdeHvELt8rg">
-              <children xsi:type="advanced:Placeholder" xmi:id="_apJG2lNKEe2JdeHvELt8rg" elementId="org.eclipse.ui.editorss" containerData="6600" ref="_ZXX88FNKEe2JdeHvELt8rg"/>
-              <children xsi:type="basic:PartStack" xmi:id="_apJG21NKEe2JdeHvELt8rg" elementId="bottomRight" containerData="3400" selectedElement="_apJG3FNKEe2JdeHvELt8rg">
+              <children xsi:type="advanced:Placeholder" xmi:id="_apJG2lNKEe2JdeHvELt8rg" elementId="org.eclipse.ui.editorss" containerData="7380" ref="_ZXX88FNKEe2JdeHvELt8rg"/>
+              <children xsi:type="basic:PartStack" xmi:id="_apJG21NKEe2JdeHvELt8rg" elementId="bottomRight" containerData="2620" selectedElement="_apJG3FNKEe2JdeHvELt8rg">
                 <children xsi:type="advanced:Placeholder" xmi:id="_apJG3FNKEe2JdeHvELt8rg" elementId="org.eclipse.ui.views.PropertySheet" ref="_apH4sVNKEe2JdeHvELt8rg"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_apJG3VNKEe2JdeHvELt8rg" elementId="org.eclipse.ui.views.ProblemView" ref="_ZXc1dFNKEe2JdeHvELt8rg"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_apJG3lNKEe2JdeHvELt8rg" elementId="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" ref="_apH4slNKEe2JdeHvELt8rg"/>
@@ -212,15 +212,9 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_ZXX88FNKEe2JdeHvELt8rg" elementId="org.eclipse.ui.editorss" selectedElement="_ZXX88VNKEe2JdeHvELt8rg">
-      <children xsi:type="basic:PartStack" xmi:id="_ZXX88VNKEe2JdeHvELt8rg" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_0z_qIFNKEe2JdeHvELt8rg">
+      <children xsi:type="basic:PartStack" xmi:id="_ZXX88VNKEe2JdeHvELt8rg" elementId="org.eclipse.e4.primaryDataStack">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
-        <children xsi:type="basic:Part" xmi:id="_0z_qIFNKEe2JdeHvELt8rg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="recrutamento_selecao_pessoal_v3" iconURI="platform:/plugin/com.totvs.tds.ecm.designer.eclipse/icons/icon.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;com.totvs.tds.ecm.designer.bpmneditor&quot; name=&quot;platform:/resource/Homologa&#xe7;&#xe3;o/workflow/diagrams/recrutamento_selecao_pessoal_v3.process#/0&quot; partName=&quot;recrutamento_selecao_pessoal_v3&quot; title=&quot;recrutamento_selecao_pessoal_v3&quot; tooltip=&quot;platform:/resource/Homologa&#xe7;&#xe3;o/workflow/diagrams/recrutamento_selecao_pessoal_v3.process#/0&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.graphiti.ui.editor.DiagramEditorInputFactory&quot; org.eclipse.graphiti.providerId=&quot;com.totvs.tds.ecm.designer.diagram.bpmn.TotvsBpmnDiagramTypeProvider&quot; org.eclipse.graphiti.uri=&quot;platform:/resource/Homologa&#xe7;&#xe3;o/workflow/diagrams/recrutamento_selecao_pessoal_v3.process#/0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>com.totvs.tds.ecm.designer.bpmneditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
       </children>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_ZXc1cFNKEe2JdeHvELt8rg" elementId="org.eclipse.jdt.ui.PackageExplorer" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Package Explorer" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/eview16/package.png" tooltip="" closeable="true">
@@ -433,11 +427,14 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_ZP9GUlNKEe2JdeHvELt8rg" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_ZQG3VFNKEe2JdeHvELt8rg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_ZEIT3FNKEe2JdeHvELt8rg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_f34SUFbIEe2oVvWeFH1VjA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_ZEIT3FNKEe2JdeHvELt8rg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_ZP9GU1NKEe2JdeHvELt8rg" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
         <children xsi:type="menu:ToolBarSeparator" xmi:id="_ZP9GVFNKEe2JdeHvELt8rg" elementId="additions" toBeRendered="false"/>
+      </children>
+      <children xsi:type="menu:ToolBar" xmi:id="_u3zooFX0Ee2Z06hWF5jhIA" elementId="org.eclipse.ui.edit.text.actionSet.presentation" visible="false">
+        <tags>Draggable</tags>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_ZjH58FNKEe2JdeHvELt8rg" elementId="org.eclipse.debug.ui.launchActionSet">
         <tags>Draggable</tags>
@@ -454,7 +451,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_ZP9GV1NKEe2JdeHvELt8rg" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_ZQG3XlNKEe2JdeHvELt8rg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_ZEITjVNKEe2JdeHvELt8rg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_f36HgFbIEe2oVvWeFH1VjA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_ZEITjVNKEe2JdeHvELt8rg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_ZP9GWFNKEe2JdeHvELt8rg" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
