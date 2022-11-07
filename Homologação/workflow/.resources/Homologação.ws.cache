@@ -1412,6 +1412,206 @@
    </array>
   </void>
   <void method="put">
+   <string>camposFormulario, documentoId = 14920</string>
+   <array class="java.lang.String" length="65">
+    <void index="0">
+     <string>abax</string>
+    </void>
+    <void index="1">
+     <string>acessoEspelho</string>
+    </void>
+    <void index="2">
+     <string>aprovacaoDiretoria</string>
+    </void>
+    <void index="3">
+     <string>aprovacaoRH</string>
+    </void>
+    <void index="4">
+     <string>atividadeAnterior</string>
+    </void>
+    <void index="5">
+     <string>atividadeAtual</string>
+    </void>
+    <void index="6">
+     <string>atividadeFacilities</string>
+    </void>
+    <void index="7">
+     <string>atividades</string>
+    </void>
+    <void index="8">
+     <string>atividadeSegTrabalho</string>
+    </void>
+    <void index="9">
+     <string>atividadeTI</string>
+    </void>
+    <void index="10">
+     <string>cargo</string>
+    </void>
+    <void index="11">
+     <string>carro</string>
+    </void>
+    <void index="12">
+     <string>cartaoCombustivel</string>
+    </void>
+    <void index="13">
+     <string>celular</string>
+    </void>
+    <void index="14">
+     <string>centroCusto</string>
+    </void>
+    <void index="15">
+     <string>codigoCentroCusto</string>
+    </void>
+    <void index="16">
+     <string>codigoFilial</string>
+    </void>
+    <void index="17">
+     <string>compras</string>
+    </void>
+    <void index="18">
+     <string>conhecimento</string>
+    </void>
+    <void index="19">
+     <string>contatoAprovado</string>
+    </void>
+    <void index="20">
+     <string>convenioMedico</string>
+    </void>
+    <void index="21">
+     <string>convenioOdontologico</string>
+    </void>
+    <void index="22">
+     <string>dataSolicitacao</string>
+    </void>
+    <void index="23">
+     <string>decisaoRevisao</string>
+    </void>
+    <void index="24">
+     <string>email</string>
+    </void>
+    <void index="25">
+     <string>emailAprovado</string>
+    </void>
+    <void index="26">
+     <string>email_solicitante</string>
+    </void>
+    <void index="27">
+     <string>empresa</string>
+    </void>
+    <void index="28">
+     <string>escolaridade</string>
+    </void>
+    <void index="29">
+     <string>excluirItem</string>
+    </void>
+    <void index="30">
+     <string>ferramentasTrabalho</string>
+    </void>
+    <void index="31">
+     <string>filial</string>
+    </void>
+    <void index="32">
+     <string>fluig</string>
+    </void>
+    <void index="33">
+     <string>horarioTrabalho</string>
+    </void>
+    <void index="34">
+     <string>IdAdmissao</string>
+    </void>
+    <void index="35">
+     <string>id_protheus_solicitante</string>
+    </void>
+    <void index="36">
+     <string>inserirAprovado</string>
+    </void>
+    <void index="37">
+     <string>nivel</string>
+    </void>
+    <void index="38">
+     <string>nivelEscolaridade</string>
+    </void>
+    <void index="39">
+     <string>nomeAprovado</string>
+    </void>
+    <void index="40">
+     <string>nomeColaborador</string>
+    </void>
+    <void index="41">
+     <string>notebook</string>
+    </void>
+    <void index="42">
+     <string>numeroProcesso</string>
+    </void>
+    <void index="43">
+     <string>obsDiretoria</string>
+    </void>
+    <void index="44">
+     <string>obsFacilities</string>
+    </void>
+    <void index="45">
+     <string>obsRevisaoRequisicao</string>
+    </void>
+    <void index="46">
+     <string>obsRH</string>
+    </void>
+    <void index="47">
+     <string>obsSegurancaTrabalho</string>
+    </void>
+    <void index="48">
+     <string>obsTI</string>
+    </void>
+    <void index="49">
+     <string>outroAcesso</string>
+    </void>
+    <void index="50">
+     <string>outroFerramentaTrabalho</string>
+    </void>
+    <void index="51">
+     <string>outrosAcessos</string>
+    </void>
+    <void index="52">
+     <string>outrosFerramentasTrabalho</string>
+    </void>
+    <void index="53">
+     <string>outroTipoContratacao</string>
+    </void>
+    <void index="54">
+     <string>protheus</string>
+    </void>
+    <void index="55">
+     <string>qtdVaga</string>
+    </void>
+    <void index="56">
+     <string>refeicaoLocal</string>
+    </void>
+    <void index="57">
+     <string>salario</string>
+    </void>
+    <void index="58">
+     <string>salarioSugerido</string>
+    </void>
+    <void index="59">
+     <string>segurancaTrabalho</string>
+    </void>
+    <void index="60">
+     <string>solicitante</string>
+    </void>
+    <void index="61">
+     <string>tipo</string>
+    </void>
+    <void index="62">
+     <string>vaga</string>
+    </void>
+    <void index="63">
+     <string>vagaConfidencial</string>
+    </void>
+    <void index="64">
+     <string>vtEstacionamento</string>
+    </void>
+   </array>
+  </void>
+  <void method="put">
    <string>mecanismo</string>
    <array class="[Ljava.lang.Object;" length="20">
     <void index="0">
