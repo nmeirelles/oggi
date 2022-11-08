@@ -1,0 +1,1502 @@
+<list>
+  <ProcessDefinition>
+    <processDefinitionPK>
+      <companyId>1</companyId>
+      <processId>WKF_SOLIC_REEMBOLSO</processId>
+    </processDefinitionPK>
+    <processDescription>Reembolso de Despesas(2.0)</processDescription>
+    <instruction></instruction>
+    <active>true</active>
+    <publicProcess>false</publicProcess>
+    <volumeId>Default</volumeId>
+    <categoryId>Financeiro</categoryId>
+    <managerEngineAllocationId>Grupo</managerEngineAllocationId>
+    <managerEngineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;RH&lt;/Group&gt;&lt;/AssignmentController&gt;</managerEngineAllocationConfiguration>
+    <snapshotFrequency>0</snapshotFrequency>
+    <baseDay>0</baseDay>
+    <baseMonth>0</baseMonth>
+    <periodId>Default</periodId>
+    <uniqueCardVersion>false</uniqueCardVersion>
+    <keyWord></keyWord>
+    <complementsLevel>1</complementsLevel>
+    <notifyRequisitionerComplements>true</notifyRequisitionerComplements>
+    <notifyManagerComplements>false</notifyManagerComplements>
+    <deadlineTime>0</deadlineTime>
+    <warningDeadlineTime>0</warningDeadlineTime>
+    <notifyAuthorityComplements>true</notifyAuthorityComplements>
+  </ProcessDefinition>
+  <ProcessDefinitionVersion>
+    <processDefinitionVersionPK>
+      <companyId>1</companyId>
+      <processId>Reembolso de Despesas(2.0)</processId>
+      <version>88</version>
+    </processDefinitionVersionPK>
+    <versionDescription></versionDescription>
+    <formId>8794</formId>
+    <editionMode>true</editionMode>
+    <updateAttachmentsVersion>false</updateAttachmentsVersion>
+    <controlsAttachmentsSecurity>false</controlsAttachmentsSecurity>
+    <active>true</active>
+    <blockedVersion>false</blockedVersion>
+    <counterSign>false</counterSign>
+    <openInstances>0</openInstances>
+    <bpmnVersion>2</bpmnVersion>
+    <processStates/>
+    <favorito>false</favorito>
+    <inheritFormSecurity>false</inheritFormSecurity>
+    <mobileReady>true</mobileReady>
+  </ProcessDefinitionVersion>
+  <list>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <sequence>1</sequence>
+      </processStatePK>
+      <stateName>Solicitação</stateName>
+      <stateDescription>Solicitação</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>true</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>227</positionX>
+      <positionY>76</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>10</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <sequence>2</sequence>
+      </processStatePK>
+      <stateName>Aprovação Gestor</stateName>
+      <stateDescription>Aprovação Gestor</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>86400</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;Gestores_Solicitacao_Reembolso&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>191</positionX>
+      <positionY>243</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <sequence>8</sequence>
+      </processStatePK>
+      <stateName>Aprovação Diretoria</stateName>
+      <stateDescription>Aprovação Diretoria</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>86400</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Papel</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Role&gt;DIRETORIAREEMBOLSO&lt;/Role&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>320</positionX>
+      <positionY>440</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <sequence>12</sequence>
+      </processStatePK>
+      <stateName>T.I.</stateName>
+      <stateDescription>T.I.</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>86400</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Pool Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;TI&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>160</positionX>
+      <positionY>780</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <sequence>14</sequence>
+      </processStatePK>
+      <stateName>Impressão formulario despesas &amp; Lançamento</stateName>
+      <stateDescription>Impressão formulario despesas &amp; Lançamento</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>86400</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Pool Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;Fiscal_Solicitacao_Reembolso&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>680</positionX>
+      <positionY>965</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <sequence>16</sequence>
+      </processStatePK>
+      <stateName>Pagamento &amp; Validação</stateName>
+      <stateDescription>Pagamento &amp; Validação</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>86400</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Pool Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;Financeiro_Solicitacao_Reembolso&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>380</positionX>
+      <positionY>1148</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <sequence>34</sequence>
+      </processStatePK>
+      <stateName>Integração Protheus</stateName>
+      <stateDescription>Integração Protheus</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>320</positionX>
+      <positionY>590</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>82</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>1</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <sequence>78</sequence>
+      </processStatePK>
+      <stateName>Bloqueiro orçamentario</stateName>
+      <stateDescription>Bloqueiro orçamentario</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>490</positionX>
+      <positionY>243</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>81</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <sequence>81</sequence>
+      </processStatePK>
+      <stateName>Liberar PC</stateName>
+      <stateDescription>Liberar PC</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>680</positionX>
+      <positionY>250</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>81</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <sequence>36</sequence>
+      </processStatePK>
+      <stateName>Intermediate</stateName>
+      <stateDescription>Intermediate</stateDescription>
+      <instruction>Evento intermediário do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>1</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>310</positionX>
+      <positionY>630</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>43</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <parentSequence>34</parentSequence>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <sequence>6</sequence>
+      </processStatePK>
+      <stateName>Cancelar</stateName>
+      <stateDescription>Cancelar</stateDescription>
+      <instruction>Atividade final do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>409</positionX>
+      <positionY>260</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>6</stateType>
+      <bpmnType>60</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <sequence>20</sequence>
+      </processStatePK>
+      <stateName>End</stateName>
+      <stateDescription>End</stateDescription>
+      <instruction>Atividade final do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>230</positionX>
+      <positionY>1165</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>6</stateType>
+      <bpmnType>60</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+  </list>
+  <list/>
+  <list>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <linkSequence>37</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>36</initialStateSequence>
+      <finalStateSequence>12</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <linkSequence>38</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>12</initialStateSequence>
+      <finalStateSequence>34</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <linkSequence>59</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>8</initialStateSequence>
+      <finalStateSequence>34</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <linkSequence>61</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>8</initialStateSequence>
+      <finalStateSequence>2</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <linkSequence>67</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>2</initialStateSequence>
+      <finalStateSequence>8</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <linkSequence>68</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>true</returnPermited>
+      <initialStateSequence>1</initialStateSequence>
+      <finalStateSequence>2</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <linkSequence>70</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>16</initialStateSequence>
+      <finalStateSequence>20</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <linkSequence>71</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>2</initialStateSequence>
+      <finalStateSequence>6</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <linkSequence>77</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>14</initialStateSequence>
+      <finalStateSequence>16</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <linkSequence>80</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>78</initialStateSequence>
+      <finalStateSequence>81</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <linkSequence>84</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>true</returnPermited>
+      <initialStateSequence>34</initialStateSequence>
+      <finalStateSequence>78</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <linkSequence>85</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>81</initialStateSequence>
+      <finalStateSequence>14</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+  </list>
+  <list/>
+  <list>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>notificarViaEmail</eventId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function notificarViaEmail(nextSequenceId) {&#xd;
+	setLog(&quot;INICIANDO FUNCAO - NOTIFICAR VIA E-MAIL&quot;);&#xd;
+	&#xd;
+	var processInstanceId = getValue(&quot;WKNumProces&quot;);&#xd;
+&#xd;
+	// =====================================&#xd;
+	// DESTINATARIOS DO E-MAIL&#xd;
+	var solicitanteMail = mail_USER&#xd;
+&#xd;
+	// =====================================&#xd;
+	// ASSUNTO DO E-MAIL&#xd;
+	var isEnviarEmail = false;&#xd;
+	var subject = &apos;&apos;&#xd;
+	var body = &apos;&apos;&#xd;
+	if(nextSequenceId == &apos;6&apos;){&#xd;
+		subject = &quot;Solicitaçao de reembolso cancelada&quot;;	&#xd;
+		body = &apos;Sua solicitaçao de reembolso foi cancelada, favor entrar em contato com o seu Gestor!&apos;&#xd;
+	}else{&#xd;
+		subject = &quot;Solicitaçao de reembolso realizada&quot;;&#xd;
+		body = &apos;Solicitaçao de Reembolso foi realizada com sucesso!&apos;&#xd;
+	}&#xd;
+	&#xd;
+	&#xd;
+	// =====================================&#xd;
+	// MENSAGEM DO E-MAIL&#xd;
+	&#xd;
+&#xd;
+	setLog(&quot;&gt;&gt;&gt; NOTIFICAR VIA E-MAIL &lt;&lt;&lt; CONTEUDO: &quot; + body);&#xd;
+	&#xd;
+	constraints.push(DatasetFactory.createConstraint(&quot;BODY&quot;, body, null, ConstraintType.MUST));&#xd;
+	var dataset = DatasetFactory.getDataset(&quot;DTS_NOTIFICAR_POR_EMAIL&quot;, null, constraints, null);&#xd;
+&#xd;
+	if(dataset.rowsCount &gt; 0) {&#xd;
+		var status = dataset.getValue(0, &quot;STATUS&quot;);&#xd;
+		var mensagem = dataset.getValue(0, &quot;MENSAGEM&quot;);&#xd;
+		setLog(&quot;ENCAMINHAR E-MAIL | STATUS: &quot; + status + &quot; | MENSAGEM: &quot; + mensagem);&#xd;
+	}&#xd;
+}&#xd;
+&#xd;
+/**&#xd;
+ * Recuperar o e-mail pela matricula do usuário&#xd;
+ * @param matricula&#xd;
+ * @returns {String}&#xd;
+ */&#xd;
+function getMailPorMatricula(matricula) {&#xd;
+	setLog(&quot;INICIANDO FUNCAO - getMailPorMatricula (&quot; + matricula + &quot;)&quot;);&#xd;
+	&#xd;
+	var mailRet = &quot;&quot;;&#xd;
+	var constraints = [];&#xd;
+	constraints.push(DatasetFactory.createConstraint(&quot;colleaguePK.colleagueId&quot;, matricula, matricula, ConstraintType.MUST));&#xd;
+	var dataset = DatasetFactory.getDataset(&quot;colleague&quot;, null, constraints, null);&#xd;
+&#xd;
+	setLog(&quot;FUNCAO getMailPorMatricula: (QTD) &quot; + dataset.rowsCount);&#xd;
+	&#xd;
+	if(dataset.rowsCount &gt; 0) {&#xd;
+		mailRet = dataset.getValue(0, &quot;mail&quot;);&#xd;
+		&#xd;
+		setLog(&quot;FUNCAO getMailPorMatricula: (MAIL) &quot; + mailRet);&#xd;
+	}&#xd;
+	&#xd;
+	setLog(&quot;FUNCAO getMailPorMatricula: (MAIL RET) &quot; + mailRet);&#xd;
+	&#xd;
+	return mailRet;&#xd;
+}&#xd;
+&#xd;
+&#xd;
+</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>beforeCancelProcess</eventId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function beforeCancelProcess(colleagueId,processId){&#xd;
+	if(String(hAPI.getCardValue(&apos;NUM_RETORNO&apos;))){&#xd;
+	&#xd;
+	log.info(&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Estorno &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&quot;);&#xd;
+	var clientService = fluigAPI.getAuthorizeClientService();&#xd;
+	&#xd;
+	try{&#xd;
+		var clientService = fluigAPI.getAuthorizeClientService();&#xd;
+		var data = {&#xd;
+				companyId : &apos;0&apos;+getValue(&quot;WKCompany&quot;) + &apos;&apos;,&#xd;
+				serviceCode : &apos;Protheus&apos;,&#xd;
+				endpoint : &apos;/rest/FLGCOM00/PedidodeCompras/&apos;+String( hAPI.getCardValue(&apos;NUM_RETORNO&apos;))+&apos;&apos;,&#xd;
+				method : &apos;delete&apos;,&#xd;
+				timeoutService: &apos;100&apos;,&#xd;
+//			params : {&#xd;
+//				&quot;NUMSOL&quot; : String( hAPI.getCardValue(&apos;NUM_RETORNO&apos;) )&#xd;
+//			},&#xd;
+			headers: {&#xd;
+				&apos;tenantid&apos;: String(hAPI.getCardValue(&apos;COD_EMPRESA&apos;) + &apos;,&apos; + hAPI.getCardValue(&apos;COD_FILIAL&apos;))&#xd;
+			}&#xd;
+		}&#xd;
+		&#xd;
+		log.warn( &quot;##### Estorno - JSON: &quot; + JSON.stringify(data) );&#xd;
+		&#xd;
+		var vo = clientService.invoke( JSON.stringify(data) );&#xd;
+		log.warn(&quot;##### Estorno - RESULTADO  vo : &quot; + vo);&#xd;
+		&#xd;
+		if(vo.getResult()== null || vo.getResult().isEmpty()){&#xd;
+			throw &quot;Retorno está vazio&quot;;&#xd;
+		}else{&#xd;
+			log.info(vo.getResult());&#xd;
+		}&#xd;
+		var retorno = JSON.parse(vo.getResult());&#xd;
+	&#xd;
+		if(parseInt(retorno.errorCode) &lt; 200 || parseInt(retorno.errorCode) &gt; 299){&#xd;
+			//hAPI.setCardValue(&apos;grupoerro&apos;,);&#xd;
+			throw vo.getResult() + &quot; &quot; + JSON.stringify(data);&#xd;
+		}&#xd;
+	}catch(err) {&#xd;
+		throw err;&#xd;
+		}&#xd;
+		return true;&#xd;
+	}&#xd;
+	}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>beforeTaskSave</eventId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function beforeTaskSave(colleagueId,nextSequenceId,userList){&#xd;
+	if(nextSequenceId == 2){&#xd;
+		var anexos = hAPI.listAttachments();&#xd;
+		var indexes = hAPI.getChildrenIndexes(&quot;tb_produtos&quot;);&#xd;
+		if(indexes.length &gt; anexos.size()){&#xd;
+			throw &quot;Validar a quantidade de anexos referente ao reembolso&quot;&#xd;
+		}&#xd;
+	}&#xd;
+	if(nextSequenceId == 78 || nextSequenceId == 81){&#xd;
+		var c1 = DatasetFactory.createConstraint(&quot;CODIGO&quot;, hAPI.getCardValue(&quot;NUM_RETORNO&quot;), hAPI.getCardValue(&quot;NUM_RETORNO&quot;), ConstraintType.MUST);&#xd;
+		var c2 = DatasetFactory.createConstraint(&quot;EMP&quot;, hAPI.getCardValue(&quot;empresa_cod2&quot;), hAPI.getCardValue(&quot;empresa_cod2&quot;), ConstraintType.MUST);&#xd;
+		var c3 = DatasetFactory.createConstraint(&quot;FILIAL&quot;, hAPI.getCardValue(&quot;filial_cod2&quot;), hAPI.getCardValue(&quot;filial_cod2&quot;), ConstraintType.MUST);&#xd;
+		var constraints = new Array(c1,c2,c3);&#xd;
+		var dataset = DatasetFactory.getDataset(&quot;ds_solcompras_aprovado&quot;, null, constraints, null);&#xd;
+		log.info(&quot;Solicitação de reembolso - Bloqueio orçamentario - WKNumProces: &quot;+getValue(&apos;WKNumProces&apos;)+&quot; C7_CONAPRO &quot;+dataset.getValue(0, &quot;C7_CONAPRO&quot;));&#xd;
+		if(dataset.getValue(0, &quot;C7_CONAPRO&quot;)==&quot;X&quot; ){&#xd;
+			throw &quot;Pedido de compras &quot; + hAPI.getCardValue(&quot;NUM_RETORNO&quot;) + &quot;Está com bloqueio orçamentario.&quot;&#xd;
+		}else{&#xd;
+			if(dataset.getValue(0, &quot;C7_CONAPRO&quot;)==&quot;B&quot; || dataset.getValue(0, &quot;C7_CONAPRO&quot;)==&quot;L&quot;){&#xd;
+				return true;&#xd;
+			}&#xd;
+			throw &quot;Pedido de compras &quot; + hAPI.getCardValue(&quot;NUM_RETORNO&quot;) + &quot;Está Aguardando liberação no protheus.&quot;&#xd;
+		}&#xd;
+	}&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>servicetask34</eventId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function servicetask34(attempt, message) {&#xd;
+	try{&#xd;
+		logTexto(&apos;**************** INTEGRAÇÃO CADASTRO DE COMPRAS **************** &apos;)&#xd;
+		var clientService = fluigAPI.getAuthorizeClientService();&#xd;
+		var aItens = new Array();&#xd;
+		var indexes = hAPI.getChildrenIndexes(&quot;tb_produtos&quot;);&#xd;
+		logTexto(&apos;indexes:  &apos;+indexes.length);&#xd;
+		for(var i = 0; i &lt; indexes.length; i++){&#xd;
+			logTexto(&apos;Dentro do FOR  &apos;)&#xd;
+			var indice = indexes[i];&#xd;
+			var item = {};&#xd;
+			item[&quot;C7_PRODUTO&quot;] = hAPI.getCardValue(&quot;C7_PRODUTO___&quot; + indice).trim()+ &quot;&quot;;&#xd;
+			logTexto(&apos;C7_PRODUTO___ &apos;+hAPI.getCardValue(&quot;C7_PRODUTO___&quot; + indice).trim());&#xd;
+			item[&quot;C7_QUANT&quot;] = hAPI.getCardValue(&quot;C7_QUANT___&quot; + indice).trim()+ &quot;&quot;;&#xd;
+			logTexto(&apos;C7_QUANT___ &apos;+hAPI.getCardValue(&quot;C7_QUANT___&quot; + indice).trim());&#xd;
+			item[&quot;C7_PRECO&quot;] = hAPI.getCardValue(&quot;C7_TOTAL___&quot; + indice).trim()+ &quot;&quot;;&#xd;
+			logTexto(&apos;TX_VALUNI___ &apos;+hAPI.getCardValue(&quot;TX_VALUNI___&quot; + indice).trim());&#xd;
+			item[&quot;C7_TOTAL&quot;] = hAPI.getCardValue(&quot;C7_TOTAL___&quot; + indice).trim()+ &quot;&quot;;&#xd;
+			logTexto(&apos;C7_TOTAL___ &apos;+hAPI.getCardValue(&quot;C7_TOTAL___&quot; + indice).trim());&#xd;
+			item[&quot;C7_XNFLUIG&quot;] = getValue(&quot;WKNumProces&quot;)+ &quot;&quot;;&#xd;
+			logTexto(&apos;C7_XNFLUIG &apos;+getValue(&quot;WKNumProces&quot;));&#xd;
+			item[&quot;C7_CONTA&quot;] = hAPI.getCardValue(&quot;C7_CONTA___&quot; + indice).trim()+ &quot;&quot;;&#xd;
+			item[&quot;C7_CODINAT&quot;] = hAPI.getCardValue(&quot;COD_NATU___&quot; + indice).trim()+ &quot;&quot;;&#xd;
+			item[&quot;C7_CC&quot;] = hAPI.getCardValue(&quot;cod_CC&quot;).trim()+ &quot;&quot;;&#xd;
+			item[&quot;C7_NUMSC&quot;] = &apos;&apos;;&#xd;
+			aItens.push(item);&#xd;
+		}&#xd;
+		logTexto(&apos;Depois do FOR  &apos;);&#xd;
+		var data = {&#xd;
+			companyId : &apos;01&apos;,&#xd;
+			serviceCode : &apos;Protheus&apos;,&#xd;
+			endpoint : &apos;/rest/FLGCOM00/PEDIDODECOMPRAS&apos;,&#xd;
+			method : &apos;post&apos;,&#xd;
+			timeoutService: &apos;100&apos;, &#xd;
+			params : {&#xd;
+				&quot;C7_FORNECE&quot;:hAPI.getCardValue(&quot;C7_FORNECE&quot;).trim() + &quot;&quot;,&#xd;
+				&quot;C7_LOJA&quot;:hAPI.getCardValue(&quot;C7_LOJA&quot;).trim() + &quot;&quot;,&#xd;
+				&quot;C7_COND&quot;:hAPI.getCardValue(&quot;COD_COND&quot;).trim() + &quot;&quot;,&#xd;
+				&quot;C7_CONTATO&quot;:&quot;&quot;,&#xd;
+				&quot;C7_USER&quot;: &quot;000802&quot;,&#xd;
+				&quot;C7_XDTORC&quot;:&quot;&quot;,&#xd;
+				&quot;ITENS&quot;:	aItens&#xd;
+			},&#xd;
+			headers: {&#xd;
+				&apos;tenantid&apos;: String(hAPI.getCardValue(&apos;empresa_cod2&apos;) + &apos;,&apos; + hAPI.getCardValue(&apos;filial_cod2&apos;)) &#xd;
+			}&#xd;
+		}&#xd;
+		logTexto(&apos;-- DATA -- *-*-*-*-*-*-*-*&apos;);&#xd;
+		log.dir(data);&#xd;
+		logTexto(&apos;-- DATA --&apos;);&#xd;
+		logTexto(&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;Linha3&quot;);&#xd;
+		var retornoApi = clientService.invoke(JSON.stringify(data));&#xd;
+		log.dir(retornoApi);&#xd;
+		logTexto(&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;Linha4&quot;);&#xd;
+		var statusHttp = retornoApi.getHttpStatusResult();&#xd;
+		logTexto(&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;Linha5&quot;);&#xd;
+		logTexto(retornoApi.getResult());&#xd;
+		var idIntegracao = retornoApi.getResult();&#xd;
+		idIntegracao = JSON.parse(idIntegracao).C7_NUM;&#xd;
+		&#xd;
+		var constraint = [] &#xd;
+		constraint.push(DatasetFactory.createConstraint(&apos;CODE&apos;,statusHttp,statusHttp, ConstraintType.MUST));&#xd;
+	    var dts_httpStatus = DatasetFactory.getDataset(&apos;dts_httpStatus&apos;, null,constraint, null);&#xd;
+		&#xd;
+&#xd;
+		if(statusHttp == 400){&#xd;
+			throw java.lang.Exception(&quot;Incorrect Request&quot;);&#xd;
+		}else if(statusHttp == 401){&#xd;
+			throw java.lang.Exception(&quot;User is not authenticated&quot;);&#xd;
+		}else if(statusHttp == 403){&#xd;
+			throw java.lang.Exception(&quot;User does not have permission to perform the operation&quot;);&#xd;
+		}else if(statusHttp == 404){&#xd;
+			throw java.lang.Exception(&quot;Resource not found&quot;);&#xd;
+		}else if(statusHttp == 412){&#xd;
+			throw java.lang.Exception(&quot;Failed to move due to the need of an assignee to be appointed for the next task&quot;);&#xd;
+		}else if(statusHttp == 500){&#xd;
+			throw java.lang.Exception(&quot;Internal server error, see reply for more details&quot;);&#xd;
+		}&#xd;
+		hAPI.setCardValue(&quot;NUM_RETORNO&quot;,idIntegracao);&#xd;
+		hAPI.setTaskComments(getValue(&quot;WKUser&quot;), getValue(&quot;WKNumProces&quot;), 0, &quot;Integração realizada com sucesso. Emp: &quot; + hAPI.getCardValue(&apos;empresa_cod2&apos;) + &quot; Fil: &quot; + hAPI.getCardValue(&apos;filial_cod2&apos;) + &quot; Número de Pedido: &quot; +idIntegracao);&#xd;
+	} catch(err) {&#xd;
+		hAPI.setCardValue(&quot;msg&quot;, &quot;Erro!&quot;);&#xd;
+		throw err + JSON.stringify(data);&#xd;
+	}&#xd;
+}&#xd;
+&#xd;
+&#xd;
+//=================================================================================================&#xd;
+/*/&#xd;
+@DESCRICAO: Funções uteis para maninupalão de valores&#xd;
+	@AUTHOR: Pedro Costa&#xd;
+	@DATA: 2020-02-12&#xd;
+/*/&#xd;
+function convertStringToNumber(value){&#xd;
+	log.info(&quot;Iniciando convertStringToNumber() &gt;&gt;&gt; &quot; + value);&#xd;
+	try{&#xd;
+		value = new String(value);&#xd;
+		value = value.replace(/[^0-9.,]/g, &quot;&quot;);&#xd;
+		var result = quantityOfTimes(value, &quot;,&quot;);&#xd;
+		log.info(&quot;Finalizando convertStringToNumber() &gt;&gt;&gt; Result: &quot; + result);&#xd;
+		if(result &gt; 0){&#xd;
+			result = quantityOfTimes(value, &quot;.&quot;);&#xd;
+			if(result &gt; 0){&#xd;
+				value = value.replace(/\./g, &quot;&quot;);&#xd;
+			}&#xd;
+			value = value.replace(/\,/g, &quot;.&quot;);&#xd;
+		}&#xd;
+		log.info(&quot;Finalizando convertStringToNumber() &gt;&gt;&gt; Antes parseFloat: &quot; + value);&#xd;
+		value = parseFloat(value);&#xd;
+		log.info(&quot;Finalizando convertStringToNumber() &gt;&gt;&gt; Depois parseFloat: &quot; + value);&#xd;
+		log.info(&quot;Finalizando convertStringToNumber() &gt;&gt;&gt; &quot; + value);&#xd;
+		return value;&#xd;
+	}catch (e) {&#xd;
+		throw e;&#xd;
+	}&#xd;
+}&#xd;
+&#xd;
+function quantityOfTimes(value, search){&#xd;
+	search = new String(search);&#xd;
+	var value = value;&#xd;
+	var controller = true;&#xd;
+	var quantity = 0;&#xd;
+	var result = 0;&#xd;
+	var valueLength = value.length;&#xd;
+	var searchLength = search.length;&#xd;
+	while (controller) {&#xd;
+		result = value.indexOf(search);&#xd;
+		if(result &gt; -1){&#xd;
+			value = value.substring((result + searchLength), valueLength);&#xd;
+			quantity++;&#xd;
+		}else{&#xd;
+			controller = false;&#xd;
+		}&#xd;
+	}&#xd;
+	return quantity;&#xd;
+}&#xd;
+&#xd;
+function numberToCurrencyBR(value){&#xd;
+	log.info(&quot;Iniciando numberToCurrencyBR() &gt;&gt;&gt; 1: &quot; + value);&#xd;
+	value = convertStringToNumber(value);&#xd;
+	log.info(&quot;Iniciando numberToCurrencyBR() &gt;&gt;&gt; 2: &quot; + value);&#xd;
+	value = new String(value.toFixed(2));&#xd;
+	log.info(&quot;Iniciando numberToCurrencyBR() &gt;&gt;&gt; 3: &quot; + value);&#xd;
+	var pointIndex = value.indexOf(&quot;.&quot;);&#xd;
+	pointIndex = (pointIndex &gt; -1 ? pointIndex : value.length);&#xd;
+	var numberInt = value.substr(0, pointIndex);&#xd;
+	var numberDec = value.substr(pointIndex + 1, value.length);&#xd;
+	var initial = (numberInt.length % 3);&#xd;
+	var treatment = numberInt.substr(initial, numberInt.length);&#xd;
+	var result = numberInt.substr(0, initial);&#xd;
+	result += result != &quot;&quot; ? &quot;.&quot; : &quot;&quot;;&#xd;
+	for(var x = 0; x &lt; treatment.length; x++){&#xd;
+		if(x != 0 &amp;&amp; ((x % 3) == 0)){&#xd;
+			result += &quot;.&quot;;&#xd;
+		}&#xd;
+		result += treatment[x];&#xd;
+	}&#xd;
+	log.info(&quot;Iniciando numberToCurrencyBR() &gt;&gt;&gt; 4: &quot; + (&quot;R$ &quot; + result + &quot;,&quot; + numberDec));&#xd;
+	return &quot;R$ &quot; + result + &quot;,&quot; + numberDec;&#xd;
+}&#xd;
+&#xd;
+function logTexto( mensagem ){&#xd;
+	mensagem = new String( mensagem );&#xd;
+	mensagem = &quot;-=||=-=||=-=|| (Processo Solicitacao Reembolso) &gt;&gt;&gt; &quot; + mensagem;&#xd;
+	&#xd;
+	if( true ){&#xd;
+		log.info( mensagem );&#xd;
+	}&#xd;
+	&#xd;
+	return mensagem;&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>afterTaskSave</eventId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function afterTaskSave(colleagueId,nextSequenceId,userList){&#xd;
+	if(nextSequenceId == &apos;20&apos; || nextSequenceId == &apos;6&apos;){&#xd;
+		notificarViaEmail(nextSequenceId)&#xd;
+	}&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>scripttask45</eventId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function scripttask45() {
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>intermediateconditional72</eventId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function intermediateconditional72() {
+	var c1 = DatasetFactory.createConstraint(&quot;CODIGO&quot;, hAPI.getCardValue(&quot;NUM_RETORNO&quot;), hAPI.getCardValue(&quot;NUM_RETORNO&quot;), ConstraintType.MUST);
+	var c2 = DatasetFactory.createConstraint(&quot;EMP&quot;, hAPI.getCardValue(&quot;empresa_cod2&quot;), hAPI.getCardValue(&quot;empresa_cod2&quot;), ConstraintType.MUST);
+	var c3 = DatasetFactory.createConstraint(&quot;FILIAL&quot;, hAPI.getCardValue(&quot;filial_cod2&quot;), hAPI.getCardValue(&quot;filial_cod2&quot;), ConstraintType.MUST);
+	var constraints = new Array(c1,c2,c3);
+	var dataset = DatasetFactory.getDataset(&quot;ds_solcompras_aprovado&quot;, null, constraints, null);
+	log.info(&quot;Solicitação de reembolso - Bloqueio orçamentario - WKNumProces: &quot;+getValue(&apos;WKNumProces&apos;)+&quot; C7_CONAPRO &quot;+dataset.getValue(0, &quot;C7_CONAPRO&quot;));
+	if(dataset.getValue(0, &quot;C7_CONAPRO&quot;)==&quot;X&quot; ){
+		throw &quot;Pedido de compras &quot; + hAPI.getCardValue(&quot;ppf3&quot;) + &quot;Está com bloqueio orçamentario.&quot;
+	}else{
+		if(dataset.getValue(0, &quot;C7_CONAPRO&quot;)==&quot;B&quot; || dataset.getValue(0, &quot;C7_CONAPRO&quot;)==&quot;L&quot;){
+			return true;
+		}
+		throw &quot;Pedido de compras &quot; + hAPI.getCardValue(&quot;NUM_RETORNO&quot;) + &quot;Está com bloqueio orçamentario.&quot;
+	}
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>intermediateconditional73</eventId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function intermediateconditional73() {
+	var c1 = DatasetFactory.createConstraint(&quot;CODIGO&quot;, hAPI.getCardValue(&quot;NUM_RETORNO&quot;), hAPI.getCardValue(&quot;NUM_RETORNO&quot;), ConstraintType.MUST);
+	var c2 = DatasetFactory.createConstraint(&quot;EMP&quot;, hAPI.getCardValue(&quot;empresa_cod2&quot;), hAPI.getCardValue(&quot;empresa_cod2&quot;), ConstraintType.MUST);
+	var c3 = DatasetFactory.createConstraint(&quot;FILIAL&quot;, hAPI.getCardValue(&quot;filial_cod2&quot;), hAPI.getCardValue(&quot;filial_cod2&quot;), ConstraintType.MUST);
+	var constraints = new Array(c1,c2,c3);
+	var dataset = DatasetFactory.getDataset(&quot;ds_solcompras_aprovado&quot;, null, constraints, null);
+	log.info(&quot;Solicitação de reembolso - Liberação protheus - WKNumProces: &quot;+getValue(&apos;WKNumProces&apos;)+&quot;  C7_CONAPRO  &quot;+dataset.getValue(0, &quot;C7_CONAPRO&quot;) + &quot; Cotação 3&quot;);
+	if(dataset.getValue(0, &quot;C7_CONAPRO&quot;)==&quot;L&quot;){
+		return true;
+	}else{
+		throw &quot;Pedido de compras &quot; + hAPI.getCardValue(&quot;NUM_RETORNO&quot;) + &quot;Está Aguardando aprovação no protheus.&quot;;
+	}
+}</eventDescription>
+    </WorkflowProcessEvent>
+  </list>
+  <list/>
+  <list>
+    <SwimLane>
+      <color>FFFFFF</color>
+      <height>1291</height>
+      <width>951</width>
+      <positionX>40</positionX>
+      <positionY>0</positionY>
+      <stateName>S O L I C I T A Ç Ã O   D E   R E E M B O L S O </stateName>
+      <type>1</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <sequence>1</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>82b0b7</color>
+      <height>184</height>
+      <width>921</width>
+      <positionX>70</positionX>
+      <positionY>0</positionY>
+      <stateName>SOLICITANTE</stateName>
+      <type>2</type>
+      <parentSequence>1</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <sequence>2</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>adc9ac</color>
+      <height>184</height>
+      <width>921</width>
+      <positionX>70</positionX>
+      <positionY>184</positionY>
+      <stateName>GESTOR</stateName>
+      <type>2</type>
+      <parentSequence>1</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <sequence>3</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>d6e0d0</color>
+      <height>187</height>
+      <width>921</width>
+      <positionX>70</positionX>
+      <positionY>1104</positionY>
+      <stateName>FINANCEIRO</stateName>
+      <type>2</type>
+      <parentSequence>1</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <sequence>4</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>9fc1c6</color>
+      <height>184</height>
+      <width>921</width>
+      <positionX>70</positionX>
+      <positionY>736</positionY>
+      <stateName>SUPORTE</stateName>
+      <type>2</type>
+      <parentSequence>1</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <sequence>5</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>82b0b7</color>
+      <height>184</height>
+      <width>921</width>
+      <positionX>70</positionX>
+      <positionY>368</positionY>
+      <stateName>DIRETORIA</stateName>
+      <type>2</type>
+      <parentSequence>1</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <sequence>6</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>adc9ac</color>
+      <height>184</height>
+      <width>921</width>
+      <positionX>70</positionX>
+      <positionY>552</positionY>
+      <stateName>INTEGRAÇÃO</stateName>
+      <type>2</type>
+      <parentSequence>1</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <sequence>7</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>d0daae</color>
+      <height>184</height>
+      <width>921</width>
+      <positionX>70</positionX>
+      <positionY>920</positionY>
+      <stateName>F I S C A L</stateName>
+      <type>2</type>
+      <parentSequence>1</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>1</version>
+        <sequence>8</sequence>
+      </swimLanePK>
+    </SwimLane>
+  </list>
+  <list/>
+  <list/>
+  <list>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>88</version>
+        <linkSequence>37</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>324</positionX>
+      <positionY>808</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>88</version>
+        <linkSequence>38</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>213</positionX>
+      <positionY>624</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>88</version>
+        <linkSequence>61</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>372</positionX>
+      <positionY>278</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>88</version>
+        <linkSequence>67</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>244</positionX>
+      <positionY>475</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>88</version>
+        <linkSequence>77</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>733</positionX>
+      <positionY>1183</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>WKF_SOLIC_REEMBOLSO</processId>
+        <version>88</version>
+        <linkSequence>84</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>542</positionX>
+      <positionY>624</positionY>
+    </ProcessLinkBend>
+  </list>
+  <list/>
+  <list/>
+  <list/>
+  <list>
+    <ProcessStateService>
+      <companyId>1</companyId>
+      <processId>WKF_SOLIC_REEMBOLSO</processId>
+      <version>1</version>
+      <sequence>34</sequence>
+      <attempts>0</attempts>
+      <sucessFullMessage>Integration performed successfully</sucessFullMessage>
+      <serviceName></serviceName>
+      <frequency>1</frequency>
+      <frequencyType>0</frequencyType>
+    </ProcessStateService>
+  </list>
+  <list/>
+  <list/>
+  <list>
+    <ProcessAttachmentRules>
+      <id>0</id>
+      <tenantId>0</tenantId>
+      <processId>WKF_SOLIC_REEMBOLSO</processId>
+      <processVersion>88</processVersion>
+      <stateSequence>16</stateSequence>
+      <operator>2</operator>
+      <amount>0</amount>
+      <name></name>
+      <message>Adicionar comprovante de pagamento</message>
+    </ProcessAttachmentRules>
+  </list>
+  <list/>
+</list>

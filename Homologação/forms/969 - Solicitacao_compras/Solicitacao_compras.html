@@ -1,0 +1,1443 @@
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+		<link type="text/css" rel="stylesheet" href="css.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+		<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+		<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+		<script src="/style-guide/js/fluig-style-guide-filter.min.js"></script>
+		<script type="text/javascript" src="/pacotes/resources/js/jquery.maskMoney.min.js"></script>
+		<script type="text/javascript" src="zoom.js"></script>
+	</head>
+
+	<body>
+		<div class="fluig-style-guide">
+			<form class="form-horizontal" name="form">
+				<div class="panel panel-primary" id="painel-iniciar">
+					<div class="panel-heading">
+						Solicitação de Compras
+					</div>
+
+					<div class="panel-body">
+						<div class="form-group">
+							<div class="col-md-2">
+								<label for="processoid"><strong>Número Solicitação</strong></label>
+								<input type="text" name="processoid" id="processoid" readonly="readonly" class="form-control">
+							</div>
+							<div class="col-md-2">
+								<label for="id_protheus"><strong>Usuário Protheus</strong></label>
+								<input type="text" name="id_protheus" id="id_protheus" readonly="readonly" class="form-control">
+								<input type="hidden" name="id_protheus_cotacao" id="id_protheus_cotacao" readonly="readonly" class="form-control">
+								<input type="hidden" name="codUserCotacao" id="codUserCotacao" readonly="readonly" class="form-control">
+								<input type="hidden" name="codUser" id="codUser" readonly="readonly" class="form-control">
+							</div>
+							<div class="col-md-2">
+								<label for="ID_solicitante"><strong>Número ID Solicitante</strong></label>
+								<input type="text" name="ID_solicitante" id="ID_solicitante" readonly="readonly" class="form-control">
+							</div>
+							<div class="col-md-3">
+								<label for="nome_solicitante"><strong>Nome Solicitante</strong></label>
+								<input type="text" name="nome_solicitante" id="nome_solicitante" readonly="readonly"
+									class="form-control">
+							</div>
+							<div class="col-md-3">
+								<label for="email_solicitante"><strong>E-mail Solicitante</strong></label>
+								<input type="text" name="email_solicitante" id="email_solicitante" readonly="readonly" class="form-control">
+							</div>
+
+						</div>
+						<div class="form-group">
+							<div class="col-md-3">
+								<label for="empresa_cod2">Código Empresa</label>
+								<input type="text" name="empresa_cod2" id="empresa_cod2" class="form-control" readonly='readonly'>
+							</div>
+							<div class="col-md-3">
+								<label for="filial_cod2">Código Filial</label>
+								<input type="text" name="filial_cod2" id="filial_cod2" readonly="readonly" class="form-control">
+							</div>
+							<div class="col-md-6">
+								<label for="filial"> Descrição Empresa  </label>
+								<input type="zoom" Id="filial" Name="filial" class="form-control" data-zoom="{
+								'displayKey':'empresa_desc',
+								'datasetId':'ds_empresas_protheus',
+								'maximumSelectionLength':'1',
+								'placeholder':'Escolha a Empresa',
+								'fields':[
+									{
+										'field':'empresa_cod',
+										'label':'ID Empresa'
+									},{
+										'field':'empresa_desc',
+										'label':'Descrição Empresa'
+									},{
+										'field':'filial_cod',
+										'label':'ID Filial'
+									},{
+										'field':'filial_desc',
+										'label':'Descrição Filial'
+									},
+									{
+										'field':'Empresa',
+										'label':'Empresa',
+										'visible':'false'
+									}
+								]
+							}" />
+							</div> <!-- div zoom empresa-->
+						</div> <!-- div row zoom empresa-->
+
+						<div class="form-group">
+							<div class="col-md-4">
+								<label for="empresa"><strong>Local de entrega</strong></label>
+								<select name="empresa" id="empresa" class="form-control">
+									<option value="0110"> So Gelo </option>
+									<option value="0201"> Mauad - GLP</option>
+									<option value="0208"> Mauad - Duque de caxias</option>
+									<option value="0210"> Mauad - Indaiatuba</option>
+									<option value="0301"> Oggi - ES </option>
+									<option value="0302"> Oggi - MG </option>
+									<option value="0401"> Flucap </option>
+									<option value="0701"> Barra Pírai </option>
+									<option value="1001"> Franqueadora </option>
+								</select>
+							</div>
+							<div class="col-md-2">
+								<i class="fluigicon fluigicon-exclamation-sign icon-sm for"></i>
+								<label for="urgente">Urgente?</label>
+								<select name="urgente" id="urgente" class="form-control">
+									<option value="S"> Sim</option>
+									<option value="N" selected> Não</option>
+								</select>
+							</div>
+							<!-- <div class="col-md-3">
+								<label for="materia">Tipo de compra?</label>
+								<select name="materia" id="materia" class="form-control">
+									<option value="MP/ME">MP/ME</option>
+									<option value="MC"> Outros</option>
+								</select>
+							</div> -->
+							<div class="col-md-2">
+								<label for="vencimento1"><strong>Data Vencimento F1</strong></label>
+								<input type="date" name="vencimento1" id="vencimento1" placeholder="" class="form-control">
+							</div>
+							<div class="col-md-2">
+								<label for="vencimento2"><strong>Data Vencimento F2</strong></label>
+								<input type="date" name="vencimento2" id="vencimento2" placeholder="" class="form-control">
+							</div>
+							<div class="col-md-2">
+								<label for="vencimento3"><strong>Data Vencimento F3</strong></label>
+								<input type="date" name="vencimento3" id="vencimento3" placeholder="" class="form-control">
+							</div>
+						</div>
+
+						<ul id="myTab12" class="nav nav-tabs nav-justified black" role="tablist" style="display: none;">
+							<li class="nav-link active">
+								<a href="#pedido" role="tab" data-toggle="tab">Pedidos</a>
+							</li>
+							<li class="nav-item">
+								<a href="#orcamentario" role="tab" data-toggle="tab" onclick="buildOrcamento(this)">
+								<i id="iconWarning" class="flaticon flaticon-info icon-sm" style="margin-top: -10px; color: red; display: none;"></i>
+								<span style="margin-left:3px">
+									Previsão Orçamentaria
+								</span>
+								</a>
+							</li>
+						</ul>
+
+						<div class="tab-content">
+
+							<div class="tab-pane active form-group" id="pedido">
+								<!--inicio tabela-->
+								<div class="col-md-12" style="padding-top:15px; padding-bottom: 5px;">
+									<table tablename="pedidos" noaddbutton=true class="table full_table_list table-hover" id="pedidos" customFnDelete="fnCustomDelete(this)">
+										<thead>
+											<tr>
+											</tr>
+										</thead>
+										<!--fim cabeçalho-->
+										<tbody>
+											<tr>
+												<td style="vertical-align: middle; text-align: center; padding-top:15px; padding-bottom: 15px;" class="EXCLUIR">
+													<div class="row">
+														<div class="col-md-2 fs-no-padding-right" style=" padding-top:5px; padding-bottom: 5px;">
+															<label for="codproduto"><strong>Código produto</strong></label>
+															<input type="text" placeholder="Cod Produto" name="codproduto" id="codproduto" readonly="readonly" class="form-control">
+														</div>
+														<div class="col-md-7 fs-no-padding-left" style=" padding-top:5px; padding-bottom: 5px;">
+															<!--final zomm produto-->
+															<label for="conprod"><strong>Produto </strong> </label>
+															<input type="zoom" id="conprod" name="conprod" style="vertical-align: middle; text-align: center; padding-top:15px; padding-bottom: 15px;"
+																data-zoom="{
+																	'displayKey':'B1_PRODUTO',
+																	'datasetId':'DS_consul_produto',
+																	'maximumSelectionLength':'1',
+																	'resultLimit':'50',
+																	'placeholder':'Escolha o Produto',
+																	'fields':[
+																		{
+																			'field':'B1_COD',
+																			'label':'Codigo Produto'
+																		},{
+																			'field':'B1_DESC',
+																			'label':'Descrição Produto'
+																		},{
+																			'field':'B1_GRUPO',
+																			'label':'Grupo',
+																			'visible':'false'
+																		},{
+																			'field':'B1_TIPO',
+																			'label':'Tipo',
+																			'visible':'false'
+																		},{
+																			'field':'B1_UM',
+																			'label':'UN',
+																			'visible':'false'
+																		},{
+																			'field':'B1_UPRC',
+																			'label':'Preco',
+																			'visible':'false'
+																		},{
+																			'field':'B1_PRODUTO',
+																			'label':'B1_PRODUTO',
+																			'visible':'false'
+																		},{
+																			'field':'B1_FILIAL',
+																			'label':'B1_FILIAL',
+																			'visible':'false'
+																		},{
+																			'field':'B1_EMP',
+																			'label':'B1_EMP',
+																			'visible':'false'
+																		},{
+																			'field':'B1_PE',
+																			'label':'B1_PE',
+																			'visible':'false'
+																		},{
+																			'field':'B1_POSIPI',
+																			'label':'B1_POSIPI',
+																			'visible':'false'
+																		},{
+																			'field':'B1_XCUSTM',
+																			'label':'B1_XCUSTM',
+																			'visible':'false'
+																		}
+																	]
+																}"
+															/>
+														</div>
+														<!--final TD zom produtos-->
+														<div class="col-md-1" style=" padding-top:5px; padding-bottom: 5px;">
+															<label for="UN"><strong>Unidade</strong></label>
+															<input type="text" name="UN" id="UN" readonly="readonly" class="form-control">
+														</div>
+														<div class="col-md-2" style=" padding-top:5px; padding-bottom: 5px;">
+															<label for="UPreco"><strong>Valor</strong></label>
+															<input type="text" title="Ultimo Preço de Compra" name="UPreco" id="UPreco" class="form-control money">
+															<input type="hidden" name="tipo" id="tipo">
+															<input type="hidden" name="vlrmax" id="vlrmax">
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-2 fs-no-padding-right" style=" padding-top:5px; padding-bottom: 5px;">
+															<label for="cc"><strong>Cód. centro de custo</strong> </label>
+															<input type="text" name="cc" id="cc" readonly="readonly" class="form-control">
+															<input type="hidden" name="cgrupo" id="cgrupo">
+														</div>
+														<div class="col-md-6 fs-no-padding-left" style=" padding-top:5px; padding-bottom: 5px;">
+															<label for="desc_cc"><strong>Centro de Custo</strong> </label>
+															<input type="zoom" id="desc_cc" class="form-control" name="desc_cc"
+																data-zoom="{
+																	'displayKey':'Descricao',
+																	'datasetId':'ds_centro_de_custo_protheus',
+																	'maximumSelectionLength':'1',
+																	'placeholder':'Centro de Custo',
+																	'fields':[
+																		{
+																			'field':'Codigo',
+																			'label':'C Custo'
+																		},
+																		{
+																			'field':'Descricao',
+																			'label':'Descrição C Custo'
+																		}
+																	]
+																}" 
+															/>
+															<!--final zomm cc-->
+														</div>
+														
+														<!--final TD zomm cc-->
+														<div class="col-md-2 fs-no-padding-right" style="padding-top:5px; padding-bottom: 5px;">
+															<label for="quantidade"><strong>Quantidade</strong></label>
+															<input type="text" name="quantidade" id="quantidade" placeholder="Quantidade" class="form-control money" min="1">
+														</div>
+														<div class="col-md-2 fs-no-padding-left" style="padding-top:5px; padding-bottom: 5px;">
+															<label for="dataorcamento"><strong>Data Orçamento</strong></label>
+															<input type="date" name="dataorcamento" id="dataorcamento" placeholder="" class="form-control">
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-2 fs-no-padding-right" style=" padding-top:5px; padding-bottom: 5px;">
+															<label for="codcontabil"><strong>Código conta contabil</strong></label>
+															<input type="text" name="codcontabil" id="codcontabil" readonly="readonly" class="form-control">
+														</div>
+														<div class="col-md-3 fs-no-padding-left" style=" padding-top:5px; padding-bottom: 5px;">
+															<label for="desc_contabil"><strong>Conta contábil</strong></label>
+															<input type="zoom" id="desc_contabil" class="form-control" name="desc_contabil"
+																data-zoom="{
+																	'displayKey':'CT1_DESC01',
+																	'datasetId':'ds_conta_contabil_protheus',
+																	'maximumSelectionLength':'1',
+																	'placeholder':'Conta contabil',
+																	'fields':[
+																		{
+																			'field':'ZM_CONTA',
+																			'label':'Codigo'
+																		},{
+																			'field':'CT1_DESC01',
+																			'label':'Descrição C Ccontabil'
+																		}
+																	]
+																}" 
+															/>
+															<!--final zomm cc-->
+														</div>
+														<div class="col-md-3" style=" padding-top:5px; padding-bottom: 5px;">
+															<label for="obs"><strong>Observação</strong></label>
+															<input type="text" name="obs" id="obs" class="form-control">
+														</div>
+														<div class="col-md-2 fs-no-padding-right" style=" padding-top:5px; padding-bottom: 5px;">
+															<label for="entrega"><strong>Data Entrega</strong></label>
+															<input type="date" name="entrega" id="entrega" placeholder="Sugestão entrega" class="form-control">
+														</div>
+														<div class="col-md-2 fs-no-padding-left" style=" padding-top:5px; padding-bottom: 5px;">
+															<label for="necessidade"><strong>Data necessidade</strong></label>
+															<input type="date" name="necessidade" id="necessidade" placeholder="Necessidade" class="form-control">
+														</div>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table> 
+									<!-- fim tabela -->
+									<input type="hidden" name="grupo" id="grupo">
+								</div>
+		
+								<div class="form-group" id="ADICIONARITEM" style="display:none;">
+									<div class="col-md-6">
+										<button id="ADICIONARITEMB" name="ADICIONARITEMB" class="btn btn-default">Adicionar itens</button>
+									</div>
+								</div>
+							</div> <!-- fim div tabela -->
+
+							<div class="tab-pane form-group" id="orcamentario">
+								<style>
+									#tableOrcamentario table {
+									  font-family: arial, sans-serif;
+									  border-collapse: collapse;
+									  width: 100%;
+									}
+									
+									#tableOrcamentario table td, th {
+									  border: 1px solid #dddddd;
+									  text-align: left;
+									  padding: 8px;
+									}
+									
+									#tableOrcamentario table tr:nth-child(even) {
+									  background-color: #dddddd;
+									}
+									</style>
+								
+								<div id="tableOrcamentario">
+
+								</div>
+							</div>
+						</div>
+						
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs" role="tablist" id="ulcotacao">
+							<li class="active text-center" style="width:25%"><a href="#cotacao1" role="tab" data-toggle="tab">COTAÇÃO 1</a></li>
+							<li class="text-center" style="width:25%"><a href="#cotacao2" role="tab" data-toggle="tab">COTAÇÃO 2</a></li>
+							<li class="text-center" style="width:25%"><a href="#cotacao3" role="tab" data-toggle="tab">COTAÇÃO 3</a></li>
+							<li class="text-center" style="width:25%"><a href="#cotacao4" role="tab" data-toggle="tab">COTAÇÃO VENCEDORA</a></li>
+						</ul>
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div class="tab-pane active" id="cotacao1">
+								<div class="row"  id='df1'>
+									<div class="form-input col-md-3">
+										<label>Fornecedor 1 </label>
+										<input type="hidden" name="CCOD1" id="CCOD1">
+										<input type="hidden" name="CLOJA1" id="CLOJA1">
+										<input type="hidden" name="CODCOND1" id="CODCOND1">
+										<input type="zoom" class="form-control" name="CNOME1" id="CNOME1"
+											data-zoom="{
+												'displayKey':'NomeCGC',
+												'datasetId':'DsFornecedor',
+												'maximumSelectionLength':'1',
+												'placeholder':'Fornecedor',
+												'fields':[
+													{
+														'field':'CNPJ',
+														'label':'CGC',
+														'visible':'false'
+													},
+													{
+														'field':'Codigo',
+														'label':'Codigo',
+														'visible':'false'
+													},
+													{
+														'field':'Nome',
+														'label':'Nome'
+													},
+													{
+														'field':'NomeCGC',
+														'label':'Nome',
+														'visible':'false'
+													},
+													{
+														'field':'CLOJA',
+														'label':'cloja',
+														'visible':'false'
+													}
+												]
+											}" 
+										/>
+									</div>
+									<div class="form-input col-md-2 fs-no-padding-left fs-no-padding-right">
+										<div class="form-input">
+											<label>Condição </label>
+											<input type="zoom" name="COND1" id="COND1" class="form-control"
+												data-zoom="{
+													'displayKey':'DescCod',
+													'datasetId':'DsCondPag_com_C',
+													'maximumSelectionLength':'1',
+													'placeholder':'CondPg',
+													'fields':[
+														{
+															'field':'Id',
+															'label':'ID',
+															'visible':'false'
+														},
+														{
+															'field':'CondPag',
+															'label':'CondPag',
+															'visible':'false'
+														},
+														{
+															'field':'Descricao',
+															'label':'Condição'
+														},
+														{
+															'field':'DescCod',
+															'label':'Condição'
+														}
+													]
+												}" 
+											/>
+										</div>
+									</div>	
+									<div class="form-input col-md-1 fs-no-padding-right">
+										<div class="form-input">
+											<label>Prazo</label>
+											<input type="text" name="prazo1" id="prazo1" class="form-control">
+										</div>
+									</div>
+									<div class="form-input col-md-2" id="divt1">
+										<label>Valor Total</label>
+										<input type="text" id="totalcotacao1" name="totalcotacao1" class="form-control money" readonly>
+									</div>
+									<div class="form-input col-md-1 fs-no-padding-left fs-no-padding-right">
+										<div class="form-input">
+											<label>Frete</label>
+											<input type="text" name="frete1" id="frete1" class="form-control money">
+										</div>
+									</div>
+									<div class="form-input col-md-2">
+										<div class="form-input">
+											<label>Total com frete</label>
+											<input type="text" name="valortotalcomfrete1" id="valortotalcomfrete1" class="form-control money" readonly>
+										</div>
+									</div>
+									<div class="form-input col-md-1 fs-no-padding-left fs-no-padding-right">
+										<label for="pg_ant" >PG Antecipa?</label>
+										<select name="pg_ant1" id="pg_ant1" class="form-control">
+											<option value="S">Sim</option>
+											<option value="N" selected>Não</option>
+										</select>
+									</div>
+									<!--fim pg_ant-->
+								</div>
+								<div class="row">
+									<div class="col-md-4">
+										<label for="forma_pg1">Forma de pagamento </label>
+										<input type="zoom" name="forma_pg1" id="forma_pg1" class="form-control"
+											data-zoom="{
+												'displayKey':'Formapg',
+												'datasetId':'ds_forma_pagamento',
+												'maximumSelectionLength':'1',
+												'placeholder':'Forma de pagamento',
+												'fields':[
+													{
+														'field':'Formapg',
+														'label':'Forma Pagamento'
+													}
+												]
+											}"
+										/>
+									</div>
+									<div class="col-md-2 cartao1" style="display:none;">
+										<label for="numCartao1">Número do cartão</label>
+										<input type="text" name="numCartao1" id="numCartao1" class="form-control">
+									</div>
+									<div class="col-md-2 cartao1" style="display:none;">
+										<label for="bandeira1">Bandeira do cartão</label>
+										<input type="text" name="bandeira1" id="bandeira1" class="form-control">
+									</div>
+									
+									<div class="col-md-2 cartao1" style="display:none;">
+										
+										<label for="pg_parcelas1">Num. Parcelas</label>
+										<select name="pg_parcelas1" id="pg_parcelas1" class="form-control">
+											<option value="1">1x</option>
+											<option value="2">2x</option>
+											<option value="3">3x</option>
+											<option value="4">4x</option>
+											<option	value="5">5x</option>
+											<option value="6">6x</option>
+											<option	value="7">7x</option>
+											<option	value="8">8x</option>
+											<option value="9">9x</option>
+											<option value="10">10x</option>
+											<option value="11">11x</option>
+											<option value="12">12x</option>
+											<option value="13">13x</option>
+											<option value="14">14x</option>
+											<option value="15">15x</option>
+											<option value="16">16x</option>
+											<option value="17">17x</option>
+											<option value="18">18x</option>
+										
+										</select>
+										
+										
+									
+									</div>
+									<div class="col-md-2 pix1" style="display:none;">
+										<label for="pg_pix_tipo1">Tipo de chave</label>
+										<select name="pg_pix_tipo1" id="pg_pix_tipo1" class="form-control">
+											<option value="email">E-MAIL</option>
+											<option value="CNPJ">CNPJ</option>
+											<option value="tel">TELEFONE</option>
+											<option value="outra">OUTRA CHAVE</option>
+										</select>
+									</div>
+									<div class="col-md-2 pix1" style="display:none;">
+										<label for="pg_pix_chave1">Chave pix</label>
+										<input type="text" name="pg_pix_chave1" id="pg_pix_chave1" class="form-control">
+									</div>
+									<div class="col-md-2 banco1" style="display:none;">
+										<label for="banco1"><strong>Banco</strong></label>
+										<input type="text" id="banco1" name="banco1" maxlength="3" class="form-control">
+									</div>
+									<div class="col-md-2 banco1" style="display:none;">
+										<label for="agencia1"><strong>Agência</strong></label>
+										<input type="text" id="agencia1" name="agencia1" class="form-control">
+									</div>
+									<div class="col-md-2 banco1" style="display:none;">
+										<label for="conta1"> <strong>Conta Corrente</strong></label>
+										<input type="text" id="conta1" name="conta1" class="form-control">
+									</div>
+									<div class="col-md-2 banco1" style="display:none;">
+										<label for="conta1"> <strong>Conta Poupança</strong> </label>
+										<input type="text" id="contap1" name="contap1" class="form-control">
+									</div>
+									<div class="col-md-2 moeda1" >
+										<label for="moeda1"> <strong>Moeda</strong> </label>
+										<select name="moeda1" id="moeda1" class="form-control">
+											<option value="1">REAL</option>
+											<option value="2">DOLAR</option>
+										</select>
+										
+									</div>
+								</div>		
+
+								<div class="row" style="background-color: #d9edf7">
+									<div class="form-field" data-type="tabledetail" data-show-properties="" data-field-name="cotacao1">
+										<div class="form-input">
+											<h2>Itens da cotação</h2>
+											<table tablename="cotacao1" style="width:100%" id="tcotacao1" noaddbutton="true" nodeletebutton="true">
+												<thead>
+													<tr>
+														<th class="tableColumn" style="width:30%">Produto<span class="is-required" style="display: inline;font-size:22px;"><b>*</b></span></th>
+														<th class="tableColumn" style="width:10%">Quantidade<span class="is-required" style="display: inline;font-size:22px;"><b>*</b></span></th>
+														<th class="tableColumn" style="width:7%">Unidade<span class="is-required" style="display: inline;font-size:22px;"><b>*</b></span></th>
+														<th class="tableColumn" style="width:17%">Unitario<span class="is-required" style="display: inline;font-size:22px;"><b>*</b></span></th>
+														<th class="tableColumn" style="width:9%">IPI%<span class="is-required" style="display: inline;font-size:22px;"><b>*</b></span></th>
+														<th class="tableColumn" style="width:17%">Valor Total<span class="is-required" style="display: inline;font-size:22px;"><b>*</b></span></th>
+														<th class="tableColumn et" style="width:10%" id="et1">Escolhido</th>
+													</tr>
+												</thead>
+												<tbody id="tbodycotacao">
+													<tr class="tableBodyRow" id="trcotacao">
+														<td class="fs-v-align-middle" style="width:20%">
+															<div class="form-input">
+																<input type="text" name="descricao1" id="descricao1" class="form-control idescricao" readonly>
+																<input type="hidden" name="itemsc1" id="itemsc1" class="form-control idescricao" readonly>
+																<input type="hidden" name="coc1" id="coc1"  class="form-control idescricao" readonly>
+																<input type="hidden" name="cec1" id="cec1"  class="form-control idescricao" readonly>
+															</div>
+														</td>
+														<td class="fs-v-align-middle" >
+															<div class="form-input">
+																<input type="text" name="quantidade1" id="quantidade1" class="form-control" readonly>
+															</div>
+														</td>
+														<td class="fs-v-align-middle" >
+															<div class="form-input">
+																<input type="text" name="unidade1" id="unidade1" class="form-control" value="UND" readonly>
+															</div>
+														</td>
+														<td class="fs-v-align-middle" >
+															<div class="form-input">
+																<input type="text" name="preco1" id="preco1" class="form-control money" onblur="calcula(this,'1');">
+															</div>
+														</td>
+														<td class="fs-v-align-middle" >
+															<div class="form-input">
+																<input type="number" step="0.01" value="0" min="0" name="ipi1" id="ipi1" class="form-control"  tabindex="2" onblur="$('#preco1___' + $(this)[0].id.replace('ipi1___','') ).blur();">
+															</div>
+														</td>
+														<td class="fs-v-align-middle" >
+															<div class="form-input">
+																<input type="text" name="total1" id="total1" class="form-control money" value="0" readonly>
+															</div>
+														</td>
+														<td class="fs-v-align-middle" >
+															<div class="form-input">
+																<input type="checkbox" name="escolhido1" id="escolhido1" class="form-control" onclick="escolhido(this,'1');">
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" id="cotacao2">
+								<div class="row" id='df2'>
+									<div class="form-input col-md-3">
+										<label>Fornecedor 2 </label>
+										<input type="hidden" name="CCOD2" id="CCOD2">
+										<input type="hidden" name="CLOJA2" id="CLOJA2">
+										<input type="hidden" name="CODCOND2" id="CODCOND2">
+										<input type="zoom" class="form-control" name="CNOME2" id="CNOME2"
+											data-zoom="{
+												'displayKey':'NomeCGC',
+												'datasetId':'DsFornecedor',
+												'maximumSelectionLength':'1',
+												'placeholder':'Fornecedor',
+												'fields':[
+													{
+														'field':'CNPJ',
+														'label':'CGC',
+														'visible':'false'
+													},
+													{
+														'field':'Codigo',
+														'label':'Codigo',
+														'visible':'false'
+													},
+													{
+														'field':'Nome',
+														'label':'Nome'
+													},
+													{
+														'field':'NomeCGC',
+														'label':'Nome',
+														'visible':'false'
+													},
+													{
+														'field':'CLOJA',
+														'label':'cloja',
+														'visible':'false'
+													}
+												]
+											}" 
+										/>
+									</div>
+									<div class="form-input col-md-2 fs-no-padding-left fs-no-padding-right">
+										<div class="form-input">
+											<label>Condição </label>
+											<input type="zoom" name="COND2" id="COND2" class="form-control"
+												data-zoom="{
+													'displayKey':'DescCod',
+													'datasetId':'DsCondPag_com_C',
+													'maximumSelectionLength':'1',
+													'placeholder':'CondPg',
+													'fields':[
+														{
+															'field':'Id',
+															'label':'ID',
+															'visible':'false'
+														},
+														{
+															'field':'CondPag',
+															'label':'CondPag',
+															'visible':'false'
+														},
+														{
+															'field':'Descricao',
+															'label':'Condição'
+														},
+														{
+															'field':'DescCod',
+															'label':'Condição'
+														}
+													]
+												}" 
+											/>
+										</div>
+									</div>	
+									<div class="form-input col-md-1 fs-no-padding-right">
+										<div class="form-input">
+											<label>Prazo</label>
+											<input type="text" name="prazo2" id="prazo2" class="form-control">
+										</div>
+									</div>
+									<div class="form-input col-md-2" id="divt2">
+										<label>Valor Total</label>
+										<input type="text" id="totalcotacao2" name="totalcotacao2" class="form-control money" readonly>
+									</div>
+									<div class="form-input col-md-1 fs-no-padding-left fs-no-padding-right">
+										<div class="form-input">
+											<label>Frete</label>
+											<input type="text" name="frete2" id="frete2" class="form-control money">
+										</div>
+									</div>
+									<div class="form-input col-md-2">
+										<div class="form-input">
+											<label>Total com frete</label>
+											<input type="text" name="valortotalcomfrete2" id="valortotalcomfrete2" class="form-control money" readonly>
+										</div>
+									</div>
+									<div class="form-input col-md-1 fs-no-padding-left fs-no-padding-right">
+										<label for="pg_ant" >PG Antecipa?</label>
+										<select name="pg_ant2" id="pg_ant2" class="form-control">
+											<option value="S">Sim</option>
+											<option value="N" selected>Não</option>
+										</select>
+									</div>
+									<!--fim pg_ant-->
+								</div>
+								<div class="row">
+									<div class="col-md-4">
+										<label for="forma_pg2">Forma de pagamento </label>
+										<input type="zoom" name="forma_pg2" id="forma_pg2" class="form-control"
+											data-zoom="{
+												'displayKey':'Formapg',
+												'datasetId':'ds_forma_pagamento',
+												'maximumSelectionLength':'1',
+												'placeholder':'Forma de pagamento',
+												'fields':[
+													{
+														'field':'Formapg',
+														'label':'Forma Pagamento'
+													}
+												]
+											}"
+										/>
+									</div>
+									<div class="col-md-2 cartao2" style="display:none;">
+										<label for="numCartao2">Número do cartão</label>
+										<input type="text" name="numCartao2" id="numCartao2" class="form-control">
+									</div>
+									<div class="col-md-2 cartao2" style="display:none;">
+										<label for="bandeira2">Bandeira do cartão</label>
+										<input type="text" name="bandeira2" id="bandeira2" class="form-control">
+									</div>
+									
+									<div class="col-md-2 cartao2" style="display:none;">
+										
+										<label for="pg_parcelas2">Num. parcelas</label>
+										<select name="pg_parcelas2" id="pg_parcelas2" class="form-control">
+											<option value="1">1x</option>
+											<option value="2">2x</option>
+											<option value="3">3x</option>
+											<option value="4">4x</option>
+											<option	value="5">5x</option>
+											<option value="6">6x</option>
+											<option	value="7">7x</option>
+											<option	value="8">8x</option>
+											<option value="9">9x</option>
+											<option value="10">10x</option>
+											<option value="11">11x</option>
+											<option value="12">12x</option>
+											<option value="13">13x</option>
+											<option value="14">14x</option>
+											<option value="15">15x</option>
+											<option value="16">16x</option>
+											<option value="17">17x</option>
+											<option value="18">18x</option>
+										
+										</select>
+										
+										
+									
+									</div>
+									<div class="col-md-2 pix2" style="display:none;">
+										<label for="pg_pix_tipo2">Tipo de chave</label>
+										<select name="pg_pix_tipo2" id="pg_pix_tipo2" class="form-control">
+											<option value="email">E-MAIL</option>
+											<option value="CNPJ">CNPJ</option>
+											<option value="tel">TELEFONE</option>
+											<option value="outra">OUTRA CHAVE</option>
+										</select>
+									</div>
+									<div class="col-md-2 pix2" style="display:none;">
+										<label for="pg_pix_chave2">Chave pix</label>
+										<input type="text" name="pg_pix_chave2" id="pg_pix_chave2" class="form-control">
+									</div>
+									<div class="col-md-2 banco2" style="display:none;">
+										<label for="banco2"><strong>Banco</strong></label>
+										<input type="text" id="banco2" name="banco2" maxlength="3" class="form-control">
+									</div>
+									<div class="col-md-2 banco2" style="display:none;">
+										<label for="agencia2"><strong>Agência</strong></label>
+										<input type="text" id="agencia2" name="agencia2" class="form-control">
+									</div>
+									<div class="col-md-2 banco2" style="display:none;">
+										<label for="conta2"><strong>Conta Corrente</strong></label>
+										<input type="text" id="conta2" name="conta2" class="form-control">
+									</div>
+									<div class="col-md-2 banco2" style="display:none;">
+										<label for="conta2"> <strong>Conta Poupança</strong> </label>
+										<input type="text" id="contap2" name="contap2" class="form-control">
+									</div>
+										<div class="col-md-2 moeda2" >
+											<label for="moeda2"> <strong>Moeda</strong> </label>
+											<select name="moeda2" id="moeda2" class="form-control">
+												<option value="1">REAL</option>
+												<option value="2">DOLAR</option>
+											</select>
+										
+									</div>
+								</div>
+								<div class="row" id="cotacao2" style="background-color: #d9edf7">
+									<div class="form-field" data-type="tabledetail" data-show-properties="" data-field-name="cotacao2">
+										<div class="form-input">
+											<h2>Itens da cotação</h2>
+											<table tablename="cotacao2" style="width:100%" id="tcotacao2" noaddbutton="true" nodeletebutton="true">
+												<thead>
+													<tr>
+														<th class="tableColumn" style="width:30%">Produto<span class="is-required" style="display: inline;font-size:22px;"><b>*</b></span></th>
+														<th class="tableColumn" style="width:10%">Quantidade<span class="is-required" style="display: inline;font-size:22px;"><b>*</b></span></th>
+														<th class="tableColumn" style="width:7%">Unidade<span class="is-required" style="display: inline;font-size:22px;"><b>*</b></span></th>
+														<th class="tableColumn" style="width:17%">Unitario<span class="is-required" style="display: inline;font-size:22px;"><b>*</b></span></th>
+														<th class="tableColumn" style="width:9%">IPI%<span class="is-required" style="display: inline;font-size:22px;"><b>*</b></span></th>
+														<th class="tableColumn" style="width:17%">Valor Total<span class="is-required" style="display: inline;font-size:22px;"><b>*</b></span></th>
+														<th class="tableColumn et" style="width:10%" id="et2">Escolhido</th>
+													</tr>
+												</thead>
+												<tbody id="tbodycotacao">
+													<tr class="tableBodyRow" id="trcotacao">
+														<td class="fs-v-align-middle" style="width:20%">
+															<div class="form-input">
+																<input type="text" name="descricao2" id="descricao2" class="form-control idescricao" readonly>
+																<input type="hidden" name="itemsc2" id="itemsc2" class="form-control idescricao" readonly>
+																<input type="hidden" name="coc2" id="coc2"  class="form-control idescricao" readonly>
+																<input type="hidden" name="cec2" id="cec2"  class="form-control idescricao" readonly>
+															</div>
+														</td>
+														<td class="fs-v-align-middle" >
+															<div class="form-input">
+																<input type="text" name="quantidade2" id="quantidade2" class="form-control" readonly>
+															</div>
+														</td>
+														<td class="fs-v-align-middle" >
+															<div class="form-input">
+																<input type="text" name="unidade2" id="unidade2" class="form-control" value="UND" readonly>
+															</div>
+														</td>
+														<td class="fs-v-align-middle" >
+															<div class="form-input">
+																<input type="text" name="preco2" id="preco2" class="form-control money" onblur="calcula(this,'2');">
+															</div>
+														</td>
+														<td class="fs-v-align-middle" >
+															<div class="form-input">
+																<input type="number" step="0.01" name="ipi2" min="0" value="0" id="ipi2" class="form-control" onblur="$('#preco2___' + $(this)[0].id.replace('ipi2___','') ).blur();">
+															</div>
+														</td>
+														<td class="fs-v-align-middle" >
+															<div class="form-input">
+																<input type="text" name="total2" id="total2" class="form-control money" value="0" readonly>
+															</div>
+														</td>
+														<td class="fs-v-align-middle" >
+															<div class="form-input">
+																<input type="checkbox" name="escolhido2" id="escolhido2" class="form-control" onclick="escolhido(this,'2');">
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" id="cotacao3">
+								<div class="row" id='df3'>
+									<div class="form-input col-md-3">
+										<label>Fornecedor 3 </label>
+										<input type="hidden" name="CCOD3" id="CCOD3">
+										<input type="hidden" name="CLOJA3" id="CLOJA3">
+										<input type="hidden" name="CODCOND3" id="CODCOND3">
+										<input type="zoom" class="form-control" name="CNOME3" id="CNOME3"
+											data-zoom="{
+												'displayKey':'NomeCGC',
+												'datasetId':'DsFornecedor',
+												'maximumSelectionLength':'1',
+												'placeholder':'Fornecedor',
+												'fields':[
+													{
+														'field':'CNPJ',
+														'label':'CGC',
+														'visible':'false'
+													},
+													{
+														'field':'CLOJA',
+														'label':'CLOJA',
+														'visible':'false'
+													},
+													{
+														'field':'Codigo',
+														'label':'Codigo',
+														'visible':'false'
+													},
+													{
+														'field':'Nome',
+														'label':'Nome'
+													},
+													{
+														'field':'NomeCGC',
+														'label':'Nome',
+														'visible':'false'
+													}
+												]
+											}" 
+										/>
+									</div>
+									<div class="form-input col-md-2 fs-no-padding-left fs-no-padding-right">
+										<div class="form-input">
+											<label>Condição </label>
+											<input type="zoom" class="form-control" name="COND3" id="COND3"
+												data-zoom="{
+													'displayKey':'DescCod',
+													'datasetId':'DsCondPag_com_C',
+													'maximumSelectionLength':'1',
+													'placeholder':'CondPg',
+													'fields':[
+														{
+															'field':'Id',
+															'label':'ID',
+															'visible':'false'
+														},
+														{
+															'field':'CondPag',
+															'label':'CondPag',
+															'visible':'false'
+														},
+														{
+															'field':'Descricao',
+															'label':'Condição'
+														},
+														{
+															'field':'DescCod',
+															'label':'Condição',
+															'visible':'false'
+														}
+													]
+												}" 
+											/>
+										</div>
+									</div>
+									<div class="form-input col-md-1 fs-no-padding-right">
+										<div class="form-input">
+											<label>Prazo</label>
+											<input type="text" name="prazo3" id="prazo3" class="form-control">
+										</div>
+									</div>
+									<div class="form-input col-md-2" id="divt3">
+										<label>Valor Total</label>
+										<input type="text" id="totalcotacao3" name="totalcotacao3" class="form-control money" readonly>
+									</div>
+									<div class="form-input col-md-1 fs-no-padding-left fs-no-padding-right">
+										<div class="form-input">
+											<label>Frete</label>
+											<input type="text" name="frete3" id="frete3" class="form-control money" >
+										</div>
+									</div>
+									<div class="form-input col-md-2">
+										<div class="form-input">
+											<label>Total com frete</label>
+											<input type="text" name="valortotalcomfrete3" id="valortotalcomfrete3" class="form-control money" readonly>
+										</div>
+									</div>
+									<div class="form-input col-md-1 fs-no-padding-left fs-no-padding-right">
+										<label for="pg_ant" >PG Antecipa?</label>
+										<select name="pg_ant3" id="pg_ant3" class="form-control">
+											<option value="S">Sim</option>
+											<option value="N" selected>Não</option>
+										</select>
+									</div>
+									<!--fim pg_ant-->
+								</div>
+								<div class="row">
+									<div class="col-md-4">
+										<label for="forma_pg3">Forma de pagamento </label>
+										<input type="zoom" name="forma_pg3" id="forma_pg3" class="form-control"
+											data-zoom="{
+												'displayKey':'Formapg',
+												'datasetId':'ds_forma_pagamento',
+												'maximumSelectionLength':'1',
+												'placeholder':'Forma de pagamento',
+												'fields':[
+													{
+														'field':'Formapg',
+														'label':'Forma Pagamento'
+													}
+												]
+											}"
+										/>
+									</div>
+									<div class="col-md-2 cartao3" style="display:none;">
+										<label for="numCartao3">Número do cartão</label>
+										<input type="text" name="numCartao3" id="numCartao3" class="form-control">
+									</div>
+									<div class="col-md-2 cartao3" style="display:none;">
+										<label for="bandeira3">Bandeira do cartão</label>
+										<input type="text" name="bandeira3" id="bandeira3" class="form-control">
+									</div>
+									
+									<div class="col-md-2 cartao3" style="display:none;">
+										
+										<label for="pg_parcelas3">Num. parcelas</label>
+										<select name="pg_parcelas3" id="pg_parcelas3" class="form-control">
+											<option value="1">1x</option>
+											<option value="2">2x</option>
+											<option value="3">3x</option>
+											<option value="4">4x</option>
+											<option	value="5">5x</option>
+											<option value="6">6x</option>
+											<option	value="7">7x</option>
+											<option	value="8">8x</option>
+											<option value="9">9x</option>
+											<option value="10">10x</option>
+											<option value="11">11x</option>
+											<option value="12">12x</option>
+											<option value="13">13x</option>
+											<option value="14">14x</option>
+											<option value="15">15x</option>
+											<option value="16">16x</option>
+											<option value="17">17x</option>
+											<option value="18">18x</option>
+										
+										</select>
+										
+										
+									
+									</div>
+									<div class="col-md-2 pix3" style="display:none;">
+										<label for="pg_pix_tipo3">Tipo de chave</label>
+										<select name="pg_pix_tipo3" id="pg_pix_tipo3" class="form-control">
+											<option value="email">E-MAIL</option>
+											<option value="CNPJ">CNPJ</option>
+											<option value="tel">TELEFONE</option>
+											<option value="outra">OUTRA CHAVE</option>
+										</select>
+									</div>
+									<div class="col-md-2 pix3" style="display:none;">
+										<label for="pg_pix_chave3">Chave pix</label>
+										<input type="text" name="pg_pix_chave3" id="pg_pix_chave3" class="form-control">
+									</div>
+									<div class="col-md-2 banco3" style="display:none;">
+										<label for="banco3"><strong>Banco</strong></label>
+										<input type="text" id="banco3" name="banco3" maxlength="3" class="form-control">
+									</div>
+									<div class="col-md-2 banco3" style="display:none;">
+										<label for="agencia3"><strong>Agência</strong></label>
+										<input type="text" id="agencia3" name="agencia3" class="form-control">
+									</div>
+									<div class="col-md-2 banco3" style="display:none;">
+										<label for="conta3"><strong>Conta Corrente</strong></label>
+										<input type="text" id="conta3" name="conta3" class="form-control">
+									</div>
+									<div class="col-md-2 banco3" style="display:none;">
+										<label for="conta3"> <strong>Conta Poupança</strong> </label>
+										<input type="text" id="contap3" name="contap3" class="form-control">
+									</div>
+									<div class="col-md-2 moeda3" >
+											<label for="moeda3"> <strong>Moeda</strong> </label>
+											<select name="moeda3" id="moeda3" class="form-control">
+												<option value="1">REAL</option>
+												<option value="2">DOLAR</option>
+											</select>
+										
+									</div>
+								</div>								
+								<div class="row" id="cotacao3" style="background-color: #d9edf7">
+									<div class="form-field" data-type="tabledetail" data-show-properties="" data-field-name="cotacao3">
+										<div class="form-input">
+											<h2>Itens da cotação</h2>
+											<table tablename="cotacao3" style="width:100%" id="tcotacao3" noaddbutton="true" nodeletebutton="true">
+												<thead>
+													<tr>
+														<th class="tableColumn" style="width:30%">Produto<span class="is-required" style="display: inline;font-size:22px;"><b>*</b></span></th>
+														<th class="tableColumn" style="width:10%">Quantidade<span class="is-required" style="display: inline;font-size:22px;"><b>*</b></span></th>
+														<th class="tableColumn" style="width:7%">Unidade<span class="is-required" style="display: inline;font-size:22px;"><b>*</b></span></th>
+														<th class="tableColumn" style="width:17%">Unitario<span class="is-required" style="display: inline;font-size:22px;"><b>*</b></span></th>
+														<th class="tableColumn" style="width:9%">IPI%<span class="is-required" style="display: inline;font-size:22px;"><b>*</b></span></th>
+														<th class="tableColumn" style="width:17%">Valor Total<span class="is-required" style="display: inline;font-size:22px;"><b>*</b></span></th>
+														<th class="tableColumn et" style="width:10%" id="et3">Escolhido</th>
+													</tr>
+												</thead>
+												<tbody id="tbodycotacao">
+													<tr class="tableBodyRow" id="trcotacao">
+														<td class="fs-v-align-middle" style="width:20%">
+															<div class="form-input">
+																<input type="text" name="descricao3" id="descricao3" class="form-control idescricao" readonly>
+																<input type="hidden" name="itemsc3" id="itemsc3" class="form-control idescricao" readonly>
+																<input type="hidden" name="coc3" id="coc3"  class="form-control idescricao" readonly>
+																<input type="hidden" name="cec3" id="cec3"  class="form-control idescricao" readonly>
+															</div>
+														</td>
+														<td class="fs-v-align-middle" >
+															<div class="form-input">
+																<input type="text" name="quantidade3" id="quantidade3" class="form-control" readonly>
+															</div>
+														</td>
+														<td class="fs-v-align-middle" >
+															<div class="form-input">
+																<input type="text" name="unidade3" id="unidade3" class="form-control" value="UND" readonly>
+															</div>
+														</td>
+														<td class="fs-v-align-middle" >
+															<div class="form-input">
+																<input type="text" name="preco3" id="preco3" class="form-control money" onblur="calcula(this,'3');">
+															</div>
+														</td>
+														<td class="fs-v-align-middle" >
+															<div class="form-input">
+																<input type="number" step="0.01" name="ipi3" min="0" value="0" id="ipi3" class="form-control" onblur="$('#preco3___' + $(this)[0].id.replace('ipi3___','') ).blur();">
+															</div>
+														</td>
+														<td class="fs-v-align-middle" >
+															<div class="form-input">
+																<input type="text" name="total3" id="total3" class="form-control money" value="0" readonly>
+															</div>
+														</td>
+														<td class="fs-v-align-middle" >
+															<div class="form-input">
+																<input type="checkbox" name="escolhido3" id="escolhido3" class="form-control" onclick="escolhido(this,'3');">
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" id="cotacao4">
+								<div class="row"  id="f4" style="background-color: #d9edf7">
+									<div class="form-field" data-type="tabledetail" data-show-properties="" data-field-name="cotacao4">
+										<div class="form-input">
+											<h2>Itens da cotação</h2>
+											<table tablename="cotacao4" style="width:100%" id="tcotacao4" noaddbutton="true" nodeletebutton="true">
+												<thead>
+													<tr>
+													</tr>
+												</thead>
+												<tbody id="tbodycotacao">
+													<tr class="tableBodyRow" id="trcotacao">
+														<td>
+															<div class="row">
+																<div class="col-md-3">
+																	<label for="descricao4">Produto</label>
+																	<input type="text" name="descricao4" id="descricao4" class="form-control idescricao" readonly>
+																</div>
+																<div class="col-md-4" >
+																	<label for="fornecedor4"><strong>Fornecedor</strong></label>
+																	<input type="text" name="fornecedor4" id="fornecedor4" class="form-control" readonly>
+																	<input type="hidden" name="CCOD4" id="CCOD4" class="form-control">
+																	<input type="hidden" name="itemsc4" id="itemsc4" class="form-control idescricao" readonly>
+																	
+																</div>
+																<div class="col-md-2" >
+																	<label for="preco4"><strong>Valor unitário</strong></label>
+																	<input type="text" name="preco4" id="preco4" class="form-control money" readonly>
+																</div>
+																<div class="col-md-2" >
+																	<label for="total4"><strong>Valor total</strong></label>
+																	<input type="text" name="total4" id="total4" class="form-control money" readonly>
+																</div>
+																<div class="col-md-1" >
+																	<label for="ipi4"><strong>IPI%</strong></label>
+																	<input type="text" name="ipi4" value="0" id="ipi4" class="form-control" readonly>
+																</div>
+																<div class="col-md-3" >
+																	<label for="aprovador4"><strong>Aprovador</strong></label>
+																	<input type="text" name="aprovador4" id="aprovador4" class="form-control" readonly value="Não validado">
+																</div>
+																<div class="col-md-3" >
+																	<label for="cec4"><strong>Centro de custo</strong></label>
+																	<input type="text" name="cec4" id="cec4" class="form-control" readonly value="Não validado">
+																</div>
+																<div class="col-md-3" >
+																	<label for ="coc4"><strong>Conta contábil</strong></label>
+																	<input type="text" name="coc4" id="coc4" class="form-control" readonly value="Não validado">
+																</div>
+																<div class="col-md-3" >
+																	<label for="status4"><strong>Status</strong></label>
+																	<input type="text" name="status4" id="status4" class="form-control" readonly value="Não validado">
+																</div>
+																<div class="col-md-12">
+																	<br><hr style="height:2px;border-width:0;color:gray;background-color:gray"><br>
+																</div>
+															</div>
+														</td>
+													</tr> 
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<input type="hidden" name="f1" id="f1" value="0">
+								<input type="hidden" name="f2" id="f2" value="0">
+								<input type="hidden" name="f3" id="f3" value="0">
+							</div>
+						</div>
+
+						<!--final radio cotacao-->
+						<div id="protheus">
+							<div class="row">
+								<div class="col-md-12">
+									<label for="solicitacao_protheus" id="solicitacao_protheus">Número da Solicitação de compras Protheus</label>
+									<input type="text" name="solicitacao_protheus" readonly="readonly" id="solicitacao_protheus" class="form-control" />
+								</div>
+							</div>
+							<!--final retorno API-->
+							<div class="row">
+								<div class="col-md-4" id="pedido_protheus">
+									<label for="ppf1" id="pedido_protheus">Nº Pedido de compras protheus fornecedor 1</label>
+									<input type="text" name="ppf1" id="ppf1" class="form-control" maxlength="6" readonly/>
+								</div>
+								<div class="col-md-4" id="pedido_protheus">
+									<label for="ppf2" id="pedido_protheus">Nº Pedido de compras protheus fornecedor 2</label>
+									<input type="text" name="ppf2" id="ppf2" class="form-control" maxlength="6" readonly/>
+								</div>
+								<div class="col-md-4" id="pedido_protheus">
+									<label for="ppf3" id="pedido_protheus">Nº Pedido de compras protheus fornecedor 3</label>
+									<input type="text" name="ppf3" id="ppf3" class="form-control" maxlength="6" readonly/>
+								</div>
+							</div>
+							<!--final pedido_protheus-->
+							
+							<div class="row">
+								<div class="col-md-4" >
+									<label for="ppf1" id="fluigPedido1">Nº fluig Recebimento de Materiais 1 </label>
+									<input type="text" name="fluigPedido1" id="fluigPedido1" class="form-control" maxlength="6" readonly/>
+								</div>
+								<div class="col-md-4" >
+									<label for="ppf2" id="fluigPedido2">Nº fluig Recebimento de Materiais 2</label>
+									<input type="text" name="fluigPedido2" id="fluigPedido2" class="form-control" maxlength="6" readonly/>
+								</div>
+								<div class="col-md-4" >
+									<label for="ppf3" id="fluigPedido3">Nº fluig Recebimento de Materiais 3</label>
+									<input type="text" name="fluigPedido3" id="fluigPedido3" class="form-control" maxlength="6" readonly/>
+								</div>
+							</div>
+							<!--final pedido_fluxo_recebimento-->
+							<div class="row">
+								<div class="col-md-12" id="nfprotheus">
+									<label for="nfprotheus" id="nfprotheus">Chave da danfe seguida de ; no final(Caso seja NFSE informar numero da nota)</label>
+									<input type="text" name="nfprotheus" id="nfprotheus" class="form-control" />
+								</div>
+							</div>
+							<!--final nfprotheus-->
+						</div>
+						<div class="panel panel-primary" id="painel-revisar">
+							<div class="panel-heading">
+								Revisar solicitação?
+							</div> <!-- fim panel -->
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-md-12 flex">
+										<input type="radio" name="revisardados" id="rsim" class="rinput" value="SIM">
+										<label for="rsim" class="rlabel">
+											<i class="fa fa-check fa-2x" aria-hidden="true"></i>
+											<span>Sim</span>
+										</label>
+										<input type="radio" name="revisardados" id="rnao" class="rinput" value="NAO">
+										<label for="rnao" class="rlabel">
+											<i class="fa fa-times-circle fa-2x" aria-hidden="true"></i>
+											<span>Não</span>
+										</label>
+									</div>
+									<div class="col-md-12">
+									<label for="obsrevisar">Observação</label>
+										<textarea name="motivorevisa" id="motivorevisa" class="form-control" rows="4" placeholder="Descreva o que dever ser revisado aqui"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="panel panel-primary" id="painel-aprovar">
+							<div class="panel-heading">
+								Aprovar solicitação?
+							</div> <!-- fim panel -->
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-md-12 flex">
+										<input type="radio" name="aprovarsolicitacao" id="asim" class="rinput" value="SIM" checked>
+										<label for="asim" class="rlabel">
+											<i class="fa fa-check fa-2x" aria-hidden="true"></i>
+											<span>Sim</span>
+										</label>
+										<input type="radio" name="aprovarsolicitacao" id="anao" class="rinput" value="NAO">
+										<label for="anao" class="rlabel">
+											<i class="fa fa-times-circle fa-2x" aria-hidden="true"></i>
+											<span>Não</span>
+										</label>
+									</div>
+									<div class="col-md-12">
+										<label for="obsrevisar">Observação</label>
+										<textarea name="motivorecusa" id="motivorecusa" class="form-control" rows="4" placeholder="Descreva o que dever ser revisado aqui"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="panel panel-primary" id="painel-cotar">
+							<div class="panel-heading">
+								Aprovar cotação?
+							</div> <!-- fim panel -->
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-md-12 flex">
+										<input type="radio" name="aprovado" id="csim" class="rinput" value="SIM">
+										<label for="csim" class="rlabel">
+											<i class="fa fa-check fa-2x" aria-hidden="true"></i>
+											<span>Sim</span>
+										</label>
+										<input type="radio" name="aprovado" id="cnao" class="rinput" value="NAO">
+										<label for="cnao" class="rlabel">
+											<i class="fa fa-times-circle fa-2x" aria-hidden="true"></i>
+											<span>Não</span>
+										</label>
+										<input type="radio" name="aprovado" id="cvoltar" class="rinput" value="VOLTAR">
+										<label for="cvoltar" class="rlabel">
+											<i class="fa fa-times-circle fa-2x" aria-hidden="true"></i>
+											<span>Voltar</span>
+										</label>
+									</div>
+									<div class="col-md-12">
+										<label for="obsrevisar">Observação</label>
+										<textarea name="motivo" id="motivo" class="form-control" rows="4" placeholder="Descreva o que dever ser revisado aqui"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="panel panel-primary" id="painel-parcial">
+							<div class="panel-heading">
+								TODOS OS ITENS SOLICITADOS FORAM ENTREGUES?
+							</div> <!-- fim panel -->
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-md-12 flex">
+										<input type="radio" name="pedidoparcial" id="nsim" class="rinput" value="SIM" selected>
+										<label for="nsim" class="rlabel">
+											<i class="fa fa-check fa-2x" aria-hidden="true"></i>
+											<span>Sim</span>
+										</label>
+										<input type="radio" name="pedidoparcial" id="nnao" class="rinput" value="NAO">
+										<label for="nnao" class="rlabel">
+											<i class="fa fa-times-circle fa-2x" aria-hidden="true"></i>
+											<span>Não</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="panel panel-primary" id="painel-revisar2">
+							<div class="panel-heading">
+								Revisar dados?
+							</div> <!-- fim panel -->
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-md-12 flex">
+										<input type="radio" name="revisarpedido" id="r2sim" class="rinput" value="SIM">
+										<label for="r2sim" class="rlabel">
+											<i class="fa fa-check fa-2x" aria-hidden="true"></i>
+											<span>Sim</span>
+										</label>
+										<input type="radio" name="revisarpedido" id="r2nao" class="rinput" value="NAO">
+										<label for="r2nao" class="rlabel">
+											<i class="fa fa-times-circle fa-2x" aria-hidden="true"></i>
+											<span>Não</span>
+										</label>
+									</div>
+									<div class="col-md-12">
+										<label for="obsrevisar2">Observação</label>
+										<textarea name="obsrevisar2" id="obsrevisar2" class="form-control" rows="4" placeholder="Descreva o que dever ser revisado aqui"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--  Aprovação divergência de preço-->
+						<div class="panel panel-primary" id="painel-aprovarDivergencia" >
+							<div class="panel-heading">
+								Aprovar solicitação com divergência de preço?
+							</div> <!-- fim panel -->
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-md-12 flex">
+										<input type="radio" name="aprovarSolicitDivergencia" id="asimDir" class="rinput" value="SIM">
+										<label for="asimDir" class="rlabel">
+											<i class="fa fa-check fa-2x" aria-hidden="true"></i>
+											<span>Sim</span>
+										</label>
+										<input type="radio" name="aprovarSolicitDivergencia" id="anaoDir" class="rinput" value="NAO">
+										<label for="anaoDir" class="rlabel">
+											<i class="fa fa-times-circle fa-2x" aria-hidden="true"></i>
+											<span>Não</span>
+										</label>
+									</div>
+									<div class="col-md-12">
+										<label for="motivorecusaDir">Observação</label>
+										<textarea name="motivorecusaDir" id="motivorecusaDir" class="form-control" rows="4" placeholder="Descreva o que dever ser revisado aqui"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<input type="hidden" name="estadosolicitacao" id="estadosolicitacao">
+				<input type="hidden" name="dataentrada" id="dataentrada">
+				<input type="hidden" name="datafim" id="datafim">
+				<input type="hidden" name="atividadeatrasada" id="atividadeatrasada">
+				<input type="hidden" name="gestorsolicitante" id="gestorsolicitante">
+				<input type="hidden" name="achouMaxVl" id="achouMaxVl">
+			</form>
+		</div>
+	</body>
+</html>
