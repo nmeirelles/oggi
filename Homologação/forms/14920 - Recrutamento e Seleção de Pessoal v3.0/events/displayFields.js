@@ -16,13 +16,24 @@ function displayFields(form,customHTML){
 		var dataSolicitacao = getDatetimeNow();
 		var nome = fluigAPI.getUserService().getCurrent().getFullName();
 		var mail = fluigAPI.getUserService().getCurrent().getEmail();
-		//var idprotheus = fluigAPI.getUserService().getCurrent().getExtraData("IDPROTHEUS");
+		var idprotheus = fluigAPI.getUserService().getCurrent().getExtraData("IDPROTHEUS");
 		
 		form.setValue("solicitante", nome);
 		form.setValue("email_solicitante", mail);
-		form.setValue("id_protheus_solicitante", '000829');
+		form.setValue("id_protheus_solicitante", idprotheus);
 		form.setValue("dataSolicitacao", dataSolicitacao);
 
+		form.setVisibleById('aprovacaoGestor', false);
+		form.setVisibleById('revisaoRequisicao', false);
+		form.setVisibleById('aprovacaoDiretoria', false);
+		form.setVisibleById('assumirVaga', false);
+		form.setVisibleById('ti', false);
+		form.setVisibleById('facilities', false);
+		form.setVisibleById('divSegurancaTrabalho', false);
+		form.setVisibleById('aberturaSubprocesso', false);
+	}
+
+	if(WKNumState == '95'){
 		form.setVisibleById('revisaoRequisicao', false);
 		form.setVisibleById('aprovacaoDiretoria', false);
 		form.setVisibleById('assumirVaga', false);
@@ -129,7 +140,6 @@ function displayFields(form,customHTML){
 	if(aprovacaoRH == 'aprovado') form.setVisibleById('candidatoAprovado', true);
 	else form.setVisibleById('candidatoAprovado', false);
 
-	
 }
 
 function validaInfo(form){

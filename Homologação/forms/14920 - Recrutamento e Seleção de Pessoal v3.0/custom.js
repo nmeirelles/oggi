@@ -85,6 +85,16 @@ $(document).ready(function(){
 function verLista(){
     window.parent.document.getElementById("tab-attachments").click();
 }
+function consultaGestor(codigoCentroCusto){
+	let codigoCentroCusto = DatasetFactory.createConstraint("CC", codigoCentroCusto, codigoCentroCusto, ConstraintType.MUST)
+	let ds = DatasetFactory.getDataset("ds_getdadosfunc_rest", null, [codigoCentroCusto], null)
+
+	if(ds.values.length > 0){
+
+		$('#idGestorCentroCusto').val(ds.values[0]['EMAIL'])
+
+	}
+}
 function setSelectedZoomItem(selectedItem){
 	var id = selectedItem.inputId.split("___");
 	
@@ -96,10 +106,13 @@ function setSelectedZoomItem(selectedItem){
 		reloadZoomFilterValues("horarioTrabalho", "EMPRESA,"+ selectedItem['empresa_cod'].trim());
 	}
 	if(selectedItem.inputId == "centroCusto"){
-		$("#codigoCentroCusto").val(selectedItem['Codigo'].trim());
+		var codigoCentroCusto = selectedItem['Codigo'].trim();
+		$("#codigoCentroCusto").val(codigoCentroCusto);
+
+		consultaGestor(codigoCentroCusto);
 	}
 }
-function removedZoomItem(removedItem){	
+function removedZoomItem(removedItem){
     if(removedItem.inputId == "filial"){
        	$('#empresa').val('');
        	$('#codigoFilial').val('');
@@ -111,6 +124,7 @@ function removedZoomItem(removedItem){
     }
 	if(removedItem.inputId == "centroCusto"){
 		$('#codigoCentroCusto').val('');
+		$('#idGestorCentroCusto').val('');
  	}
 }
 function customRemoveChild(oElement){

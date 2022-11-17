@@ -15,19 +15,19 @@
 		<script type="text/javascript" src="FileSaver.js"></script>
 		<script type="text/javascript" src="pizzip-utils.js"></script>
 		<script type="text/javascript" src="pizzip.js"></script>
-
-		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 	</head>
 	<body>
 		<div class="fluig-style-guide">
 			<form name="form" role="form">
 
 				<div class="panel panel-default">
+
 					<div class="panel-heading">
 						<h3 class="panel-title"><b>RH.01 - SOLICITAÇÃO DE RECRUTAMENTO E SELEÇÃO DE PESSOAL</b></h3>
 					</div>
+
 					<div class="panel-body">
+
 						<div class="row">
 							<div class="form-group col-md-12">
 								<p>
@@ -71,6 +71,10 @@
 									<div class='form-group col-md-3 col-xs-12 col-sm-12'>
 										<label class="control-label" for="codigoCentroCusto">Código Centro Custo</label>
 										<input type="text" id="codigoCentroCusto" name="codigoCentroCusto" class="form-control" readonly>
+									</div>
+									<div class='form-group col-md-3 col-xs-12 col-sm-12'>
+										<label class="control-label" for="idGestorCentroCusto">Id Gestor Centro Custo</label>
+										<input type="text" id="idGestorCentroCusto" name="idGestorCentroCusto" class="form-control" readonly>
 									</div>
 								</div>
 								<div class="row">
@@ -179,16 +183,25 @@
 										</div>	
 									</div>
 									<div class="row">
-										<div class="form-group col-md-6 col-xs-12 col-sm-12">
+										<div class="form-group col-md-4 col-xs-12 col-sm-12">
+											<label for="area" class="control-label">Área <strong style="color: red">*</strong></label>
+											<select name="area" id="area" class="form-control">
+												<option value=""></option>
+												<option value="Pool:Group:Diretoria_Adm_Processo_Recrutamento">Administrativo</option>
+												<option value="Pool:Group:Diretoria_Com_Processo_Recrutamento">Comercial</option>
+												<option value="Pool:Group:Diretoria_Ope_Processo_Recrutamento">Operacional</option>
+											</select>
+										</div>
+										<div class="form-group col-md-4 col-xs-12 col-sm-12">
 											<label for="nivel" class="control-label">Nível <strong style="color: red">*</strong></label>
 											<select name="nivel" id="nivel" class="form-control">
 												<option value=""></option>
 												<option value="operacao">Operação</option>
 												<option value="adm">Administrativo</option>
-												<option value="lideraca">Lidenrança</option>
+												<option value="lideranca">Liderança</option>
 											</select>
 										</div>
-										<div class='form-group col-md-6 col-xs-12 col-sm-12'>
+										<div class='form-group col-md-4 col-xs-12 col-sm-12'>
 											<label class="control-label" for="cargo">Cargo<strong style="color: red">*</strong></label> 
 											<input type="text" name="cargo" id="cargo" class="form-control" />
 										</div>
@@ -419,6 +432,14 @@
 											<input type="checkbox" id="convenioOdontologico" name="convenioOdontologico"> 
 											<label for="convenioOdontologico">Convênio Odontológico</label>
 										</div>
+										<div class="custom-checkbox custom-checkbox-primary">
+											<input type="checkbox" id="valeAlimentacao" name="valeAlimentacao"> 
+											<label for="valeAlimentacao">Vale Alimentação</label>
+										</div>
+										<div class="custom-checkbox custom-checkbox-primary">
+											<input type="checkbox" id="valeRefeicao" name="valeRefeicao"> 
+											<label for="valeRefeicao">Vale Refeição</label>
+										</div>
 									</div>
 								</div>
 		
@@ -453,6 +474,43 @@
 							</div>
 						</div>
 						<!-- Fim da definição da vaga  -->
+
+						<!-- APROVAÇÃO GESTOR -->
+						<div class="panel panel-default" id="aprovacaoGestor">
+							<div class="panel-heading">
+								<h3 class="panel-title">Aprovação Gestor</h3>
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<div class="form-group col-md-1">
+										<div class="switch switch-success">
+											<label>Aprovado</label>
+											<input class="switch-input" type="radio" value="aprovado" name="aprovacaoGestor" id="aprovado" />
+											<label class="switch-button" for="aprovado">Toggle</label>
+										</div>
+									</div>
+									<div class="form-group col-md-1">
+										<div class="switch switch-danger">
+											<label>Reprovado</label>
+											<input class="switch-input" type="radio" value="reprovado" name="aprovacaoGestor" id="reprovado" />
+											<label class="switch-button" for="reprovado">Toggle</label>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12 form-group">
+										<label class="control-label" for="obsGestor">Observações <b style="color: red">*</b></label>
+										<div class="input-group">
+											<textarea class="form-control" id="obsGestor" name="obsGestor" rows="2"></textarea>
+											<span class="input-group-addon">
+												<span class="fluigicon fluigicon-comment"></span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- FIM APROVAÇÃO DIRETORIA -->									
 		
 						<!-- REVISÃO DE REQUISIÇÃO -->
 						<div class="panel panel-default" id="revisaoRequisicao">

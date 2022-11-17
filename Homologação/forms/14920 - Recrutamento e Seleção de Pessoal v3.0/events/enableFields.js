@@ -13,6 +13,7 @@ function enableFields(form){
         form.setEnabled("codigoFilial", false);
         form.setEnabled("centroCusto", false);
         form.setEnabled("codigoCentroCusto", false);
+        form.setEnabled("area", false);
         form.setEnabled("nivel", false);
         form.setEnabled("cargo", false);
         form.setEnabled("salarioSugerido", false);
@@ -45,6 +46,11 @@ function enableFields(form){
         form.setEnabled("acessoEspelho", false);
         form.setEnabled("atividades", false);
         form.setEnabled("conhecimento", false);
+    }
+
+    if(ativ != 95){
+        form.setEnabled("aprovacaoGestor", false);
+        form.setEnabled("obsGestor", false);
     }
 
     if(ativ != 68){
