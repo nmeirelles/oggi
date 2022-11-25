@@ -1,27 +1,27 @@
 
 function createDataset(fields, constraints, sortFields){
 
+    log.info('ds_consulta_id');
+
 	var dataset = DatasetBuilder.newDataset();
-    var dataSource = "/jdbc/BDPROTHEUS";
+    var dataSource = "/jdbc/AppDS";
     var ic = new javax.naming.InitialContext();
     var ds = ic.lookup(dataSource);
 	var created = false;
-
-    var EMPRESA = '';
-    var FILIAL = '';
+ 
+    var IDPROTHEUS = '';
     if(constraints != null){
 	    for(var i = 0; i < constraints.length; i++){
-	    	if(constraints[i].fieldName == "EMPRESA") EMPRESA = String(constraints[i].initialValue);
-	    	if(constraints[i].fieldName == "FILIAL") FILIAL = String(constraints[i].initialValue);
+	    	if(constraints[i].fieldName == "IDPROTHEUS") IDPROTHEUS = String(constraints[i].initialValue);
         }
     }
+
+    var myQuery =   " SELECT ut.USER_CODE, ut.EMAIL FROM fdn_userdata ud "+
+                    " JOIN fdn_usertenant ut ON ud.USER_TENANT_ID = ut.USER_TENANT_ID "+ 
+                    " WHERE DATA_KEY='IDPROTHEUS' AND DATA_VALUE='"+IDPROTHEUS+"'";
+
+    log.info(myQuery);
     
-    var myQuery = "";
-    if(EMPRESA == "01") myQuery = "SELECT * from dbo.fn_microsiga_gestor_cc() where EMPRESA = '"+EMPRESA+"' ";
-    else myQuery = "SELECT * from dbo.fn_microsiga_gestor_cc() where EMPRESA = '"+EMPRESA+"' AND FILIAL = '"+FILIAL+"' ";
-
-    log.info("query: "+myQuery);
-
     try {
         var conn = ds.getConnection();
         var stmt = conn.createStatement();

@@ -22,7 +22,7 @@ function exportarDoc() {
     var extensaoDoArq = '.docx'      
     
     if(origem == "https://sogelo137933.fluig.cloudtotvs.com.br:1600") pastaGED = "15509" 
-    else if(origem == "https://sogelo.fluig.cloudtotvs.com.br") pastaGED = "118349"
+    else if(origem == "https://sogelo.fluig.cloudtotvs.com.br") pastaGED = ""
 
     var consultaDocGed = docGED(pastaGED, tipoDoc)
     var file = consultaDocGed.file

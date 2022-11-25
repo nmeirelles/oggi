@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;ds_consulta_id.js&apos; to &apos;ds_horario_trabalho_protheus.js&apos;&#x0D;&#x0A;- Original project: &apos;Homologação&apos;&#x0D;&#x0A;- Destination element: &apos;ds_horario_trabalho_protheus.js&apos;&#x0D;&#x0A;- Original element: &apos;ds_consulta_id.js&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move file" element1="datasets/ds_consulta_id.js" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1669133785538" target="datasets/Homologação/ds_horario_trabalho_protheus.js" units="0" version="1.0"/>
+</session>

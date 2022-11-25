@@ -23,7 +23,7 @@ function displayFields(form,customHTML){
 		form.setValue("id_protheus_solicitante", idprotheus);
 		form.setValue("dataSolicitacao", dataSolicitacao);
 
-		form.setVisibleById('aprovacaoGestor', false);
+		form.setVisibleById('divAprovacaoGestor', false);
 		form.setVisibleById('revisaoRequisicao', false);
 		form.setVisibleById('aprovacaoDiretoria', false);
 		form.setVisibleById('assumirVaga', false);

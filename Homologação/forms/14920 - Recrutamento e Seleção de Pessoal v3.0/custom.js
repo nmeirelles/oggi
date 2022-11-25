@@ -85,15 +85,14 @@ $(document).ready(function(){
 function verLista(){
     window.parent.document.getElementById("tab-attachments").click();
 }
-function consultaGestor(codigoCentroCusto){
-	let codigoCentroCusto = DatasetFactory.createConstraint("CC", codigoCentroCusto, codigoCentroCusto, ConstraintType.MUST)
-	let ds = DatasetFactory.getDataset("ds_getdadosfunc_rest", null, [codigoCentroCusto], null)
+function consultaGestor(IDPROTHEUS){
+	let c = DatasetFactory.createConstraint("IDPROTHEUS", IDPROTHEUS, IDPROTHEUS, ConstraintType.MUST)
+	let ds = DatasetFactory.getDataset("ds_consulta_id", null, [c], null)
 
-	if(ds.values.length > 0){
+	console.log(ds)
 
-		$('#idGestorCentroCusto').val(ds.values[0]['EMAIL'])
-
-	}
+	if(ds.values.length > 0) $('#idGestorCentroCusto').val(ds.values[0]['USER_CODE'])
+	else FLUIGC.toast({title: 'Atenção: ', message: 'Gestor não encontrado!', type: 'danger'});
 }
 function setSelectedZoomItem(selectedItem){
 	var id = selectedItem.inputId.split("___");
@@ -102,14 +101,15 @@ function setSelectedZoomItem(selectedItem){
 		$("#empresa").val(selectedItem['empresa_cod'].trim());
 		$("#codigoFilial").val(selectedItem['filial_cod'].trim());
 		var id_protheus_solicitante = $('#id_protheus_solicitante').val();
-		reloadZoomFilterValues("centroCusto", "B1_EMP,"+ selectedItem['empresa_cod'].trim()+",B1_FILIAL,"+selectedItem['filial_cod'].trim()+",DBK_USER,"+id_protheus_solicitante);
+		reloadZoomFilterValues("centroCusto", "EMPRESA,"+ selectedItem['empresa_cod'].trim()+",FILIAL,"+selectedItem['filial_cod'].trim());
 		reloadZoomFilterValues("horarioTrabalho", "EMPRESA,"+ selectedItem['empresa_cod'].trim());
 	}
 	if(selectedItem.inputId == "centroCusto"){
-		var codigoCentroCusto = selectedItem['Codigo'].trim();
-		$("#codigoCentroCusto").val(codigoCentroCusto);
-
-		consultaGestor(codigoCentroCusto);
+		var CC = selectedItem['CC'].trim();
+		$("#codigoCentroCusto").val(CC);
+		
+		var IDPROTHEUS = selectedItem['IDPROTHEUS'].trim();
+		consultaGestor(IDPROTHEUS);
 	}
 }
 function removedZoomItem(removedItem){

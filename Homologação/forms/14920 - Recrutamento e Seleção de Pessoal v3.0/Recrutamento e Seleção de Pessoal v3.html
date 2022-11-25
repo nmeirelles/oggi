@@ -170,13 +170,14 @@
 											<label for="centroCusto">Centro de Custo <strong style="color: red">*</strong></label>
 											<input type="zoom" id="centroCusto" class="form-control" name="centroCusto"
 												data-zoom="{
-													'displayKey':'Descricao',
-													'datasetId':'ds_centro_de_custo_protheus',
+													'displayKey':'DESCCC',
+													'datasetId':'ds_consulta_gestor_centro_custo',
 													'maximumSelectionLength':'1',
 													'placeholder':'Centro de Custo',
 													'fields':[
-														{'field':'Codigo','label':'C Custo'},
-														{'field':'Descricao','label':'Descrição C Custo'}
+														{'field':'CC','label':'C Custo'},
+														{'field':'DESCCC','label':'Descrição C Custo'},
+														{'field':'IDPROTHEUS','label':'Id Protheus','visible':'false'}
 													]
 												}" 
 											/>
@@ -476,7 +477,7 @@
 						<!-- Fim da definição da vaga  -->
 
 						<!-- APROVAÇÃO GESTOR -->
-						<div class="panel panel-default" id="aprovacaoGestor">
+						<div class="panel panel-default" id="divAprovacaoGestor">
 							<div class="panel-heading">
 								<h3 class="panel-title">Aprovação Gestor</h3>
 							</div>
@@ -485,15 +486,15 @@
 									<div class="form-group col-md-1">
 										<div class="switch switch-success">
 											<label>Aprovado</label>
-											<input class="switch-input" type="radio" value="aprovado" name="aprovacaoGestor" id="aprovado" />
-											<label class="switch-button" for="aprovado">Toggle</label>
+											<input class="switch-input" type="radio" value="aprovado" name="aprovacaoGestor" id="aprovacaoGestorSim" />
+											<label class="switch-button" for="aprovacaoGestorSim">Toggle</label>
 										</div>
 									</div>
 									<div class="form-group col-md-1">
 										<div class="switch switch-danger">
 											<label>Reprovado</label>
-											<input class="switch-input" type="radio" value="reprovado" name="aprovacaoGestor" id="reprovado" />
-											<label class="switch-button" for="reprovado">Toggle</label>
+											<input class="switch-input" type="radio" value="reprovado" name="aprovacaoGestor" id="aprovacaoGestorNao" />
+											<label class="switch-button" for="aprovacaoGestorNao">Toggle</label>
 										</div>
 									</div>
 								</div>

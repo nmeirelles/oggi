@@ -27,16 +27,16 @@ function validateForm(form){
 
         ) msgErro += "<li>É necessário informar a(s) <b>FERRAMENTA(S) TRABALHO</b>.</li>";
         if(form.getValue('outrosFerramentasTrabalho') == 'on' && campoVazio(form,"outroFerramentaTrabalho")) msgErro += "<li>É necessário informar o <b>OUTRO</b>.</li>";
-        if( 
-            campoVazio(form,"email") && 
-            campoVazio(form,"fluig") && 
-            campoVazio(form,"protheus") && 
-            campoVazio(form,"abax") && 
-            campoVazio(form,"outrosAcessos")
+        // if( 
+        //     campoVazio(form,"email") && 
+        //     campoVazio(form,"fluig") && 
+        //     campoVazio(form,"protheus") && 
+        //     campoVazio(form,"abax") && 
+        //     campoVazio(form,"outrosAcessos")
 
-        ) msgErro += "<li>É necessário informar o(s) <b>ACESSO(S)</b>.</li>";
+        // ) msgErro += "<li>É necessário informar o(s) <b>ACESSO(S)</b>.</li>";
         if(form.getValue('outrosAcessos') == 'on' && campoVazio(form,"outroAcesso")) msgErro += "<li>É necessário informar o <b>OUTRO</b>.</li>";
-        if(campoVazio(form,"acessoEspelho")) msgErro += "<li>É necessário informar o <b>ACESSO ESPELHO</b>.</li>";
+        //if(campoVazio(form,"acessoEspelho")) msgErro += "<li>É necessário informar o <b>ACESSO ESPELHO</b>.</li>";
         if(campoVazio(form,"atividades")) msgErro += "<li>É necessário informar a(s) <b>ATIVIDADE(S)</b>.</li>";
         if(campoVazio(form,"conhecimento")) msgErro += "<li>É necessário informar o(s) <b>CONHECIMENTO(S)</b>.</li>";
     }

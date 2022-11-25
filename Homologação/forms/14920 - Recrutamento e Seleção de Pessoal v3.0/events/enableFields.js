@@ -43,6 +43,8 @@ function enableFields(form){
         form.setEnabled("vtEstacionamento", false);
         form.setEnabled("convenioMedico", false);
         form.setEnabled("convenioOdontologico", false);
+        form.setEnabled("valeAlimentacao", false);
+        form.setEnabled("valeRefeicao", false);
         form.setEnabled("acessoEspelho", false);
         form.setEnabled("atividades", false);
         form.setEnabled("conhecimento", false);
