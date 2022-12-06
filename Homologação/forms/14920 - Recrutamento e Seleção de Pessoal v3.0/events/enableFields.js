@@ -13,11 +13,12 @@ function enableFields(form){
         form.setEnabled("codigoFilial", false);
         form.setEnabled("centroCusto", false);
         form.setEnabled("codigoCentroCusto", false);
-        form.setEnabled("area", false);
         form.setEnabled("nivel", false);
         form.setEnabled("cargo", false);
         form.setEnabled("salarioSugerido", false);
         form.setEnabled("horarioTrabalho", false);
+        form.setEnabled("ajudaCustoSim", false);
+        form.setEnabled("valorAjudaCusto", false);
         form.setEnabled("tipo", false);
         form.setEnabled("outroTipoContratacao", false);
         form.setEnabled("vaga", false);
@@ -43,16 +44,10 @@ function enableFields(form){
         form.setEnabled("vtEstacionamento", false);
         form.setEnabled("convenioMedico", false);
         form.setEnabled("convenioOdontologico", false);
-        form.setEnabled("valeAlimentacao", false);
-        form.setEnabled("valeRefeicao", false);
         form.setEnabled("acessoEspelho", false);
         form.setEnabled("atividades", false);
         form.setEnabled("conhecimento", false);
-    }
-
-    if(ativ != 95){
-        form.setEnabled("aprovacaoGestor", false);
-        form.setEnabled("obsGestor", false);
+        form.setEnabled("obs", false);
     }
 
     if(ativ != 68){
