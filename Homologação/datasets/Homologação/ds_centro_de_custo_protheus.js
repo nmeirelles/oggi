@@ -1,18 +1,19 @@
 function createDataset(fields, constraints, sortFields) {
     var dataset = DatasetBuilder.newDataset();
-    var DBK_USER = "000829";
-    //var emp = "02";
-    //var fil = "01";
+    //var DBK_USER = "000829";
+    var DBK_USER = "";
+    var emp = "";
+    var fil = "";
     //criar constraints
 	if (constraints != null) {
 	    for (var i = 0; i < constraints.length; i++) {
-	    	if (constraints[i].fieldName == "B1_EMP") {
+	    	if(constraints[i].fieldName == "B1_EMP") {
 	    		emp = String( constraints[i].initialValue );
 	    	}
-	    	if (constraints[i].fieldName == "B1_FILIAL") {
+	    	if(constraints[i].fieldName == "B1_FILIAL") {
 	    		fil = String( constraints[i].initialValue );
 	    	}
-	    	if (constraints[i].fieldName == "DBK_USER") {
+	    	if(constraints[i].fieldName == "DBK_USER") {
 	    		DBK_USER = String( constraints[i].initialValue );
 	    	}
 	    }

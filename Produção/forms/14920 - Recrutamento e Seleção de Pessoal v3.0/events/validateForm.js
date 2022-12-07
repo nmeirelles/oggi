@@ -7,11 +7,12 @@ function validateForm(form){
         if(campoVazio(form,"vagaConfidencial")) msgErro += "<li>É necessário informar <b>VAGA CONFIDENCIAL</b>.</li>";
         if(campoVazio(form,"filial")) msgErro += "<li>É necessário informar a <b>FILIAL</b>.</li>";
         if(campoVazio(form,"centroCusto")) msgErro += "<li>É necessário informar o <b>CENTRO CUSTO</b>.</li>";
-        if(campoVazio(form,"area")) msgErro += "<li>É necessário informar a <b>ÁREA</b>.</li>";
         if(campoVazio(form,"nivel")) msgErro += "<li>É necessário informar o <b>NÍVEL</b>.</li>";
         if(campoVazio(form,"cargo")) msgErro += "<li>É necessário informar o <b>CARGO</b>.</li>";
         if(campoVazio(form,"salarioSugerido")) msgErro += "<li>É necessário informar o <b>SALÁRIO</b>.</li>";
         if(campoVazio(form,"horarioTrabalho")) msgErro += "<li>É necessário informar o <b>HORÁRIO TRABALHO</b>.</li>";
+        if(campoVazio(form,"ajudaCusto")) msgErro += "<li>É necessário informar a <b>AJUDA DE CUSTO</b>.</li>";
+        if(form.getValue('ajudaCusto') == 'sim' && campoVazio(form,"valorAjudaCusto")) msgErro += "<li>É necessário informar o <b>VALOR AJUDA CUSTO</b>.</li>";
         if(campoVazio(form,"tipo")) msgErro += "<li>É necessário informar o <b>TIPO CONTRATAÇÃO</b>.</li>";
         if(form.getValue('tipo') == 'outrosTipoContratacao' && campoVazio(form,"outroTipoContratacao")) msgErro += "<li>É necessário informar o <b>OUTRO</b>.</li>";
         if(campoVazio(form,"vaga")) msgErro += "<li>É necessário informar o <b>TIPO VAGA</b>.</li>";
@@ -40,11 +41,6 @@ function validateForm(form){
         //if(campoVazio(form,"acessoEspelho")) msgErro += "<li>É necessário informar o <b>ACESSO ESPELHO</b>.</li>";
         if(campoVazio(form,"atividades")) msgErro += "<li>É necessário informar a(s) <b>ATIVIDADE(S)</b>.</li>";
         if(campoVazio(form,"conhecimento")) msgErro += "<li>É necessário informar o(s) <b>CONHECIMENTO(S)</b>.</li>";
-    }
-
-    if(WKNumState == 95){
-        if(campoVazio(form,"aprovacaoGestor")) msgErro += "<li>É necessário informar a <b>APROVAÇÃO</b>.</li>";
-        if(campoVazio(form,"obsGestor")) msgErro += "<li>É necessário informar as <b>OBSERVAÇÕES</b>.</li>";
     }
 
     if(WKNumState == 68){
