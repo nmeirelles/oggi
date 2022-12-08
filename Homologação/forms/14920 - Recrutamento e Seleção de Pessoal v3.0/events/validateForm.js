@@ -12,6 +12,8 @@ function validateForm(form){
         if(campoVazio(form,"cargo")) msgErro += "<li>É necessário informar o <b>CARGO</b>.</li>";
         if(campoVazio(form,"salarioSugerido")) msgErro += "<li>É necessário informar o <b>SALÁRIO</b>.</li>";
         if(campoVazio(form,"horarioTrabalho")) msgErro += "<li>É necessário informar o <b>HORÁRIO TRABALHO</b>.</li>";
+        if(campoVazio(form,"ajudaCusto")) msgErro += "<li>É necessário informar a <b>AJUDA DE CUSTO</b>.</li>";
+        if(form.getValue('ajudaCusto') == 'sim' && campoVazio(form,"valorAjudaCusto")) msgErro += "<li>É necessário informar o <b>VALOR AJUDA CUSTO</b>.</li>";
         if(campoVazio(form,"tipo")) msgErro += "<li>É necessário informar o <b>TIPO CONTRATAÇÃO</b>.</li>";
         if(form.getValue('tipo') == 'outrosTipoContratacao' && campoVazio(form,"outroTipoContratacao")) msgErro += "<li>É necessário informar o <b>OUTRO</b>.</li>";
         if(campoVazio(form,"vaga")) msgErro += "<li>É necessário informar o <b>TIPO VAGA</b>.</li>";

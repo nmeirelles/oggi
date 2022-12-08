@@ -10,7 +10,6 @@ INDEX VERSION 1.3+C:\Users\nicko\OneDrive\Área de Trabalho\Clientes\Oggi\.metada
 481068572.index
 4224016961.index
 2695094905.index
-3018528951.index
 2761126966.index
 4189545781.index
 1032698205.index

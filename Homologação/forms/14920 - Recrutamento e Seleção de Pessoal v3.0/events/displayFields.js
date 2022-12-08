@@ -50,8 +50,6 @@ function displayFields(form,customHTML){
 		form.setVisibleById('facilities', false);
 		form.setVisibleById('divSegurancaTrabalho', false);
 		form.setVisibleById('aberturaSubprocesso', false);
-
-		getData(form,customHTML);
 	}
 
 	if(WKNumState == '71'){
@@ -110,6 +108,7 @@ function displayFields(form,customHTML){
 	log.info('validaInfo: '+validaInfo(form))
 	if(validaInfo(form) == true && WKNumState != '0'){
 		form.setVisibleById('salarioInformadoRH', true);
+		getData(form,customHTML);
 	}else{
 		form.setVisibleById('salarioInformadoRH', false);
 	}
@@ -118,6 +117,10 @@ function displayFields(form,customHTML){
 		var vagaConfidencial = form.getValue('vagaConfidencial')
 		if(vagaConfidencial == 'sim') form.setVisibleById('vagaConfidencial', false);
 	}
+
+	var ajudaCusto = form.getValue('ajudaCusto');
+	if(ajudaCusto == 'sim') form.setVisibleById('ajudaCusto', true);
+	else form.setVisibleById('ajudaCusto', false);
 
 	var tipo = form.getValue('tipo');
 	if(tipo == 'outrosTipoContratacao') form.setVisibleById('outrosTipoContratacao', true);

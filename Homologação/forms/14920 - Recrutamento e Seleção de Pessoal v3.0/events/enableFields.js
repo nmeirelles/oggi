@@ -18,6 +18,8 @@ function enableFields(form){
         form.setEnabled("cargo", false);
         form.setEnabled("salarioSugerido", false);
         form.setEnabled("horarioTrabalho", false);
+        form.setEnabled("ajudaCustoSim", false);
+        form.setEnabled("valorAjudaCusto", false);
         form.setEnabled("tipo", false);
         form.setEnabled("outroTipoContratacao", false);
         form.setEnabled("vaga", false);
@@ -48,6 +50,7 @@ function enableFields(form){
         form.setEnabled("acessoEspelho", false);
         form.setEnabled("atividades", false);
         form.setEnabled("conhecimento", false);
+        form.setEnabled("obs", false);
     }
 
     if(ativ != 95){

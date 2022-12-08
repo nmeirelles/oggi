@@ -44,7 +44,7 @@ $(document).ready(function(){
 		if(this.id === 'cartaoCombustivel' && this.checked == true) $('#atividadeFacilities').val('sim')
 		if(this.id === 'cartaoCombustivel' && this.checked == false && carro == false) $('#atividadeFacilities').val('nao')
 
-	});
+	})
 
 	$('input[type=radio]').on('click' ,function(){
 		if(this.id === 'radio1') $('#outrosTipoContratacao').hide(),$('#outroTipoContratacao').val('')
@@ -60,6 +60,9 @@ $(document).ready(function(){
 
 		if(this.id === 'aprovacaoRHSim') $('#candidatoAprovado').show()
 		if(this.id === 'aprovacaoRHNao') $('#candidatoAprovado').hide()
+
+		if(this.id === 'ajudaCustoSim') $('#ajudaCusto').show(),$('#valorAjudaCusto').val('')
+		if(this.id === 'ajudaCustoNao') $('#ajudaCusto').hide(),$('#valorAjudaCusto').val('')
 
 	})
 
@@ -83,7 +86,7 @@ $(document).ready(function(){
 
 })
 function verLista(){
-    window.parent.document.getElementById("tab-attachments").click();
+    window.parent.document.getElementById("tab-attachments").click()
 }
 function consultaGestor(IDPROTHEUS){
 	let c = DatasetFactory.createConstraint("IDPROTHEUS", IDPROTHEUS, IDPROTHEUS, ConstraintType.MUST)
@@ -92,39 +95,39 @@ function consultaGestor(IDPROTHEUS){
 	console.log(ds)
 
 	if(ds.values.length > 0) $('#idGestorCentroCusto').val(ds.values[0]['USER_CODE'])
-	else FLUIGC.toast({title: 'Atenção: ', message: 'Gestor não encontrado!', type: 'danger'});
+	else FLUIGC.toast({title: 'Atenção: ', message: 'Gestor não encontrado!', type: 'danger'})
 }
 function setSelectedZoomItem(selectedItem){
-	var id = selectedItem.inputId.split("___");
+	var id = selectedItem.inputId.split("___")
 	
 	if(selectedItem.inputId == "filial"){
-		$("#empresa").val(selectedItem['empresa_cod'].trim());
-		$("#codigoFilial").val(selectedItem['filial_cod'].trim());
-		var id_protheus_solicitante = $('#id_protheus_solicitante').val();
-		reloadZoomFilterValues("centroCusto", "EMPRESA,"+ selectedItem['empresa_cod'].trim()+",FILIAL,"+selectedItem['filial_cod'].trim());
-		reloadZoomFilterValues("horarioTrabalho", "EMPRESA,"+ selectedItem['empresa_cod'].trim());
+		$("#empresa").val(selectedItem['empresa_cod'].trim())
+		$("#codigoFilial").val(selectedItem['filial_cod'].trim())
+		var id_protheus_solicitante = $('#id_protheus_solicitante').val()
+		reloadZoomFilterValues("centroCusto", "EMPRESA,"+ selectedItem['empresa_cod'].trim()+",FILIAL,"+selectedItem['filial_cod'].trim())
+		reloadZoomFilterValues("horarioTrabalho", "EMPRESA,"+ selectedItem['empresa_cod'].trim())
 	}
 	if(selectedItem.inputId == "centroCusto"){
-		var CC = selectedItem['CC'].trim();
-		$("#codigoCentroCusto").val(CC);
+		var CC = selectedItem['CC'].trim()
+		$("#codigoCentroCusto").val(CC)
 		
-		var IDPROTHEUS = selectedItem['IDPROTHEUS'].trim();
-		consultaGestor(IDPROTHEUS);
+		var IDPROTHEUS = selectedItem['IDPROTHEUS'].trim()
+		consultaGestor(IDPROTHEUS)
 	}
 }
 function removedZoomItem(removedItem){
     if(removedItem.inputId == "filial"){
-       	$('#empresa').val('');
-       	$('#codigoFilial').val('');
-       	$('#centroCusto').val('');
-       	$('#codigoCentroCusto').val('');
+       	$('#empresa').val('')
+       	$('#codigoFilial').val('')
+       	$('#centroCusto').val('')
+       	$('#codigoCentroCusto').val('')
 
 		window['centroCusto'].clear()
 		window['horarioTrabalho'].clear()
     }
 	if(removedItem.inputId == "centroCusto"){
-		$('#codigoCentroCusto').val('');
-		$('#idGestorCentroCusto').val('');
+		$('#codigoCentroCusto').val('')
+		$('#idGestorCentroCusto').val('')
  	}
 }
 function customRemoveChild(oElement){

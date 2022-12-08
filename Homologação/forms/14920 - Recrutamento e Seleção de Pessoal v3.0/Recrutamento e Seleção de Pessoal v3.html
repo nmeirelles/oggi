@@ -225,6 +225,32 @@
 										</div>
 									</div>
 									<div class="row">
+										<div class="form-group col-md-3">
+											<h4>Ajuda de Custo <strong style="color: red">*</strong></h4>
+										</div>
+										<div class="form-group col-md-1">
+											<div class="switch switch-info">
+												<label>Sim</label>
+												<input class="switch-input" type="radio" value="sim" name="ajudaCusto" id="ajudaCustoSim" />
+												<label class="switch-button" for="ajudaCustoSim">Toggle</label>
+											</div>
+										</div>
+										<div class="form-group col-md-1">
+											<div class="switch switch-warning">
+												<label>Não</label>
+												<input class="switch-input" type="radio" value="nao" name="ajudaCusto" id="ajudaCustoNao" />
+												<label class="switch-button" for="ajudaCustoNao">Toggle</label>
+											</div>
+										</div>
+									</div>
+
+									<div id="ajudaCusto" class="row">
+										<div class="form-group col-md-3 col-xs-12 col-sm-12">
+											<label class="control-label" for="valorAjudaCusto">Valor Ajuda Custo <strong style="color: red">*</strong></label>
+											<input type="text" name="valorAjudaCusto" id="valorAjudaCusto" class="form-control" mask="#00.000.000.000.000,00"/>
+										</div>
+									</div>									
+									<div class="row">
 										<div class="col-md-12 col-xs-12">
 											<label for="tipo">Tipo de Contratação <b style="color: red">*</b></label>
 										</div>
@@ -467,9 +493,13 @@
 										<label for="atividades">Principais Atividades: <b style="color: red">*</b></label>
 										<textarea name="atividades" id="atividades" rows="4" cols="30" class="form-control"></textarea>
 									</div>
-									<div class="col-md-12 col-xs-12">
+									<div class="form-group col-md-12 col-xs-12">
 										<label for="conhecimento">Conhecimento: <b style="color: red">*</b></label>
 										<textarea name="conhecimento" id="conhecimento" rows="4" cols="30" class="form-control"></textarea>
+									</div>
+									<div class="form-group col-md-12 col-xs-12">
+										<label for="obs">Observações:</label>
+										<textarea name="obs" id="obs" rows="4" cols="30" class="form-control"></textarea>
 									</div>
 								</div>
 							</div>
