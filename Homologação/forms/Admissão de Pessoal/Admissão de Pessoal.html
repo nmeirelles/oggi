@@ -1,0 +1,427 @@
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+		<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+		<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+		<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="fluig-style-guide">
+			<form name="form" role="form">
+
+				<!-- DADOS PESSOAIS -->
+				<div class="panel panel-default" id="dadosPessoais">
+					<div class="panel-heading ">
+						<h3 class="panel-title">
+							<strong>Dados Pessoais</strong>
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="form-group col-md-4">
+								<label class="control-label" for="nomeCompleto">Nome Completo</label>
+								<input type="text" class="form-control" id="nomeCompleto" name="nomeCompleto"/>
+							</div>
+							<div class="form-group col-md-4">
+								<label class="control-label" for="nomeMae">Nome da Mãe</label>
+								<input type="text" class="form-control" id="nomeMae" name="nomeMae"/>
+							</div>
+							<div class="form-group col-md-4">
+								<label class="control-label" for="nomePai">Nome do Pai</label>
+								<input type="text" class="form-control" id="nomePai" name="nomePai"/>
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-md-3">
+								<label class="control-label" for="sexo">Sexo</label>
+								<select name="sexo" id="sexo" class="form-control">
+									<option value=""></option>
+									<option value="M">Masculino</option>
+									<option value="F">Feminino</option>
+								</select>
+							</div>
+							<div class="form-group col-md-3">
+								<label class="control-label" for="racaCor">Raça/Cor</label>
+								<select name="racaCor" id="racaCor" class="form-control">
+									<option value=""></option>
+									<option value="branco">Branco</option>
+									<option value="pardo">Pardo</option>
+									<option value="preto">Preto</option>
+									<option value="amarelo">Amarelo</option>
+									<option value="indigena">Indígena</option>
+								</select>
+							</div>
+							<div class="form-group col-md-3">
+								<label class="control-label" for="dataNascimento">Data de Nascimento</label>
+								<input type="date" class="form-control" id="dataNascimento" name="dataNascimento"/>
+							</div>
+							<div class="form-group col-md-3">
+								<label class="control-label" for="estadoCivil">Estado Civil</label>
+								<select name="estadoCivil" id="estadoCivil" class="form-control">
+									<option value=""></option>
+									<option value="solteiro">Solteiro</option>
+									<option value="casado">Casado</option>
+									<option value="separado">Separado</option>
+									<option value="divorciado">Divorciado</option>
+									<option value="viuvo">Viúvo</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-md-3">
+								<label class="control-label" for="ufNaturalidade">Naturalidade</label>
+								<select name="ufNaturalidade" id="ufNaturalidade" class="form-control">
+									<option value=""></option>
+									<option value="AC">Acre</option>
+									<option value="AL">Alagoas</option>
+									<option value="AP">Amapá</option>
+									<option value="AM">Amazonas</option>
+									<option value="BA">Bahia</option>
+									<option value="CE">Ceará</option>
+									<option value="DF">Distrito Federal</option>
+									<option value="ES">Espírito Santo</option>
+									<option value="GO">Goiás</option>
+									<option value="MA">Maranhão</option>
+									<option value="MT">Mato Grosso</option>
+									<option value="MS">Mato Grosso do Sul</option>
+									<option value="MG">Minas Gerais</option>
+									<option value="PA">Pará</option>
+									<option value="PB">Paraíba</option>
+									<option value="PR">Paraná</option>
+									<option value="PE">Pernambuco</option>
+									<option value="PI">Piauí</option>
+									<option value="RJ">Rio de Janeiro</option>
+									<option value="RN">Rio Grande do Norte</option>
+									<option value="RS">Rio Grande do Sul</option>
+									<option value="RO">Rondônia</option>
+									<option value="RR">Roraima</option>
+									<option value="SC">Santa Catarina</option>
+									<option value="SP">São Paulo</option>
+									<option value="SE">Sergipe</option>
+									<option value="TO">Tocantins</option>									
+								</select>
+							</div>	
+							<div class="form-group col-md-3">
+								<label for="municipioNaturalidade" class="control-label">Município</label>
+								<input type="text" name="municipioNaturalidade" id="municipioNaturalidade" class="form-control">
+							</div>
+							<div class="form-group col-md-3">
+								<label class="control-label" for="instrucao">Instrução</label>
+								<select name="instrucao" id="instrucao" class="form-control">
+									<option value=""></option>
+									<option value="01">Analfabeto</option>
+									<option value="02">Ensino Fundamental Incompleto</option>
+									<option value="03">Ensino Fundamental Completo</option>
+									<option value="04">Ensino Médio Incompleto</option>
+									<option value="05">Ensino Médio Completo</option>
+									<option value="06">Ensino Superior Incompleto</option>
+									<option value="07">Ensino Superior Completo</option>
+									<option value="08">Pós-Graduação</option>
+									<option value="09">Mestrado</option>
+									<option value="10">Doutorado</option>
+								</select>
+							</div>	
+							<div class="form-group col-md-3">
+								<label class="control-label" for="deficiencia">Deficiência</label>
+								<select name="deficiencia" id="deficiencia" class="form-control">
+									<option value=""></option>
+									<option value="fisica">Física</option>
+									<option value="visual">Visual</option>
+									<option value="auditiva">Auditiva</option>
+									<option value="intelectual">Intelectual</option>
+									<option value="psicossocial">Psicossocial</option>
+									<option value="multipla">Múltipla</option>
+								</select>
+							</div>	
+						</div>
+					</div>
+				</div>	
+				
+				<!-- DOCUMENTOS -->
+				<div class="panel panel-default" id="documentos">
+					<div class="panel-heading ">
+						<h3 class="panel-title">
+							<strong>Documentos</strong>
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="form-group col-md-3">
+								<label for="cpf" class="control-label">CPF</label>
+								<input type="text" name="cpf" id="cpf" class="form-control" mask="000.000.000-00">
+							</div>
+							<div class="form-group col-md-3">
+								<label for="pis" class="control-label">PIS</label>
+								<input type="text" name="pis" id="pis" class="form-control" mask="000.00000.00-0">
+							</div>
+							<div class="form-group col-md-3">
+								<label for="tituloEleitor" class="control-label">Título Eleitor</label>
+								<input type="text" name="tituloEleitor" id="tituloEleitor" class="form-control" mask="0000.0000.00.00">
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-md-3">
+								<label for="rg" class="control-label">RG</label>
+								<input type="text" name="rg" id="rg" class="form-control">
+							</div>
+							<div class="form-group col-md-3">
+								<label class="control-label" for="ufRg">UF do RG</label>
+								<select name="ufRg" id="ufRg" class="form-control">
+									<option value=""></option>
+									<option value="AC">Acre</option>
+									<option value="AL">Alagoas</option>
+									<option value="AP">Amapá</option>
+									<option value="AM">Amazonas</option>
+									<option value="BA">Bahia</option>
+									<option value="CE">Ceará</option>
+									<option value="DF">Distrito Federal</option>
+									<option value="ES">Espírito Santo</option>
+									<option value="GO">Goiás</option>
+									<option value="MA">Maranhão</option>
+									<option value="MT">Mato Grosso</option>
+									<option value="MS">Mato Grosso do Sul</option>
+									<option value="MG">Minas Gerais</option>
+									<option value="PA">Pará</option>
+									<option value="PB">Paraíba</option>
+									<option value="PR">Paraná</option>
+									<option value="PE">Pernambuco</option>
+									<option value="PI">Piauí</option>
+									<option value="RJ">Rio de Janeiro</option>
+									<option value="RN">Rio Grande do Norte</option>
+									<option value="RS">Rio Grande do Sul</option>
+									<option value="RO">Rondônia</option>
+									<option value="RR">Roraima</option>
+									<option value="SC">Santa Catarina</option>
+									<option value="SP">São Paulo</option>
+									<option value="SE">Sergipe</option>
+									<option value="TO">Tocantins</option>									
+								</select>
+							</div>	
+							<div class="form-group col-md-3">
+								<label class="control-label" for="orgaoEmissorRG">Orgão Emissor do RG</label>
+								<select name="orgaoEmissorRG" id="orgaoEmissorRG" class="form-control">
+									<option value=""></option>
+									<option value="SSP">Secretaria de Segurança Pública (SSP)</option>
+									<option value="SJC">Secretaria de Justiça e Cidadania (SJC)</option>
+									<option value="SSP">Secretaria de Justiça e Trabalho (SJT)</option>
+									<option value="CC">Cartório Civil</option>
+									<option value="DPF">Departamento de Polícia Federal (DPF)</option>
+								</select>
+							</div>	
+							<div class="form-group col-md-3">
+								<label for="dataEmissaoRG" class="control-label">Data Emissão do RG</label>
+								<input type="date" name="dataEmissaoRG" id="dataEmissaoRG" class="form-control">
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-md-3">
+								<label for="ctps" class="control-label">Carteira Profissional</label>
+								<input type="text" name="ctps" id="ctps" class="form-control">
+							</div>
+							<div class="form-group col-md-3">
+								<label for="serieCTPS" class="control-label">Série Carteira Profissional</label>
+								<input type="text" name="serieCTPS" id="serieCTPS" class="form-control">
+							</div>
+							<div class="form-group col-md-3">
+								<label class="control-label" for="ufCTPS">UF da Carteira Profissional</label>
+								<select name="ufCTPS" id="ufCTPS" class="form-control">
+									<option value=""></option>
+									<option value="AC">Acre</option>
+									<option value="AL">Alagoas</option>
+									<option value="AP">Amapá</option>
+									<option value="AM">Amazonas</option>
+									<option value="BA">Bahia</option>
+									<option value="CE">Ceará</option>
+									<option value="DF">Distrito Federal</option>
+									<option value="ES">Espírito Santo</option>
+									<option value="GO">Goiás</option>
+									<option value="MA">Maranhão</option>
+									<option value="MT">Mato Grosso</option>
+									<option value="MS">Mato Grosso do Sul</option>
+									<option value="MG">Minas Gerais</option>
+									<option value="PA">Pará</option>
+									<option value="PB">Paraíba</option>
+									<option value="PR">Paraná</option>
+									<option value="PE">Pernambuco</option>
+									<option value="PI">Piauí</option>
+									<option value="RJ">Rio de Janeiro</option>
+									<option value="RN">Rio Grande do Norte</option>
+									<option value="RS">Rio Grande do Sul</option>
+									<option value="RO">Rondônia</option>
+									<option value="RR">Roraima</option>
+									<option value="SC">Santa Catarina</option>
+									<option value="SP">São Paulo</option>
+									<option value="SE">Sergipe</option>
+									<option value="TO">Tocantins</option>									
+								</select>
+							</div>
+							<div class="form-group col-md-3">
+								<label for="dataEmissaoCTPS" class="control-label">Data Emissão da Carteira Profissional</label>
+								<input type="date" name="dataEmissaoCTPS" id="dataEmissaoCTPS" class="form-control">
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- ENDEREÇO -->
+				<div class="panel panel-default" id="endereco">
+					<div class="panel-heading ">
+						<h3 class="panel-title">
+							<strong>Endereço</strong>
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="form-group col-md-3">
+								<label for="tipoLogradouro">Tipo de Logradouro</label>
+								<select name="tipoLogradouro" id="tipoLogradouro" class="form-control">
+									<option value=""></option>
+									<option value="1">Aeroporto</option>
+									<option value="2">Alameda</option>
+									<option value="3">Área</option>
+									<option value="4">Avenida</option>
+									<option value="5">Campo</option>
+									<option value="6">Chácara</option>
+									<option value="7">Colônia</option>
+									<option value="8">Condomínio</option>
+									<option value="9">Conjunto</option>
+									<option value="10">Distrito</option>
+									<option value="11">Esplanada</option>
+									<option value="12">Estação</option>
+									<option value="13">Estrada</option>
+									<option value="14">Favela</option>
+									<option value="15">Fazenda</option>
+									<option value="16">Feira</option>
+									<option value="17">Jardim</option>
+									<option value="18">Ladeira</option>
+									<option value="19">Lago</option>
+									<option value="20">Lagoa</option>
+									<option value="21">Largo</option>
+									<option value="22">Loteamento</option>
+									<option value="23">Morro</option>
+									<option value="24">Núcleo</option>
+									<option value="25">Parque</option>
+									<option value="26">Passarela</option>
+									<option value="27">Pátio</option>
+									<option value="28">Praça</option>
+									<option value="29">Quadra</option>
+									<option value="30">Recanto</option>
+									<option value="31">Residencial</option>
+									<option value="32">Rodovia</option>
+									<option value="33">Rua</option>
+									<option value="34">Setor</option>
+									<option value="35">Sítio</option>
+									<option value="36">Travessa</option>
+									<option value="37">Trecho</option>
+									<option value="38">Trevo</option>
+									<option value="39">Vale</option>
+									<option value="40">Vereda</option>
+									<option value="41">Via</option>
+									<option value="42">Viaduto</option>
+									<option value="43">Viela</option>
+									<option value="44">Vila</option>
+								</select>
+							</div>
+							<div class="form-group col-md-4">
+								<label for="logradouro" class="control-label">Logradouro</label>
+								<input type="text" name="logradouro" id="logradouro" class="form-control">
+							</div>	
+							<div class="form-group col-md-2">
+								<label for="numeroLogradouro" class="control-label">Número</label>
+								<input type="text" name="numeroLogradouro" id="numeroLogradouro" class="form-control" mask="000.000">
+							</div>
+							<div class="form-group col-md-3">
+								<label for="complementoLogradouro" class="control-label">Complemento</label>
+								<input type="text" name="complementoLogradouro" id="complementoLogradouro" class="form-control">
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-md-3">
+								<label for="cepLogradouro" class="control-label">CEP</label>
+								<input type="text" name="cepLogradouro" id="cepLogradouro" class="form-control" mask="00.000-000">
+							</div>
+							<div class="form-group col-md-3">
+								<label class="control-label" for="ufLogradouro">Estado</label>
+								<select name="ufLogradouro" id="ufLogradouro" class="form-control">
+									<option value=""></option>
+									<option value="AC">Acre</option>
+									<option value="AL">Alagoas</option>
+									<option value="AP">Amapá</option>
+									<option value="AM">Amazonas</option>
+									<option value="BA">Bahia</option>
+									<option value="CE">Ceará</option>
+									<option value="DF">Distrito Federal</option>
+									<option value="ES">Espírito Santo</option>
+									<option value="GO">Goiás</option>
+									<option value="MA">Maranhão</option>
+									<option value="MT">Mato Grosso</option>
+									<option value="MS">Mato Grosso do Sul</option>
+									<option value="MG">Minas Gerais</option>
+									<option value="PA">Pará</option>
+									<option value="PB">Paraíba</option>
+									<option value="PR">Paraná</option>
+									<option value="PE">Pernambuco</option>
+									<option value="PI">Piauí</option>
+									<option value="RJ">Rio de Janeiro</option>
+									<option value="RN">Rio Grande do Norte</option>
+									<option value="RS">Rio Grande do Sul</option>
+									<option value="RO">Rondônia</option>
+									<option value="RR">Roraima</option>
+									<option value="SC">Santa Catarina</option>
+									<option value="SP">São Paulo</option>
+									<option value="SE">Sergipe</option>
+									<option value="TO">Tocantins</option>									
+								</select>
+							</div>
+							<div class="form-group col-md-3">
+								<label for="municipioLogradouro" class="control-label">Município</label>
+								<input type="text" name="municipioLogradouro" id="municipioLogradouro" class="form-control">
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-md-3">
+								<label for="telefone" class="control-label">Telefone</label>
+								<input type="text" name="telefone" id="telefone" class="form-control" mask="(00) 0000-0000">
+							</div>
+							<div class="form-group col-md-3">
+								<label for="celular" class="control-label">Celular</label>
+								<input type="text" name="celular" id="celular" class="form-control" mask="(00) 00000-0000">
+							</div>
+						</div>
+					</div>
+				</div>	
+			
+				<!-- DADOS CADASTRAIS -->
+				<div class="panel panel-default" id="dadosCadastrais">
+					<div class="panel-heading ">
+						<h3 class="panel-title">
+							<strong>Dados Cadastrais</strong>
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="form-group col-md-3">
+								<label for="bancoDepositoSalario" class="control-label">Banco Depósito Salário</label>
+								<input type="text" name="bancoDepositoSalario" id="bancoDepositoSalario" class="form-control" mask="000">
+							</div>
+							<div class="form-group col-md-3">
+								<label for="agenciaDepositoSalario" class="control-label">Agência Depósito Salário</label>
+								<input type="text" name="agenciaDepositoSalario" id="agenciaDepositoSalario" class="form-control" mask="0000">
+							</div>
+							<div class="form-group col-md-3">
+								<label for="contaDepositoSalario" class="control-label">Conta Depósito Salário</label>
+								<input type="text" name="contaDepositoSalario" id="contaDepositoSalario" class="form-control" mask="00000000000">
+							</div>
+							<div class="form-group col-md-3">
+								<label for="digitoDepositoSalario" class="control-label">Dígito Depósito Salário</label>
+								<input type="text" name="digitoDepositoSalario" id="digitoDepositoSalario" class="form-control" mask="0">
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</form>
+		</div>
+	</body>
+</html>

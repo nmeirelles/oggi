@@ -1,0 +1,294 @@
+<html>
+
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+
+	<style type="text/css">
+		textarea {
+			resize: none;
+		}
+
+		#divhead {
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%;
+			height: 100px;
+			/* background-image: radial-gradient(circle, red, yellow, green);  */
+			/* background-color:rgb(178, 31, 137); */
+			background-image: radial-gradient(circle, rgb(209, 127, 186), rgb(212, 75, 176), rgb(216, 46, 171), rgb(66, 8, 51));
+			border: solid 1px;
+			border-radius: 0px 20px 0px 20px;
+			/* box-shadow: 5px 5px 5px 1px rgb(195, 17, 106); */
+		}
+
+		#paragrafo {
+			color: white;
+			text-align: center;
+			/* font-size: 20px;                 */
+		}
+
+		#paragrafo2 {
+			color: white;
+			font-size: 14px;
+		}
+
+		/* novo */
+		body {
+			font-family: Open Sans;
+		}
+
+		label {
+			font-family: Open Sans;
+		}
+
+		.container {
+			/* margin-top: 150px; */
+			background: rgb(248, 248, 255);
+			padding: 10px;
+			box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+			border-radius: 10px;
+		}
+
+		h2 {
+			text-align: center;
+			font-size: 30px;
+		}
+
+		h4 {
+			color: rgb(114, 7, 86);
+			margin-left: 20px;
+			font-family: Open Sans;
+			font-style: bold;
+			font-size: 25px;
+		}
+
+		.fluig-style-guide legend {
+			padding-top: 20px;
+		}
+
+		.form-group {
+			background: rgb(255, 255, 255);
+			padding: 20px;
+			box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+			border-radius: 10px;
+		}
+	</style>
+
+
+</head>
+
+<body>
+	<div class="fluig-style-guide">
+		<form name="form" role="form">
+			<div class="container">
+
+				<div id="divhead">
+					<p id="paragrafo"><b>RH.06 - MUDANÇA DE FUNÇÃO</b></p>
+					<p id="paragrafo2" align="center"> Procedimento para Mudança de Função.</p>
+				</div>
+
+				<h4 id="lg_formulario">Formulário</h4>
+				<fieldset id="fs_formulario" name="fs_formulario">
+					<div class="form-group">
+						<div class="row" id="form">
+							<div class="col-md-3 col-xs-12">
+								<label for="dataEmissao">Data Solicitação</label>
+								<input type="date" name="dataEmissao" id="dataEmissao" readonly="readonly"
+									class="form-control">
+							</div>
+						</div>
+						<div class="row" id="form">
+							<div class="col-md-6 col-xs-12">
+								<label for="solicitante">Solicitante</label>
+								<input type="text" name="solicitante" id="solicitante" readonly="readonly"
+									class="form-control">
+							</div>
+							<div class="col-md-6 col-xs-12">
+								<label for="email_solicitante">E-mail</label>
+								<input type="text" name="email_solicitante" id="email_solicitante" readonly="readonly"
+									class="form-control">
+							</div>
+						</div>
+
+						<br>
+						<div class="row" id="form">
+							<div class="col-md-6 col-xs-12">
+								<label for="colaborador">Nome Colaborador: <b style="color:red">*</b></label>
+								<input type="text" name="colaborador" id="colaborador" class="form-control">
+							</div>
+							<div class="col-md-3 col-xs-12">
+								<label for="dataAlteracao">Data da Alteração</label>
+								<input type="date" name="dataAlteracao" id="dataAlteracao" class="form-control">
+							</div>
+						</div>
+
+						<br>
+						<div class="row" id="form">
+							<div class="col-md-6 col-xs-12">
+								<label for="cargo_atual">Cargo Atual: <b style="color:red">*</b></label>
+								<input type="text" name="cargo_atual" id="cargo_atual" class="form-control" />
+							</div>
+							<div class="col-md-6 col-xs-12">
+								<label for="departamento">Departamento: <b style="color:red">*</b></label>
+								<!-- <input type="text" name="departamento" id="departamento" class="form-control" /> -->
+								<input type="zoom" id="departamento" name="departamento" data-zoom="{
+										'displayKey':'DESCRICAO',
+										'datasetId':'DP',
+										'placeholder':'Escolha o departamento',
+										'fields':[
+												{
+													'field':'DESCRICAO'
+												}
+												]
+											}" class="form-control" />
+							</div>
+						</div>
+
+						<br>
+						<div class="row" id="form">
+							<div class="col-md-12 col-xs-12">
+								<label><b><u>ALTERAÇÃO DE CARGO E SALÁRIO</u></b></label>
+							</div>
+						</div>
+
+						<div class="row" id="form">
+							<div class="col-md-6 col-xs-12">
+								<label for="cargo_proposto">Cargo Proposto: <b style="color:red">*</b></label>
+								<input type="text" name="cargo_proposto" id="cargo_proposto" class="form-control" />
+							</div>
+							<div class="col-md-6 col-xs-12">
+								<label for="dep_proposto">Departamento Proposto: <b style="color:red">*</b></label>
+								<!-- <input type="text" name="dep_proposto" id="dep_proposto" class="form-control" /> -->
+								<input type="zoom" id="dep_proposto" name="dep_proposto" data-zoom="{
+											'displayKey':'DESCRICAO',
+											'datasetId':'DP',
+											'placeholder':'Escolha o departamento',
+											'fields':[
+													{
+														'field':'DESCRICAO'
+													}
+													]
+												}" class="form-control" />
+							</div>
+						</div>
+
+						<div class="row" id="form">
+							<div class="col-md-2 col-xs-12">
+								<label for="salario_novo">Salário Proposto: <b style="color:red">*</b></label>
+								<input type="text" name="salario_novo" id="salario_novo" placeholder="0,00"
+									mask="#00.000.000,00" class="form-control">
+							</div>
+						</div>
+
+						<br>
+						<div class="row" id="form">
+							<div class="col-md-12 col-xs-12">
+								<label><b><u>ALTERAÇÃO DA JORNADA DE TRABALHO</u></b></label>
+							</div>
+						</div>
+
+						<div class="row" id="form">
+							<div class="col-md-2 col-xs-12">
+								<label for="horario_atual">Horário Atual:</label>
+								<input type="time" name="horario_atual" id="horario_atual" class="form-control" />
+							</div>
+							<div class="col-md-2 col-xs-12">
+								<label for="horario_novo">Novo Horário:</label>
+								<input type="time" name="horario_novo" id="horario_novo" class="form-control" />
+							</div>
+						</div>
+					</div>
+				</fieldset>
+
+				<!-- APROVAÇÃO DA DIRETORIA -->
+				<h4 id="lg_aprovar_dir">Diretoria</h4>
+				<fieldset id="fs_aprovar_dir" name="fs_aprovar_dir">
+					<div class="form-group">
+						<div class="row" id="aprovacao2">
+							<div class="col-md-12 col-xs-12">
+								<label for="aprovacao2">Aprovar Alteração de Função ?</label>
+							</div>
+							<div class="custom-radio custom-radio-primary col-md-12 col-xs-12">
+								<input type="radio" name="aprovacao2" id="radio3" value="sim" class="form-control">
+								<label for="radio3">Sim</label>
+							</div>
+							<div class="custom-radio custom-radio-primary col-md-12 col-xs-12">
+								<input type="radio" name="aprovacao2" id="radio4" value="nao" class="form-control">
+								<label for="radio4">Não</label>
+							</div>
+						</div>		
+					</div>
+				</fieldset>
+
+				<h4 id="lg_aprovar_rh">Recursos Humanos</h4>
+				<fieldset id="fs_aprovar_rh" name="fs_aprovar_rh">
+					<div class="form-group">
+						<div class="row" id="aprovacao1">
+							<div class="col-md-12 col-xs-12">
+								<label for="aprovacao1">Aprovar Alteração de Função ? </label>
+							</div>
+							<div class="custom-radio custom-radio-primary col-md-12 col-xs-12">
+								<input type="radio" name="aprovacao1" id="radio1" value="sim" class="form-control">
+								<label for="radio1">Sim</label>
+							</div>
+							<div class="custom-radio custom-radio-primary col-md-12 col-xs-12">
+								<input type="radio" name="aprovacao1" id="radio2" value="nao" class="form-control">
+								<label for="radio2">Não</label>
+							</div>
+						</div>		
+					</div>
+				</fieldset>
+
+				<h4 id="lg_alteracao">Alteração</h4>
+				<fieldset id="fs_alteracao" name="fs_alteracao">
+					<div class="form-group">
+						<div class="row" id="alterar_funcao">
+							<div class="col-md-12 col-xs-12">
+								<label for="alterar_funcao">Alteração efetuada ?</label>
+							</div>
+							<div class="custom-radio custom-radio-primary col-md-12 col-xs-12">
+								<input type="radio" name="alterar_funcao" id="radio5" value="sim" class="form-control">
+								<label for="radio5">Sim</label>
+							</div>
+							<div class="custom-radio custom-radio-primary col-md-12 col-xs-12">
+								<input type="radio" name="alterar_funcao" id="radio6" value="nao" class="form-control">
+								<label for="radio6">Não</label>
+							</div>
+						</div>		
+					</div>
+				</fieldset>
+
+			</div>
+		</form>
+	</div>
+</body>
+
+<script>
+	$(document).ready(function () {
+
+		var data = new Date();
+		var dia = '' + data.getDate();
+		var mes = '' + (data.getMonth() + 1);
+		var ano = '' + data.getFullYear();
+
+		if (parseInt(dia) < 10) {
+			dia = '0' + dia;
+		}
+
+		if (parseInt(mes) < 10) {
+			mes = '0' + mes;
+		}
+
+		var dataAtual = ano + '-' + mes + '-' + dia;
+
+		$('#dataEmissao').val(dataAtual)
+		$('#dataAlteracao').val(dataAtual)
+		$('#dataEmissao').attr('#dataEmissao', True)
+	});
+</script>
+
+</html>
