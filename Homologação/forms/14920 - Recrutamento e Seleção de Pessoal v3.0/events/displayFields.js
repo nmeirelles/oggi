@@ -204,6 +204,8 @@ function getData(form,customHTML){
 		var nome = form.getValue('nomeAprovado___' + candidatosAprovados[i]) ;
 		nomeCandidatoAprovado = nomeCandidatoAprovado + nome + '';
 	};
+	var obs = form.getValue('obsRevisaoRequisicao');
+	var ajudaCusto = form.getValue('valorAjudaCusto');
 
     var dados = {
     	'dataRequisicao': dataRequisicao,
@@ -224,7 +226,9 @@ function getData(form,customHTML){
     	'compras': compras,
     	'equipamentoSegTrab': equipamentoSegTrab,
     	'nomeCandidatoAprovado': nomeCandidatoAprovado,
-        'versaoDoc': ''
+        'versaoDoc': '',
+		'obs': obs,
+		'ajudaCusto': ajudaCusto
     };
 	var json = JSONUtil.toJSON(dados);
 	customHTML.append("<script> var dadosDoc = " + json + ";</script>");

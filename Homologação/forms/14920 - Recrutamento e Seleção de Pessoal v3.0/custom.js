@@ -68,8 +68,6 @@ $(document).ready(function(){
 
 	let geraFormularioRP = $('#geraFormularioRP')
 	geraFormularioRP.on('click', () => {
-		console.log('Gera Formulário')
-		console.log('Atividade: '+WKNumState)
 		exportarDoc()
 	})
 
@@ -91,8 +89,6 @@ function verLista(){
 function consultaGestor(IDPROTHEUS){
 	let c = DatasetFactory.createConstraint("IDPROTHEUS", IDPROTHEUS, IDPROTHEUS, ConstraintType.MUST)
 	let ds = DatasetFactory.getDataset("ds_consulta_id", null, [c], null)
-
-	console.log(ds)
 
 	if(ds.values.length > 0) $('#idGestorCentroCusto').val(ds.values[0]['USER_CODE'])
 	else FLUIGC.toast({title: 'Atenção: ', message: 'Gestor não encontrado!', type: 'danger'})

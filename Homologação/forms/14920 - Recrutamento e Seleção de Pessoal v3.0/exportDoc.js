@@ -31,6 +31,9 @@ function exportarDoc() {
     var salario = $("#salario").val()
     if(dadosDoc.salario == '') dadosDoc.salario = salario
 
+    var obs = $("#obsRevisaoRequisicao").val()
+    if(dadosDoc.obs == '') dadosDoc.obs = obs
+
     if(dadosDoc.tipoContratacao == 'indeterminadoCLT') dadosDoc.tipoContratacao = 'Prazo Indeterminado (CTL)'
     if(dadosDoc.tipoContratacao == 'determinadoCLT') dadosDoc.tipoContratacao = 'Prazo Determinado (CLT)'
     if(dadosDoc.tipoContratacao == 'aprendiz') dadosDoc.tipoContratacao = 'Aprendiz'
@@ -52,8 +55,6 @@ function exportarDoc() {
     dadosDoc.beneficios = dadosDoc.beneficios.slice(0, dadosDoc.beneficios.length - 1)
     dadosDoc.tecnologiaInformacao = dadosDoc.tecnologiaInformacao.slice(0, dadosDoc.tecnologiaInformacao.length - 1)
 
-    dadosDoc.salario = $('#salario').val()
-
     // var candidatosAprovados = $('#candidatosAprovados tbody tr')
     // for(var i = 0; i < candidatosAprovados.lengt; i++){
     //     var candidato = candidatosAprovados[i]
@@ -64,7 +65,6 @@ function exportarDoc() {
 
     fluigLoading.show()
     setTimeout(function() {
-        console.log(dadosDoc)
         gerarDocumentos(dadosDoc, nomeDoc, file, extensaoDoArq, fluigLoading)
     }, 1000)
 }
@@ -83,7 +83,6 @@ function gerarDocumentos(dados, nomeDoc, file, extensaoDoArquivoDonwload, fluigL
         var doc = new window.docxtemplater().loadZip(zip)
         doc.setData(dados)
         try {
-            // render the document (replace all occurences of {first_name} by John, {last_name} by Doe, ...)
             doc.render()
         } catch (error) {
             var e = {
@@ -95,29 +94,23 @@ function gerarDocumentos(dados, nomeDoc, file, extensaoDoArquivoDonwload, fluigL
             console.log(JSON.stringify({
                 error: e
             }))
-            // The error thrown here contains additional information when logged with JSON.stringify (it contains a property object).
             throw error
         }
         var out = doc.getZip().generate({
             type: "blob",
             mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-        }) //Output the document using Data-URI
-        // saveAs(out, nomeDoc + ".docx")
-
-
+        })
         if (extensaoDoArquivoDonwload == '.pdf') {
             var formData = new FormData()
             formData.append('File', out, nomeDoc + '.docx')
             fluigLoading.show()
             $.ajax({
-                //url: 'https://v2.convertapi.com/convert/docx/to/pdf?Secret=AuRUA7IeRna6KmdS', KZhrYAIOwEgDUNTV //passado pelo lucas 18/01
             	url: 'https://v2.convertapi.com/convert/docx/to/pdf?Secret=RnGrOawf866y4IPH',
                 data: formData,
                 processData: false,
                 contentType: false,
                 method: 'POST',
                 success: function (data) {
-
                     var linkSource = "data:application/pdf;base64," + data.Files[0].FileData
                     var downloadLink = document.createElement("a")
                     var fileName = nomeDoc + extensaoDoArquivoDonwload
@@ -126,11 +119,8 @@ function gerarDocumentos(dados, nomeDoc, file, extensaoDoArquivoDonwload, fluigL
                     downloadLink.click()
                     fluigLoading.show()
                     anexaDoc = data.Files[0].FileData
-
                 }
             })
-
-            // fluigLoading.show()
         } else {
             saveAs(out, nomeDoc + extensaoDoArquivoDonwload)
             fluigLoading.show()
@@ -139,13 +129,9 @@ function gerarDocumentos(dados, nomeDoc, file, extensaoDoArquivoDonwload, fluigL
         fluigLoading.show()
 
     })
-
-    // fluigLoading.show()
     setInterval(() => {
         fluigLoading.hide()
     }, 100)
-
-    //fluigLoading.show()
 }
 
 function docGED(pastaPai, tipoDoc) {
@@ -154,7 +140,6 @@ function docGED(pastaPai, tipoDoc) {
         versao: '',
         file: ''
     }
-
     $.ajax({
         type: "get",
         dataType: 'json',
