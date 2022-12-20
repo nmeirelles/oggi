@@ -28,6 +28,9 @@ function exportarDoc() {
     var file = consultaDocGed.file
     dadosDoc.versaoDoc = '' + consultaDocGed.versao
 
+    var salario = $("#salario").val()
+    if(dadosDoc.salario == '') dadosDoc.salario = salario
+
     if(dadosDoc.tipoContratacao == 'indeterminadoCLT') dadosDoc.tipoContratacao = 'Prazo Indeterminado (CTL)'
     if(dadosDoc.tipoContratacao == 'determinadoCLT') dadosDoc.tipoContratacao = 'Prazo Determinado (CLT)'
     if(dadosDoc.tipoContratacao == 'aprendiz') dadosDoc.tipoContratacao = 'Aprendiz'
