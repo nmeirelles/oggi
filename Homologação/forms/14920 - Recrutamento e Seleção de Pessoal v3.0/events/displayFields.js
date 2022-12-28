@@ -23,18 +23,8 @@ function displayFields(form,customHTML){
 		form.setValue("id_protheus_solicitante", idprotheus);
 		form.setValue("dataSolicitacao", dataSolicitacao);
 
+		form.setVisibleById('revisaoRequisicao', false);
 		form.setVisibleById('divAprovacaoGestor', false);
-		form.setVisibleById('revisaoRequisicao', false);
-		form.setVisibleById('aprovacaoDiretoria', false);
-		form.setVisibleById('assumirVaga', false);
-		form.setVisibleById('ti', false);
-		form.setVisibleById('facilities', false);
-		form.setVisibleById('divSegurancaTrabalho', false);
-		form.setVisibleById('aberturaSubprocesso', false);
-	}
-
-	if(WKNumState == '95'){
-		form.setVisibleById('revisaoRequisicao', false);
 		form.setVisibleById('aprovacaoDiretoria', false);
 		form.setVisibleById('assumirVaga', false);
 		form.setVisibleById('ti', false);
@@ -44,6 +34,16 @@ function displayFields(form,customHTML){
 	}
 
 	if(WKNumState == '68'){
+		form.setVisibleById('divAprovacaoGestor', false);
+		form.setVisibleById('aprovacaoDiretoria', false);
+		form.setVisibleById('assumirVaga', false);
+		form.setVisibleById('ti', false);
+		form.setVisibleById('facilities', false);
+		form.setVisibleById('divSegurancaTrabalho', false);
+		form.setVisibleById('aberturaSubprocesso', false);
+	}
+
+	if(WKNumState == '95'){
 		form.setVisibleById('aprovacaoDiretoria', false);
 		form.setVisibleById('assumirVaga', false);
 		form.setVisibleById('ti', false);
@@ -53,6 +53,8 @@ function displayFields(form,customHTML){
 	}
 
 	if(WKNumState == '71'){
+		form.setVisibleById('revisaoRequisicao', false);
+		form.setVisibleById('divAprovacaoGestor', false);
 		form.setVisibleById('aprovacaoDiretoria', false);
 		form.setVisibleById('assumirVaga', false);
 		form.setVisibleById('ti', false);
@@ -60,9 +62,14 @@ function displayFields(form,customHTML){
 		form.setVisibleById('divSegurancaTrabalho', false);
 		form.setVisibleById('aberturaSubprocesso', false);
 	}
+	if(WKNumState == '71' && atividadeAnterior == '69'){
+		form.setVisibleById('revisaoRequisicao', true);
+	}
+	if(WKNumState == '71' && atividadeAnterior == '98'){
+		form.setVisibleById('divAprovacaoGestor', true);
+	}
 	if(WKNumState == '71' && atividadeAnterior == '82'){
 		form.setVisibleById('aprovacaoDiretoria', true);
-		form.setVisibleById('revisaoRequisicao', false);
 	}
 
 	if(WKNumState == '74'){

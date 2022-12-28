@@ -29,10 +29,10 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Recrutamento e Seleção de Pessoal v3.0</processId>
-      <version>2</version>
+      <version>26</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
-    <formId>116663</formId>
+    <formId>14920</formId>
     <editionMode>true</editionMode>
     <updateAttachmentsVersion>false</updateAttachmentsVersion>
     <controlsAttachmentsSecurity>false</controlsAttachmentsSecurity>
@@ -128,7 +128,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>950</positionX>
-      <positionY>142</positionY>
+      <positionY>255</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -283,8 +283,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>360</positionX>
-      <positionY>255</positionY>
+      <positionX>190</positionX>
+      <positionY>142</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -491,8 +491,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>160</positionX>
-      <positionY>142</positionY>
+      <positionX>360</positionX>
+      <positionY>255</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -529,7 +529,7 @@
       <formFolder>0</formFolder>
       <automatic>false</automatic>
       <positionX>1090</positionX>
-      <positionY>134</positionY>
+      <positionY>247</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>4</stateType>
       <bpmnType>127</bpmnType>
@@ -578,8 +578,8 @@
       <subProcessId></subProcessId>
       <formFolder>0</formFolder>
       <automatic>true</automatic>
-      <positionX>510</positionX>
-      <positionY>247</positionY>
+      <positionX>383</positionX>
+      <positionY>134</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>1</stateType>
       <bpmnType>120</bpmnType>
@@ -628,8 +628,8 @@
       <subProcessId></subProcessId>
       <formFolder>0</formFolder>
       <automatic>true</automatic>
-      <positionX>300</positionX>
-      <positionY>134</positionY>
+      <positionX>510</positionX>
+      <positionY>247</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>1</stateType>
       <bpmnType>120</bpmnType>
@@ -668,7 +668,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>1190</positionX>
-      <positionY>162</positionY>
+      <positionY>275</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -692,7 +692,7 @@
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <expressionOrder>1</expressionOrder>
-        <version>2</version>
+        <version>26</version>
         <sequence>61</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -704,7 +704,7 @@
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <expressionOrder>2</expressionOrder>
-        <version>2</version>
+        <version>26</version>
         <sequence>61</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;atividadeTI&quot;) == &quot;sim&quot;</condition>
@@ -716,7 +716,7 @@
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <expressionOrder>3</expressionOrder>
-        <version>2</version>
+        <version>26</version>
         <sequence>61</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;atividadeFacilities&quot;) == &quot;sim&quot;</condition>
@@ -728,7 +728,7 @@
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <expressionOrder>4</expressionOrder>
-        <version>2</version>
+        <version>26</version>
         <sequence>61</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;atividadeSegTrabalho&quot;) == &quot;sim&quot;</condition>
@@ -740,7 +740,7 @@
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <expressionOrder>1</expressionOrder>
-        <version>2</version>
+        <version>26</version>
         <sequence>69</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&apos;decisaoRevisao&apos;) == &apos;retornarSolicitante&apos;</condition>
@@ -752,11 +752,11 @@
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <expressionOrder>2</expressionOrder>
-        <version>2</version>
+        <version>26</version>
         <sequence>69</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&apos;decisaoRevisao&apos;) == &apos;enviarDiretoria&apos;</condition>
-      <destinationSequenceId>74</destinationSequenceId>
+      <destinationSequenceId>95</destinationSequenceId>
       <conditionType>0</conditionType>
     </ConditionProcessState>
     <ConditionProcessState>
@@ -764,7 +764,7 @@
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <expressionOrder>1</expressionOrder>
-        <version>2</version>
+        <version>26</version>
         <sequence>82</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&apos;aprovacaoDiretoria&apos;) == &apos;aprovado&apos;</condition>
@@ -776,7 +776,7 @@
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <expressionOrder>2</expressionOrder>
-        <version>2</version>
+        <version>26</version>
         <sequence>82</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&apos;aprovacaoDiretoria&apos;) == &apos;reprovado&apos;</condition>
@@ -788,11 +788,11 @@
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <expressionOrder>1</expressionOrder>
-        <version>2</version>
+        <version>26</version>
         <sequence>98</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&apos;aprovacaoGestor&apos;) == &apos;aprovado&apos;</condition>
-      <destinationSequenceId>68</destinationSequenceId>
+      <destinationSequenceId>74</destinationSequenceId>
       <conditionType>0</conditionType>
     </ConditionProcessState>
     <ConditionProcessState>
@@ -800,7 +800,7 @@
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <expressionOrder>2</expressionOrder>
-        <version>2</version>
+        <version>26</version>
         <sequence>98</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&apos;aprovacaoGestor&apos;) == &apos;reprovado&apos;</condition>
@@ -888,40 +888,6 @@
       <returnPermited>false</returnPermited>
       <initialStateSequence>68</initialStateSequence>
       <finalStateSequence>69</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>1</version>
-        <linkSequence>72</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>69</initialStateSequence>
-      <finalStateSequence>71</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>1</version>
-        <linkSequence>75</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>69</initialStateSequence>
-      <finalStateSequence>74</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
       <automaticLink>false</automaticLink>
@@ -1069,23 +1035,6 @@
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <version>1</version>
-        <linkSequence>97</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>1</initialStateSequence>
-      <finalStateSequence>95</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>1</version>
         <linkSequence>99</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
@@ -1107,8 +1056,8 @@
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
-      <initialStateSequence>98</initialStateSequence>
-      <finalStateSequence>71</finalStateSequence>
+      <initialStateSequence>1</initialStateSequence>
+      <finalStateSequence>68</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
       <automaticLink>false</automaticLink>
@@ -1124,8 +1073,8 @@
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
-      <initialStateSequence>98</initialStateSequence>
-      <finalStateSequence>68</finalStateSequence>
+      <initialStateSequence>69</initialStateSequence>
+      <finalStateSequence>71</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
       <automaticLink>false</automaticLink>
@@ -1142,7 +1091,58 @@
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
       <initialStateSequence>71</initialStateSequence>
+      <finalStateSequence>68</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>recrutamento_selecao_pessoal_v3</processId>
+        <version>1</version>
+        <linkSequence>103</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>69</initialStateSequence>
       <finalStateSequence>95</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>recrutamento_selecao_pessoal_v3</processId>
+        <version>1</version>
+        <linkSequence>104</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>98</initialStateSequence>
+      <finalStateSequence>74</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>recrutamento_selecao_pessoal_v3</processId>
+        <version>1</version>
+        <linkSequence>105</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>98</initialStateSequence>
+      <finalStateSequence>71</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
       <automaticLink>false</automaticLink>
@@ -1323,7 +1323,7 @@ process.instructions=</eventDescription>
       <height>113</height>
       <width>1211</width>
       <positionX>40</positionX>
-      <positionY>235</positionY>
+      <positionY>122</positionY>
       <stateName>RH</stateName>
       <type>2</type>
       <parentSequence>1</parentSequence>
@@ -1387,7 +1387,7 @@ process.instructions=</eventDescription>
       <height>113</height>
       <width>1211</width>
       <positionX>40</positionX>
-      <positionY>122</positionY>
+      <positionY>235</positionY>
       <stateName>Gestor</stateName>
       <type>2</type>
       <parentSequence>1</parentSequence>
@@ -1406,7 +1406,7 @@ process.instructions=</eventDescription>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>2</version>
+        <version>26</version>
         <linkSequence>14</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1417,7 +1417,7 @@ process.instructions=</eventDescription>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>2</version>
+        <version>26</version>
         <linkSequence>58</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1428,7 +1428,7 @@ process.instructions=</eventDescription>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>2</version>
+        <version>26</version>
         <linkSequence>64</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1439,7 +1439,7 @@ process.instructions=</eventDescription>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>2</version>
+        <version>26</version>
         <linkSequence>65</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1450,18 +1450,7 @@ process.instructions=</eventDescription>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>2</version>
-        <linkSequence>72</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>539</positionX>
-      <positionY>67</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>2</version>
+        <version>26</version>
         <linkSequence>85</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1472,18 +1461,18 @@ process.instructions=</eventDescription>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>2</version>
+        <version>26</version>
         <linkSequence>87</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>829</positionX>
-      <positionY>180</positionY>
+      <positionX>832</positionX>
+      <positionY>292</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>2</version>
+        <version>26</version>
         <linkSequence>92</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1494,8 +1483,8 @@ process.instructions=</eventDescription>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>2</version>
-        <linkSequence>97</linkSequence>
+        <version>26</version>
+        <linkSequence>100</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
       <positionX>117</positionX>
@@ -1505,33 +1494,22 @@ process.instructions=</eventDescription>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>2</version>
-        <linkSequence>100</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>412</positionX>
-      <positionY>179</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>2</version>
-        <linkSequence>101</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>330</positionX>
-      <positionY>292</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>2</version>
+        <version>26</version>
         <linkSequence>102</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>212</positionX>
+      <positionX>243</positionX>
+      <positionY>67</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>recrutamento_selecao_pessoal_v3</processId>
+        <version>26</version>
+        <linkSequence>105</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>539</positionX>
       <positionY>67</positionY>
     </ProcessLinkBend>
   </list>

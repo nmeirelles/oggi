@@ -18,7 +18,7 @@ function enableFields(form){
         form.setEnabled("cargo", false);
         form.setEnabled("salarioSugerido", false);
         form.setEnabled("horarioTrabalho", false);
-        form.setEnabled("ajudaCustoSim", false);
+        form.setEnabled("ajudaCusto", false);
         form.setEnabled("valorAjudaCusto", false);
         form.setEnabled("tipo", false);
         form.setEnabled("outroTipoContratacao", false);
