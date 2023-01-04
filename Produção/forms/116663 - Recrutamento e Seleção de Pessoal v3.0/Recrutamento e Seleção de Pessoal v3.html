@@ -506,6 +506,54 @@
 						</div>
 						<!-- Fim da definição da vaga  -->
 
+						<!-- REVISÃO DE REQUISIÇÃO -->
+						<div class="panel panel-default" id="revisaoRequisicao">
+							<div class="panel-heading">
+								<h3 class="panel-title">Revisão de Requisição</h3>
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<div class="form-group col-md-12">
+										<div class="switch switch-danger">
+											<label>Retornar ao solicitante</label>
+											<input class="switch-input" type="radio" value="retornarSolicitante" name="decisaoRevisao" id="retornarSolicitante" />
+											<label class="switch-button" for="retornarSolicitante">Toggle</label>
+										</div>
+									</div>
+									<div class="form-group col-md-12">
+										<div class="switch switch-success">
+											<label>Enviar para aprovacão</label>
+											<input class="switch-input" type="radio" value="enviarDiretoria" name="decisaoRevisao" id="enviarDiretoria" />
+											<label class="switch-button" for="enviarDiretoria">Toggle</label>
+										</div>
+									</div>
+								</div>
+								<div class="row" id="salarioInformadoRH">
+									<div class="form-group col-md-3 col-xs-12 col-sm-12">
+										<label class="control-label" for="salario">Salário</label>
+										<input type="text" name="salario" id="salario" class="form-control" mask="#00.000.000.000.000,00"/>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-group">
+										<button id="geraFormularioRP" class="btn btn-primarybtn btn-success">GERAR FORMULÁRIO RP</button>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12 form-group">
+										<label class="control-label" for="obsRevisaoRequisicao">Observações <b style="color: red">*</b></label>
+										<div class="input-group">
+											<textarea class="form-control" id="obsRevisaoRequisicao" name="obsRevisaoRequisicao" rows="2"></textarea>
+											<span class="input-group-addon">
+												<span class="fluigicon fluigicon-comment"></span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- FIM REVISÃO REQUISIÇÃO -->						
+
 						<!-- APROVAÇÃO GESTOR -->
 						<div class="panel panel-default" id="divAprovacaoGestor">
 							<div class="panel-heading">
@@ -541,55 +589,7 @@
 								</div>
 							</div>
 						</div>
-						<!-- FIM APROVAÇÃO DIRETORIA -->									
-		
-						<!-- REVISÃO DE REQUISIÇÃO -->
-						<div class="panel panel-default" id="revisaoRequisicao">
-							<div class="panel-heading">
-								<h3 class="panel-title">Revisão de Requisição</h3>
-							</div>
-							<div class="panel-body">
-								<div class="row">
-									<div class="form-group col-md-12">
-										<div class="switch switch-danger">
-											<label>Retornar ao solicitante</label>
-											<input class="switch-input" type="radio" value="retornarSolicitante" name="decisaoRevisao" id="retornarSolicitante" />
-											<label class="switch-button" for="retornarSolicitante">Toggle</label>
-										</div>
-									</div>
-									<div class="form-group col-md-12">
-										<div class="switch switch-success">
-											<label>Enviar para diretoria</label>
-											<input class="switch-input" type="radio" value="enviarDiretoria" name="decisaoRevisao" id="enviarDiretoria" />
-											<label class="switch-button" for="enviarDiretoria">Toggle</label>
-										</div>
-									</div>
-								</div>
-								<div class="row" id="salarioInformadoRH">
-									<div class="form-group col-md-3 col-xs-12 col-sm-12">
-										<label class="control-label" for="salario">Salário</label>
-										<input type="text" name="salario" id="salario" class="form-control" mask="#00.000.000.000.000,00"/>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-group">
-										<button id="geraFormularioRP" class="btn btn-primarybtn btn-success">GERAR FORMULÁRIO RP</button>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-12 form-group">
-										<label class="control-label" for="obsRevisaoRequisicao">Observações <b style="color: red">*</b></label>
-										<div class="input-group">
-											<textarea class="form-control" id="obsRevisaoRequisicao" name="obsRevisaoRequisicao" rows="2"></textarea>
-											<span class="input-group-addon">
-												<span class="fluigicon fluigicon-comment"></span>
-											</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- FIM REVISÃO REQUISIÇÃO -->
+						<!-- FIM APROVAÇÃO GESTOR -->									
 		
 						<!-- APROVAÇÃO DIRETORIA -->
 						<div class="panel panel-default" id="aprovacaoDiretoria">

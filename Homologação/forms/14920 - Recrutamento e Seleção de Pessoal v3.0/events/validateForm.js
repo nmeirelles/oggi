@@ -74,6 +74,8 @@ function validateForm(form){
     }
 
     if(WKNumState == 10){
+        if(campoVazio(form,"possuiEquipamento")) msgErro += "<li>É necessário informar se <b>POSSUI EQUIPAMENTO DISPONÍVEL</b>.</li>";
+        if(form.getValue("possuiEquipamento") == "nao" && campoVazio(form,"numeroComprasFluig")) msgErro += "<li>É necessário informar o <b>NÚMERO FLUIG COMPRAS</b>.</li>";
         if(campoVazio(form,"obsTI")) msgErro += "<li>É necessário informar as <b>OBSERVAÇÕES</b>.</li>";
     }
 

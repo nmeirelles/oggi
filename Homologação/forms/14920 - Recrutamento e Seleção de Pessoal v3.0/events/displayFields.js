@@ -150,6 +150,10 @@ function displayFields(form,customHTML){
 	if(aprovacaoRH == 'aprovado') form.setVisibleById('candidatoAprovado', true);
 	else form.setVisibleById('candidatoAprovado', false);
 
+	var possuiEquipamento = form.getValue('possuiEquipamento');
+	if(possuiEquipamento == 'nao') form.setVisibleById('divNumFluigCompras', true);
+	else form.setVisibleById('divNumFluigCompras', false);
+
 }
 
 function validaInfo(form){

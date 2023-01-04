@@ -64,6 +64,9 @@ $(document).ready(function(){
 		if(this.id === 'ajudaCustoSim') $('#ajudaCusto').show(),$('#valorAjudaCusto').val('')
 		if(this.id === 'ajudaCustoNao') $('#ajudaCusto').hide(),$('#valorAjudaCusto').val('')
 
+		if(this.id === 'possuiEquipamentoSim') $('#divNumFluigCompras').hide(),$('#numeroComprasFluig').val('')
+		if(this.id === 'possuiEquipamentoNao') $('#divNumFluigCompras').show(),$('#numeroComprasFluig').val('')
+
 	})
 
 	let geraFormularioRP = $('#geraFormularioRP')
