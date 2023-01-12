@@ -1,10 +1,9 @@
 function displayFields(form,customHTML){
-	log.info('displayFields.js begin: Recrutamento e Seleção de Pessoal v3');
 
 	form.setShowDisabledFields(true);
     //form.setHidePrintLink(true);
 	
-	form.setVisibleById('divCamposControle', false);
+	//form.setVisibleById('divCamposControle', false);
 
 	let WKNumState = getValue("WKNumState");
     form.setValue("atividadeAtual", WKNumState);
@@ -112,7 +111,6 @@ function displayFields(form,customHTML){
 	}
 
 	// Validation HR Section
-	log.info('validaInfo: '+validaInfo(form))
 	if(validaInfo(form) == true && WKNumState != '0'){
 		form.setVisibleById('salarioInformadoRH', true);
 		getData(form,customHTML);
@@ -218,7 +216,6 @@ function getData(form,customHTML){
 	var obs = form.getValue('obsRevisaoRequisicao');
 	var ajudaCusto = form.getValue('valorAjudaCusto');
 	var horarioTrabalho = form.getValue('horarioTrabalho');
-
     var dados = {
     	'dataRequisicao': dataRequisicao,
     	'requisicao': requisicao,

@@ -29,7 +29,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Recrutamento e Seleção de Pessoal v3.0</processId>
-      <version>28</version>
+      <version>34</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>14920</formId>
@@ -179,7 +179,7 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>640</positionX>
+      <positionX>380</positionX>
       <positionY>473</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
@@ -643,6 +643,56 @@
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <version>1</version>
+        <sequence>110</sequence>
+      </processStatePK>
+      <stateName>Exclusivo</stateName>
+      <stateDescription>Exclusivo</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>false</automatic>
+      <positionX>210</positionX>
+      <positionY>239</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>3</stateType>
+      <bpmnType>121</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>recrutamento_selecao_pessoal_v3</processId>
+        <version>1</version>
+        <sequence>113</sequence>
+      </processStatePK>
+      <stateName>Join</stateName>
+      <stateDescription>Join</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>false</automatic>
+      <positionX>730</positionX>
+      <positionY>360</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>4</stateType>
+      <bpmnType>127</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>recrutamento_selecao_pessoal_v3</processId>
+        <version>1</version>
         <sequence>35</sequence>
       </processStatePK>
       <stateName>End</stateName>
@@ -692,7 +742,7 @@
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <expressionOrder>1</expressionOrder>
-        <version>28</version>
+        <version>34</version>
         <sequence>61</sequence>
       </conditionProcessStatePK>
       <condition>true</condition>
@@ -704,7 +754,7 @@
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <expressionOrder>2</expressionOrder>
-        <version>28</version>
+        <version>34</version>
         <sequence>61</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;atividadeFacilities&quot;) == &quot;sim&quot;</condition>
@@ -716,7 +766,7 @@
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <expressionOrder>3</expressionOrder>
-        <version>28</version>
+        <version>34</version>
         <sequence>61</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;atividadeSegTrabalho&quot;) == &quot;sim&quot;</condition>
@@ -728,7 +778,7 @@
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <expressionOrder>1</expressionOrder>
-        <version>28</version>
+        <version>34</version>
         <sequence>69</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&apos;decisaoRevisao&apos;) == &apos;retornarSolicitante&apos;</condition>
@@ -740,11 +790,11 @@
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <expressionOrder>2</expressionOrder>
-        <version>28</version>
+        <version>34</version>
         <sequence>69</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&apos;decisaoRevisao&apos;) == &apos;enviarDiretoria&apos;</condition>
-      <destinationSequenceId>95</destinationSequenceId>
+      <destinationSequenceId>110</destinationSequenceId>
       <conditionType>0</conditionType>
     </ConditionProcessState>
     <ConditionProcessState>
@@ -752,7 +802,7 @@
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <expressionOrder>1</expressionOrder>
-        <version>28</version>
+        <version>34</version>
         <sequence>82</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&apos;aprovacaoDiretoria&apos;) == &apos;reprovado&apos;</condition>
@@ -764,25 +814,11 @@
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <expressionOrder>2</expressionOrder>
-        <version>28</version>
+        <version>34</version>
         <sequence>82</sequence>
       </conditionProcessStatePK>
-      <condition>(hAPI.getCardValue(&apos;aprovacaoDiretoria&apos;) == &apos;aprovado&apos;) &amp;&amp; &#xd;
-(hAPI.getCardValue(&quot;atividadeTI&quot;) == &quot;sim&quot;)</condition>
-      <destinationSequenceId>10</destinationSequenceId>
-      <conditionType>0</conditionType>
-    </ConditionProcessState>
-    <ConditionProcessState>
-      <conditionProcessStatePK>
-        <companyId>1</companyId>
-        <processId>recrutamento_selecao_pessoal_v3</processId>
-        <expressionOrder>3</expressionOrder>
-        <version>28</version>
-        <sequence>82</sequence>
-      </conditionProcessStatePK>
-      <condition>(hAPI.getCardValue(&apos;aprovacaoDiretoria&apos;) == &apos;aprovado&apos;) &amp;&amp; &#xd;
-(hAPI.getCardValue(&quot;atividadeTI&quot;) != &quot;sim&quot;)</condition>
-      <destinationSequenceId>61</destinationSequenceId>
+      <condition>hAPI.getCardValue(&apos;aprovacaoDiretoria&apos;) == &apos;aprovado&apos;</condition>
+      <destinationSequenceId>113</destinationSequenceId>
       <conditionType>0</conditionType>
     </ConditionProcessState>
     <ConditionProcessState>
@@ -790,7 +826,7 @@
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <expressionOrder>1</expressionOrder>
-        <version>28</version>
+        <version>34</version>
         <sequence>98</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&apos;aprovacaoGestor&apos;) == &apos;aprovado&apos;</condition>
@@ -802,11 +838,36 @@
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <expressionOrder>2</expressionOrder>
-        <version>28</version>
+        <version>34</version>
         <sequence>98</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&apos;aprovacaoGestor&apos;) == &apos;reprovado&apos;</condition>
       <destinationSequenceId>71</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>recrutamento_selecao_pessoal_v3</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>34</version>
+        <sequence>110</sequence>
+      </conditionProcessStatePK>
+      <condition>(hAPI.getCardValue(&quot;controleTI&quot;) == &quot;&quot;) &amp;&amp; &#xd;
+(hAPI.getCardValue(&quot;atividadeTI&quot;) == &quot;sim&quot;)</condition>
+      <destinationSequenceId>10</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>recrutamento_selecao_pessoal_v3</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>34</version>
+        <sequence>110</sequence>
+      </conditionProcessStatePK>
+      <condition>true</condition>
+      <destinationSequenceId>95</destinationSequenceId>
       <conditionType>0</conditionType>
     </ConditionProcessState>
   </list>
@@ -890,23 +951,6 @@
       <returnPermited>false</returnPermited>
       <initialStateSequence>82</initialStateSequence>
       <finalStateSequence>71</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>1</version>
-        <linkSequence>86</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>82</initialStateSequence>
-      <finalStateSequence>61</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
       <automaticLink>false</automaticLink>
@@ -1071,23 +1115,6 @@
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <version>1</version>
-        <linkSequence>103</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>69</initialStateSequence>
-      <finalStateSequence>95</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>1</version>
         <linkSequence>104</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
@@ -1122,11 +1149,45 @@
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <version>1</version>
-        <linkSequence>106</linkSequence>
+        <linkSequence>109</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
-      <initialStateSequence>82</initialStateSequence>
+      <initialStateSequence>69</initialStateSequence>
+      <finalStateSequence>110</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>recrutamento_selecao_pessoal_v3</processId>
+        <version>1</version>
+        <linkSequence>111</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>110</initialStateSequence>
+      <finalStateSequence>95</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>recrutamento_selecao_pessoal_v3</processId>
+        <version>1</version>
+        <linkSequence>112</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>110</initialStateSequence>
       <finalStateSequence>10</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
@@ -1139,11 +1200,45 @@
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <version>1</version>
-        <linkSequence>107</linkSequence>
+        <linkSequence>114</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>82</initialStateSequence>
+      <finalStateSequence>113</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>recrutamento_selecao_pessoal_v3</processId>
+        <version>1</version>
+        <linkSequence>115</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
       <initialStateSequence>10</initialStateSequence>
+      <finalStateSequence>113</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>recrutamento_selecao_pessoal_v3</processId>
+        <version>1</version>
+        <linkSequence>116</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>113</initialStateSequence>
       <finalStateSequence>61</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
@@ -1168,77 +1263,6 @@
     <WorkflowProcessEvent>
       <workflowProcessEventPK>
         <companyId>1</companyId>
-        <eventId>beforeTaskSave</eventId>
-        <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>1</version>
-      </workflowProcessEventPK>
-      <eventDescription>function beforeTaskSave(colleagueId,nextSequenceId,userList){&#xd;
-	log.info(&apos;recrutamento_selecao_pessoal_v3.beforeTaskSave.js begin&apos;)&#xd;
-&#xd;
-	var atividadeAtual = getValue(&apos;WKNumState&apos;)&#xd;
-&#xd;
-	if(nextSequenceId != 1) hAPI.setCardValue(&quot;atividadeAtual&quot;, String(nextSequenceId))&#xd;
-	if(nextSequenceId != 1) hAPI.setCardValue(&quot;atividadeAnterior&quot;, String(atividadeAtual))&#xd;
-	&#xd;
-	var aprovacaoRH = hAPI.getCardValue(&apos;aprovacaoRH&apos;)&#xd;
-	log.info(&apos;aprovacaoRH: &apos;+aprovacaoRH)&#xd;
-&#xd;
-	if(nextSequenceId == 35 &amp;&amp; aprovacaoRH == &apos;aprovado&apos;){&#xd;
-		var constraints = []&#xd;
-&#xd;
-		var departmentTI = hAPI.getCardValue(&quot;atividadeTI&quot;) == &apos;sim&apos; ? &apos;true&apos; : &quot;&quot;&#xd;
-		log.info(&apos;departmentTI: &apos;+departmentTI)&#xd;
-		&#xd;
-		var equipSeguranca = hAPI.getCardValue(&quot;atividadeSegTrabalho&quot;) == &apos;sim&apos; ? &apos;true&apos; : &quot;&quot;&#xd;
-		log.info(&apos;equipSeguranca: &apos;+equipSeguranca)&#xd;
-		&#xd;
-		var equipsTI = hAPI.getCardValue(&quot;ferramentasTrabalho&quot;)&#xd;
-		log.info(&apos;equipsTI: &apos;+equipsTI)&#xd;
-		&#xd;
-		var usuarioEspelho = hAPI.getCardValue(&quot;acessoEspelho&quot;)&#xd;
-		log.info(&apos;usuarioEspelho: &apos;+usuarioEspelho)&#xd;
-		&#xd;
-		var DFProcessId = hAPI.getCardValue(&quot;numeroProcesso&quot;)&#xd;
-		log.info(&apos;DFProcessId: &apos;+DFProcessId)&#xd;
-		&#xd;
-		var nomeAprovado = hAPI.getCardValue(&quot;nomeAprovado&quot;)&#xd;
-		log.info(&apos;nomeAprovado: &apos;+nomeAprovado)&#xd;
-		&#xd;
-		var emailAprovado = hAPI.getCardValue(&quot;emailAprovado&quot;)&#xd;
-		log.info(&apos;emailAprovado: &apos;+emailAprovado)&#xd;
-		&#xd;
-		var contatoAprovado = hAPI.getCardValue(&quot;contatoAprovado&quot;)&#xd;
-		log.info(&apos;contatoAprovado: &apos;+contatoAprovado)&#xd;
-		&#xd;
-		constraints.push(DatasetFactory.createConstraint(&quot;IDPROCESS&quot;,DFProcessId,DFProcessId, ConstraintType.MUST))&#xd;
-		constraints.push(DatasetFactory.createConstraint(&quot;DEPARTMENTTI&quot;,departmentTI,departmentTI, ConstraintType.MUST))&#xd;
-		constraints.push(DatasetFactory.createConstraint(&quot;EQUIPSEGURANCA&quot;,equipSeguranca,equipSeguranca, ConstraintType.MUST))&#xd;
-		constraints.push(DatasetFactory.createConstraint(&quot;EQUIPSTI&quot;,equipsTI,equipsTI, ConstraintType.MUST))&#xd;
-		constraints.push(DatasetFactory.createConstraint(&quot;USERESPELHO&quot;,usuarioEspelho,usuarioEspelho, ConstraintType.MUST))&#xd;
-		constraints.push(DatasetFactory.createConstraint(&quot;NOMEAPROVADO&quot;,nomeAprovado,nomeAprovado, ConstraintType.MUST))&#xd;
-		constraints.push(DatasetFactory.createConstraint(&quot;EMAILAPROVADO&quot;,emailAprovado,emailAprovado, ConstraintType.MUST))&#xd;
-		constraints.push(DatasetFactory.createConstraint(&quot;CONTATOAPROVADO&quot;,contatoAprovado,contatoAprovado, ConstraintType.MUST))&#xd;
-		var returnAbertura = DatasetFactory.getDataset(&apos;DS_START_ADMISSAO&apos;, null, constraints, null)&#xd;
-&#xd;
-		var idAdmissao = String(returnAbertura.getValue(0, &apos;NUM_PROCESSO&apos;))&#xd;
-		log.info(&quot;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; beforeTaskSave &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&quot;)&#xd;
-		log.info(&quot;NUM_PROCESSO: &quot;+idAdmissao)&#xd;
-&#xd;
-		var processoAberto = idAdmissao.replace(&apos;.0&apos;,&apos;&apos;)&#xd;
-		&#xd;
-		hAPI.setCardValue(&apos;IdAdmissao&apos;, processoAberto)&#xd;
-		&#xd;
-		if(hAPI.getCardValue(&quot;IdAdmissao&quot;) == &apos;&apos;){&#xd;
-			hAPI.setCardValue(&apos;IdAdmissao&apos;, processoAberto)&#xd;
-		}&#xd;
-		&#xd;
-		hAPI.setTaskComments(&quot;admin&quot;, DFProcessId, 0, &quot;Realizado a abertura do Processo de Admissão: &quot;+processoAberto)&#xd;
-	}&#xd;
-}</eventDescription>
-    </WorkflowProcessEvent>
-    <WorkflowProcessEvent>
-      <workflowProcessEventPK>
-        <companyId>1</companyId>
         <eventId>ENG_LITERALS</eventId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
         <version>1</version>
@@ -1257,6 +1281,46 @@ process.instructions=</eventDescription>
       <eventDescription>process.description=Recrutamento e Seleção de Pessoal v3.0
 process.category=Recursos Humanos
 process.instructions=</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>beforeStateEntry</eventId>
+        <processId>recrutamento_selecao_pessoal_v3</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function beforeStateEntry(sequenceId){&#xd;
+    var atividadeAtual = getValue(&apos;WKNumState&apos;)&#xd;
+	if(sequenceId != 1) hAPI.setCardValue(&quot;atividadeAtual&quot;, String(sequenceId))&#xd;
+	if(sequenceId != 1) hAPI.setCardValue(&quot;atividadeAnterior&quot;, String(atividadeAtual))&#xd;
+	if(sequenceId == 10) hAPI.setCardValue(&quot;controleTI&quot;, &quot;iniciado&quot;)&#xd;
+	var aprovacaoRH = hAPI.getCardValue(&apos;aprovacaoRH&apos;)&#xd;
+	if(sequenceId == 35 &amp;&amp; aprovacaoRH == &apos;aprovado&apos;){&#xd;
+		var constraints = []&#xd;
+		var departmentTI = hAPI.getCardValue(&quot;atividadeTI&quot;) == &apos;sim&apos; ? &apos;true&apos; : &quot;&quot;&#xd;
+		var equipSeguranca = hAPI.getCardValue(&quot;atividadeSegTrabalho&quot;) == &apos;sim&apos; ? &apos;true&apos; : &quot;&quot;&#xd;
+		var equipsTI = hAPI.getCardValue(&quot;ferramentasTrabalho&quot;)&#xd;
+		var usuarioEspelho = hAPI.getCardValue(&quot;acessoEspelho&quot;)&#xd;
+		var DFProcessId = hAPI.getCardValue(&quot;numeroProcesso&quot;)&#xd;
+		var nomeAprovado = hAPI.getCardValue(&quot;nomeAprovado&quot;)&#xd;
+		var emailAprovado = hAPI.getCardValue(&quot;emailAprovado&quot;)&#xd;
+		var contatoAprovado = hAPI.getCardValue(&quot;contatoAprovado&quot;)&#xd;
+		constraints.push(DatasetFactory.createConstraint(&quot;IDPROCESS&quot;,DFProcessId,DFProcessId, ConstraintType.MUST))&#xd;
+		constraints.push(DatasetFactory.createConstraint(&quot;DEPARTMENTTI&quot;,departmentTI,departmentTI, ConstraintType.MUST))&#xd;
+		constraints.push(DatasetFactory.createConstraint(&quot;EQUIPSEGURANCA&quot;,equipSeguranca,equipSeguranca, ConstraintType.MUST))&#xd;
+		constraints.push(DatasetFactory.createConstraint(&quot;EQUIPSTI&quot;,equipsTI,equipsTI, ConstraintType.MUST))&#xd;
+		constraints.push(DatasetFactory.createConstraint(&quot;USERESPELHO&quot;,usuarioEspelho,usuarioEspelho, ConstraintType.MUST))&#xd;
+		constraints.push(DatasetFactory.createConstraint(&quot;NOMEAPROVADO&quot;,nomeAprovado,nomeAprovado, ConstraintType.MUST))&#xd;
+		constraints.push(DatasetFactory.createConstraint(&quot;EMAILAPROVADO&quot;,emailAprovado,emailAprovado, ConstraintType.MUST))&#xd;
+		constraints.push(DatasetFactory.createConstraint(&quot;CONTATOAPROVADO&quot;,contatoAprovado,contatoAprovado, ConstraintType.MUST))&#xd;
+		var returnAbertura = DatasetFactory.getDataset(&apos;DS_START_ADMISSAO&apos;, null, constraints, null)&#xd;
+		var idAdmissao = String(returnAbertura.getValue(0, &apos;NUM_PROCESSO&apos;))&#xd;
+		var processoAberto = idAdmissao.replace(&apos;.0&apos;,&apos;&apos;)&#xd;
+		hAPI.setCardValue(&apos;IdAdmissao&apos;, processoAberto)&#xd;
+		if(hAPI.getCardValue(&quot;IdAdmissao&quot;) == &apos;&apos;) hAPI.setCardValue(&apos;IdAdmissao&apos;, processoAberto)&#xd;
+		hAPI.setTaskComments(&quot;admin&quot;, DFProcessId, 0, &quot;Realizado a abertura do Processo de Admissão: &quot;+processoAberto)&#xd;
+	}&#xd;
+}</eventDescription>
     </WorkflowProcessEvent>
     <WorkflowProcessEvent>
       <workflowProcessEventPK>
@@ -1408,7 +1472,7 @@ process.instructions=</eventDescription>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>28</version>
+        <version>34</version>
         <linkSequence>58</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1419,7 +1483,7 @@ process.instructions=</eventDescription>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>28</version>
+        <version>34</version>
         <linkSequence>65</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1430,7 +1494,7 @@ process.instructions=</eventDescription>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>28</version>
+        <version>34</version>
         <linkSequence>85</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1441,7 +1505,7 @@ process.instructions=</eventDescription>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>28</version>
+        <version>34</version>
         <linkSequence>87</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1452,7 +1516,7 @@ process.instructions=</eventDescription>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>28</version>
+        <version>34</version>
         <linkSequence>92</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1463,7 +1527,7 @@ process.instructions=</eventDescription>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>28</version>
+        <version>34</version>
         <linkSequence>93</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1474,7 +1538,7 @@ process.instructions=</eventDescription>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>28</version>
+        <version>34</version>
         <linkSequence>100</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1485,7 +1549,7 @@ process.instructions=</eventDescription>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>28</version>
+        <version>34</version>
         <linkSequence>102</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1496,12 +1560,34 @@ process.instructions=</eventDescription>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>recrutamento_selecao_pessoal_v3</processId>
-        <version>28</version>
+        <version>34</version>
         <linkSequence>105</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
       <positionX>539</positionX>
       <positionY>67</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>recrutamento_selecao_pessoal_v3</processId>
+        <version>34</version>
+        <linkSequence>112</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>239</positionX>
+      <positionY>519</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>recrutamento_selecao_pessoal_v3</processId>
+        <version>34</version>
+        <linkSequence>115</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>759</positionX>
+      <positionY>519</positionY>
     </ProcessLinkBend>
   </list>
   <list/>

@@ -82,6 +82,8 @@ function enableFields(form){
 
     if(ativ != 10){
         form.setEnabled("obsTI", false);
+        form.setEnabled("possuiEquipamento", false);
+        form.setEnabled("numeroComprasFluig", false);
     }
 
     if(ativ != 56){
